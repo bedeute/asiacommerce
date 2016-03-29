@@ -1,0 +1,42 @@
+{
+  "name": "asiacommerce",
+  "private": true,
+  "dependencies": {
+    "uikit": "~2.19.0",
+    "modernizr": "~2.8.1",
+    "fluidable": "^1.2.5",
+    "glidejs": "^2.0.7",
+    "Swiper": "swiper#^3.3.1",
+    "easyzoom": "^2.3.1",
+    "drift": "^0.1.7",
+    "jquery-cycle2": "^2.1.6",
+    "jquery_lazyload": "jquery.lazyload#^1.9.7"
+  },
+  "overrides": {
+    "uikit": {
+      "main": [
+        "less/core/*.less",
+        "js/core/core.js",
+        "js/core/touch.js",
+        "js/core/utility.js",
+        "js/core/smooth-scroll.js",
+        "js/core/scrollspy.js",
+        "js/core/toggle.js",
+        "js/core/alert.js",
+        "js/core/button.js",
+        "js/core/dropdown.js",
+        "js/core/grid.js",
+        "js/core/modal.js",
+        "js/core/nav.js",
+        "js/core/offcanvas.js",
+        "js/core/switcher.js",
+        "js/core/tab.js",
+        "js/core/cover.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}

@@ -1,0 +1,357 @@
+{% extends "../layouts/default.html" %}
+
+{% block css %}
+	<!-- build:css styles/index-custom-css.css -->
+	<link rel="stylesheet" href="bower_components/Swiper/dist/css/swiper.min.css">
+	<link rel="stylesheet" href="styles/ac-index.css">
+	<!-- endbuild -->
+{% endblock %}
+
+{% block main %}
+<div id="ac-index">
+	{% include "../components/header.html" %}
+	{% include "../components/header-nav.html" %}
+	<header class="ac-header-wrap">
+		<div class="uk-container uk-container-center">
+			<div class="uk-grid uk-grid-collapse">
+				<div class="uk-width-medium-3-4 uk-push-1-4" style="padding-left: 0;">
+					<div class="ac-header-slider-wrap">
+						<!-- Slider main container -->
+						<div class="swiper-container">
+						    <!-- Additional required wrapper -->
+						    <div class="swiper-wrapper">
+						        <!-- Slides -->
+						        <div class="swiper-slide">
+						        	<a href="#" class="uk-display-block">
+								        <img src="images/slider-1.jpg" alt="slider-1" title="Slider 1">
+							        </a>
+						        </div>
+						        <div class="swiper-slide">
+						        	<a href="#" class="uk-display-block">
+							        	<img src="images/slider-2.jpg" alt="slider-2" title="Slider 2">
+						        	</a>
+						        </div>
+						        <div class="swiper-slide">
+						        	<a href="#" class="uk-display-block">
+								        <img src="images/slider-3.jpg" alt="slider-3" title="Slider 3">
+							        </a>
+						        </div>
+						    </div>
+						    <!-- If we need pagination -->
+						    <div class="swiper-pagination"></div>
+						    
+						    <!-- If we need navigation buttons -->
+						    <div class="swiper-button-prev"></div>
+						    <div class="swiper-button-next"></div>
+						</div>
+					</div>
+					<div class="ac-header-box-wrap">
+						<div class="ac-header-box">
+							<a href="#" class="uk-display-block">
+								<img src="images/banner-1.jpg" alt="banner-1" title="banner 1">
+							</a>
+						</div>
+						<div class="ac-header-box">
+							<a href="#" class="uk-display-block">
+								<img src="images/banner-2.jpg" alt="banner-2" title="Banner 2">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Why us -->
+	<section id="ac-why" class="ac-section">
+		<h2 class="uk-text-center">Why us</h2>
+		<div class="uk-container uk-container-center">
+			<div class="uk-grid" style="margin-top: 10px;">
+				<div class="uk-width-1-4 uk-text-center">
+					<img src="images/badge-star.png" alt="badge-star-icon" title="Badge star icon" width="70">
+					<h3>High Quality</h3>
+					<p>
+						Get value-for-money goods at low prices from China e-commerce sites and sellers.
+					</p>
+				</div>
+				<div class="uk-width-1-4 uk-text-center">
+					<img src="images/speed.png" alt="speed-icon" title="Speed icon" width="70">
+					<h3>Speed Guarantee</h3>
+					<p>
+						Guaranteed shipment within stated period or discounts will be given.
+					</p>
+				</div>
+				<div class="uk-width-1-4 uk-text-center">
+					<img src="images/magnifier.png" alt="magnifier-icon" title="Magnifier icon" width="70">
+					<h3>Free & Secured Inpsection</h3>
+					<p>
+						Free inspection by logistics centre in China.
+					</p>
+				</div>
+				<div class="uk-width-1-4 uk-text-center">
+					<img src="images/clock.png" alt="clock-icon" title="Clock icon" width="70">
+					<h3>7/12</h3>
+					<p>
+						Friendly online customer care at your service.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end of Why us -->
+
+	<!-- How we works -->
+	<section id="ac-how" class="ac-section">
+		<div class="uk-container uk-container-center">
+			<h2 class="uk-text-center">How we works</h2>
+			<div class="uk-text-center">
+				<ul id="ac-how-nav" class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#how-content', animation: 'slide-vertical'}">
+					<li class="" aria-expanded="false"><a href="#">Buy for me</a></li>
+					<li aria-expanded="false" class=""><a href="#">Ship for me</a></li>
+				</ul>
+			</div>
+			<ul id="how-content" class="uk-switcher uk-margin">
+				<li aria-hidden="" class="">
+					<div class="uk-grid">
+						<div class="uk-width-1-5 uk-text-center">
+							<img src="images/address.png" width="140" alt="web-address-icon" title="Web address icon">
+							<h3>1. Place Order</h3>
+							<p>
+								Submit Product Links and Pay
+							</p>
+						</div>
+						<div class="uk-width-1-5 uk-text-center">
+							<img src="images/warehouse.png" width="140" alt="warehouse-icon" title="Warehouse icon">
+							<h3>2. Arrive and puchase</h3>
+							<p>
+								Purchase, inspect and change the item status into arrived at warehouse
+							</p>
+						</div>
+						<div class="uk-width-1-5 uk-text-center">
+							<img src="images/shipping.png" width="140" alt="shipping-icon" title="Shipping icon">
+							<h3>3. Submit Delivery</h3>
+							<p>
+								Select arrived items to ship choose shipping method to pay
+							</p>
+						</div>
+						<div class="uk-width-1-5 uk-text-center">
+							<img src="images/deliver.png" width="140" alt="deliver-icon" title="Deliver icon">
+							<h3>4. Distribution</h3>
+							<p>
+								Pack,strengthen weight and delivery
+							</p>
+						</div>
+						<div class="uk-width-1-5 uk-text-center">
+							<img src="images/confirm.png" width="140" alt="confirm-icon" title="Confirm icon">
+							<h3>5. Confirmation</h3>
+							<p>
+								Sign for the parcel review,get points
+							</p>
+						</div>
+					</div>
+				</li>
+				<li aria-hidden="" class="">
+					<div class="uk-grid">
+						<div class="uk-width-1-5 uk-text-center">
+							<img src="images/address.png" width="140" alt="web-address-icon" title="Web address icon">
+							<h3>1. Get Chinese Address</h3>
+							<p>
+								Buy items by yourself and ship them to our warehouse
+							</p>
+						</div>
+						<div class="uk-width-1-5 uk-text-center">
+							<img src="images/warehouse.png" width="140" alt="warehouse-icon" title="Warehouse icon">
+							<h3>2. Receive Parcel</h3>
+							<p>
+								Parcel arrived, inspected, weighted change status into arrival
+							</p>
+						</div>
+						<div class="uk-width-1-5 uk-text-center">
+							<img src="images/shipping.png" width="140" alt="shipping-icon" title="Shipping icon">
+							<h3>3. Submit Delivery</h3>
+							<p>
+								Select arrived items to ship choose shipping method to pay
+							</p>
+						</div>
+						<div class="uk-width-1-5 uk-text-center">
+							<img src="images/deliver.png" width="140" alt="deliver-icon" title="Deliver icon">
+							<h3>4. Distribution</h3>
+							<p>
+								Pack,strengthen weight and delivery
+							</p>
+						</div>
+						<div class="uk-width-1-5 uk-text-center">
+							<img src="images/confirm.png" width="140" alt="confirm-icon" title="Confirm icon">
+							<h3>5. Confirmation</h3>
+							<p>
+								Sign for the parcel review,get points
+							</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!-- end of How we works -->
+
+	<!-- Hot product (best selling) -->
+	<section id="ac-hot-product" class="ac-section">
+		<div class="uk-container uk-container-center">
+			<h2 class="uk-text-center">Hot Product (Best Selling)</h2>
+			<div class="ac-showcase">
+				<div class="ac-showcase-menu">
+					<ul class="ac-showcase-menu-ul">
+						<li class="ac-showcase-label"><span class="ac-showcase-label-icon"><i class="uk-icon-fire"></i></span>Hot Product <span class="uk-text-small">(Best Selling)</span></li>
+						<li><a href="#">Apparel</a></li>
+						<li><a href="#">Shoes</a></li>
+						<li><a href="#">Bags & Accessories</a></li>
+						<li><a href="#">Electronic & Gadget</a></li>
+						<li><a href="#">Beauty</a></li>
+						<li><a href="#">Home & Appliance</a></li>
+						<li><a href="#">Sport & Outdoor</a></li>
+						<li><a href="#">Toys & Games</a></li>
+						<li><a href="#">Automobiles & Motors</a></li>
+						<li><a href="#">Body & Magazines</a></li>
+						<li><a href="#">Daily Products</a></li>
+					</ul>
+				</div>
+				<div class="ac-showcase-slider">
+					<div class="swiper-container">
+				    <!-- Additional required wrapper -->
+				    <div class="swiper-wrapper">
+			        <!-- Slides -->
+			        <div class="swiper-slide">
+			        	<a href="#" class="uk-display-block">
+					        <img src="images/internet-tv.jpg" alt="showcase-slider-1" title="Showcase slider 1">	
+				        </a>
+			        </div>
+			        <div class="swiper-slide">
+			        	<a href="#" class="uk-display-block">
+				        	<img src="images/opo.jpg" alt="showcase-slider-2" title="Showcase slider 2">
+			        	</a>
+			        </div>
+			        <div class="swiper-slide">
+			        	<a href="#" class="uk-display-block">
+					        <img src="images/showcase-slider-3.jpg" alt="showcase-slider-3" title="Showcase slider 3">
+				        </a>
+			        </div>
+				    </div>
+				    <!-- If we need pagination -->
+				    <div class="swiper-pagination"></div>
+				    
+				    <!-- If we need navigation buttons -->
+				    <div class="swiper-button-prev"></div>
+				    <div class="swiper-button-next"></div>
+					</div>
+				</div>
+				<div class="ac-showcase-item-wrap">
+					<a href="#" class="ac-showcase-item">
+						<div class="ac-showcase-item-cover" style="background: url(images/showcase-item-pic-1.jpg) top center;"></div>
+						<div class="ac-showcase-item-text">
+							<div class="ac-showcase-item-price">
+								<strong class="uk-display-inlne-block">S$ 8.20</strong>
+								<strong class="uk-display-inline-block uk-align-right">Buy</strong>
+							</div>
+							<span class="ac-showcase-item-seller uk-display-block">loueddssd倍艾旗舰店</span>
+							<p>
+								Spring middle-aged straight jeans pants plus fertilizer to increase elderly mother dress female waist elastic waist casual pants summer
+							</p>
+						</div>
+					</a>
+					<a href="#" class="ac-showcase-item">
+						<div class="ac-showcase-item-cover" style="background: url(images/showcase-item-pic-2.jpg) top center;"></div>
+						<div class="ac-showcase-item-text">
+							<div class="ac-showcase-item-price">
+								<strong class="uk-display-inlne-block">S$ 8.20</strong>
+								<strong class="uk-display-inline-block uk-align-right">Buy</strong>
+							</div>
+							<span class="ac-showcase-item-seller uk-display-block">loueddssd倍艾旗舰店</span>
+							<p>
+								Miao Lu 2016 new leather sandals female student flat summer sandals soft bottom tassel thick crust fish head shoes Korean wave
+							</p>
+						</div>
+					</a>
+					<a href="#" class="ac-showcase-item">
+						<div class="ac-showcase-item-cover" style="background: url(images/showcase-item-pic-1.jpg) top center;"></div>
+						<div class="ac-showcase-item-text">
+							<div class="ac-showcase-item-price">
+								<strong class="uk-display-inlne-block">S$ 8.20</strong>
+								<strong class="uk-display-inline-block uk-align-right">Buy</strong>
+							</div>
+							<span class="ac-showcase-item-seller uk-display-block">loueddssd倍艾旗舰店</span>
+							<p>
+								Spring middle-aged straight jeans pants plus fertilizer to increase elderly mother dress female waist elastic waist casual pants summer
+							</p>
+						</div>
+					</a>
+					<a href="#" class="ac-showcase-item">
+						<div class="ac-showcase-item-cover" style="background: url(images/showcase-item-pic-2.jpg) top center;"></div>
+						<div class="ac-showcase-item-text">
+							<div class="ac-showcase-item-price">
+								<strong class="uk-display-inlne-block">S$ 8.20</strong>
+								<strong class="uk-display-inline-block uk-align-right">Buy</strong>
+							</div>
+							<span class="ac-showcase-item-seller uk-display-block">loueddssd倍艾旗舰店</span>
+							<p>
+								Miao Lu 2016 new leather sandals female student flat summer sandals soft bottom tassel thick crust fish head shoes Korean wave
+							</p>
+						</div>
+					</a>
+					<a href="#" class="ac-showcase-item">
+						<div class="ac-showcase-item-cover" style="background: url(images/showcase-item-pic-1.jpg) top center;"></div>
+						<div class="ac-showcase-item-text">
+							<div class="ac-showcase-item-price">
+								<strong class="uk-display-inlne-block">S$ 8.20</strong>
+								<strong class="uk-display-inline-block uk-align-right">Buy</strong>
+							</div>
+							<span class="ac-showcase-item-seller uk-display-block">loueddssd倍艾旗舰店</span>
+							<p>
+								Spring middle-aged straight jeans pants plus fertilizer to increase elderly mother dress female waist elastic waist casual pants summer
+							</p>
+						</div>
+					</a>
+					<a href="#" class="ac-showcase-item">
+						<div class="ac-showcase-item-cover" style="background: url(images/showcase-item-pic-2.jpg) top center;"></div>
+						<div class="ac-showcase-item-text">
+							<div class="ac-showcase-item-price">
+								<strong class="uk-display-inlne-block">S$ 8.20</strong>
+								<strong class="uk-display-inline-block uk-align-right">Buy</strong>
+							</div>
+							<span class="ac-showcase-item-seller uk-display-block">loueddssd倍艾旗舰店</span>
+							<p>
+								Miao Lu 2016 new leather sandals female student flat summer sandals soft bottom tassel thick crust fish head shoes Korean wave
+							</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end of Hot product (best selling) -->
+</div>
+{% endblock %}
+
+{% block scripts %}
+	<!-- build:js scripts/indexScripts.js -->
+	<script src="bower_components/Swiper/dist/js/swiper.jquery.min.js"></script>
+
+	<script>
+	  $(document).ready(function () {
+	     //initialize swiper when document ready  
+	     var mySwiper = new Swiper ('.swiper-container', {
+				pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        speed: 600,
+        loop: true
+	     })        
+	   });
+
+	  // responsive mega menu behaviour
+	  $(document).ready(function() {
+	  })
+	</script>
+	<!-- endbuild -->
+{% endblock %}
