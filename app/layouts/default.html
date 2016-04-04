@@ -35,6 +35,45 @@
   {% block main %}
   {% endblock %}
 
+<div id="ac-offcanvas-left" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+      <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+        <li class="uk-nav-header">Categories</li>
+        <li><a href="#"class="ac-header-nav-category-item ac-header-nav-category-upper"><i class="uk-icon-steam"></i>&nbsp;All</a></li>
+        {% include "../components/category-menu.html" %}
+      </ul>
+    </div>
+</div>
+
+<div id="ac-offcanvas-right" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+      <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+        <li class="uk-parent"><a href="#">Language</a>
+          <ul class="uk-nav-sub">
+            <li><a href="#">Indonesia</a></li>
+            <li><a href="#">English</a></li>
+          </ul>
+        </li>
+        <li class="uk-parent"><a href="#">Guidance</a>
+          <ul class="uk-nav-sub">
+            <li><a href="#">Shopping Guide</a></li>
+            <li><a href="#">Select Product</a></li>
+            <li><a href="#">Hot Item</a></li>
+          </ul>
+        </li>
+        <li class="uk-parent"><a href="#">Help</a>
+          <ul class="uk-nav-sub">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">My Whislist</a></li>
+        <li class="uk-active"><a href="#">Register</a></li>
+      </ul>
+    </div>
+</div>
+
   {% block footer %}
     {% include "../components/footer.html" %}
   {% endblock %}
