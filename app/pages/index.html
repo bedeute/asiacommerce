@@ -5,6 +5,10 @@
 	<link rel="stylesheet" href="bower_components/Swiper/dist/css/swiper.min.css">
 	<link rel="stylesheet" href="styles/ac-index.css">
 	<!-- endbuild -->
+
+	<style type="text/css">
+		
+	</style>
 {% endblock %}
 
 {% block main %}
@@ -13,50 +17,46 @@
 	{% include "../components/header-nav-index.html" %}
 	<header class="ac-header-wrap">
 		<div class="uk-container uk-container-center">
-			<div class="uk-grid uk-grid-collapse">
-				<div class="uk-width-medium-3-4 uk-push-1-4" style="padding-left: 0;">
-					<div class="ac-header-slider-wrap">
-						<!-- Slider main container -->
-						<div class="swiper-container">
-						    <!-- Additional required wrapper -->
-						    <div class="swiper-wrapper">
-						        <!-- Slides -->
-						        <div class="swiper-slide">
-						        	<a href="#" class="uk-display-block">
-								        <img src="images/slider-1.jpg" alt="slider-1" title="Slider 1">
-							        </a>
-						        </div>
-						        <div class="swiper-slide">
-						        	<a href="#" class="uk-display-block">
-							        	<img src="images/slider-2.jpg" alt="slider-2" title="Slider 2">
-						        	</a>
-						        </div>
-						        <div class="swiper-slide">
-						        	<a href="#" class="uk-display-block">
-								        <img src="images/slider-3.jpg" alt="slider-3" title="Slider 3">
-							        </a>
-						        </div>
-						    </div>
-						    <!-- If we need pagination -->
-						    <div class="swiper-pagination"></div>
-						    
-						    <!-- If we need navigation buttons -->
-						    <div class="swiper-button-prev"></div>
-						    <div class="swiper-button-next"></div>
-						</div>
-					</div>
-					<div class="ac-header-box-wrap">
-						<div class="ac-header-box">
-							<a href="#" class="uk-display-block">
-								<img src="images/banner-1.jpg" alt="banner-1" title="banner 1">
-							</a>
-						</div>
-						<div class="ac-header-box">
-							<a href="#" class="uk-display-block">
-								<img src="images/banner-2.jpg" alt="banner-2" title="Banner 2">
-							</a>
-						</div>
-					</div>
+			<div class="ac-header-slider-wrap">
+				<!-- Slider main container -->
+				<div class="swiper-container">
+				    <!-- Additional required wrapper -->
+				    <div class="swiper-wrapper">
+				        <!-- Slides -->
+				        <div class="swiper-slide">
+				        	<a href="#" class="uk-display-block">
+						        <img src="images/slider-1.jpg" alt="slider-1" title="Slider 1">
+					        </a>
+				        </div>
+				        <div class="swiper-slide">
+				        	<a href="#" class="uk-display-block">
+					        	<img src="images/slider-2.jpg" alt="slider-2" title="Slider 2">
+				        	</a>
+				        </div>
+				        <div class="swiper-slide">
+				        	<a href="#" class="uk-display-block">
+						        <img src="images/slider-3.jpg" alt="slider-3" title="Slider 3">
+					        </a>
+				        </div>
+				    </div>
+				    <!-- If we need pagination -->
+				    <div class="swiper-pagination"></div>
+				    
+				    <!-- If we need navigation buttons -->
+				    <div class="swiper-button-prev"></div>
+				    <div class="swiper-button-next"></div>
+				</div>
+			</div>
+			<div class="ac-header-box-wrap uk-visible-large">
+				<div class="ac-header-box">
+					<a href="#" class="uk-display-block">
+						<img src="images/banner-1.jpg" alt="banner-1" title="banner 1">
+					</a>
+				</div>
+				<div class="ac-header-box">
+					<a href="#" class="uk-display-block">
+						<img src="images/banner-2.jpg" alt="banner-2" title="Banner 2">
+					</a>
 				</div>
 			</div>
 		</div>
@@ -70,31 +70,34 @@
 				<div class="uk-width-1-4 uk-text-center">
 					<img src="images/badge-star.png" alt="badge-star-icon" title="Badge star icon" width="70">
 					<h3>High Quality</h3>
-					<p>
+					<p class="uk-hidden-small">
 						Get value-for-money goods at low prices from China e-commerce sites and sellers.
 					</p>
 				</div>
 				<div class="uk-width-1-4 uk-text-center">
 					<img src="images/speed.png" alt="speed-icon" title="Speed icon" width="70">
 					<h3>Speed Guarantee</h3>
-					<p>
+					<p class="uk-hidden-small">
 						Guaranteed shipment within stated period or discounts will be given.
 					</p>
 				</div>
 				<div class="uk-width-1-4 uk-text-center">
 					<img src="images/magnifier.png" alt="magnifier-icon" title="Magnifier icon" width="70">
-					<h3>Free & Secured Inpsection</h3>
-					<p>
+					<h3><span class="uk-hidden-small">Free & </span>Secure<span class="uk-hidden-small">d</span> Inspection</h3>
+					<p class="uk-hidden-small">
 						Free inspection by logistics centre in China.
 					</p>
 				</div>
 				<div class="uk-width-1-4 uk-text-center">
 					<img src="images/clock.png" alt="clock-icon" title="Clock icon" width="70">
-					<h3>7/12</h3>
-					<p>
+					<h3>7/12 <span class="uk-visible-small">Cust. Care</span></h3>
+					<p class="uk-hidden-small">
 						Friendly online customer care at your service.
 					</p>
 				</div>
+			</div>
+			<div class="uk-text-center uk-visible-small uk-margin-top">
+				<button type="button" class="uk-button uk-button-large">Learn more</button>
 			</div>
 		</div>
 	</section>
@@ -112,7 +115,7 @@
 			</div>
 			<ul id="how-content" class="uk-switcher uk-margin">
 				<li aria-hidden="" class="">
-					<div class="uk-grid">
+					<div class="uk-grid uk-hidden-small">
 						<div class="uk-width-1-5 uk-text-center">
 							<img src="images/address.png" width="140" alt="web-address-icon" title="Web address icon">
 							<h3>1. Place Order</h3>
@@ -149,9 +152,12 @@
 							</p>
 						</div>
 					</div>
+					<div class="uk-grid uk-visible-small">
+						show on mobile
+					</div>
 				</li>
 				<li aria-hidden="" class="">
-					<div class="uk-grid">
+					<div class="uk-grid uk-hidden-small">
 						<div class="uk-width-1-5 uk-text-center">
 							<img src="images/address.png" width="140" alt="web-address-icon" title="Web address icon">
 							<h3>1. Get Chinese Address</h3>
@@ -188,6 +194,9 @@
 							</p>
 						</div>
 					</div>
+					<div class="uk-grid uk-visible-small">
+						show on mobile #2
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -199,7 +208,7 @@
 		<div class="uk-container uk-container-center">
 			<h2 class="uk-text-center">Hot Product (Best Selling)</h2>
 			<div class="ac-showcase">
-				<div class="ac-showcase-menu">
+				<div class="ac-showcase-menu uk-hidden-small">
 					<ul class="ac-showcase-menu-ul">
 						<li class="ac-showcase-label"><span class="ac-showcase-label-icon"><i class="uk-icon-fire"></i></span>Hot Product <span class="uk-text-small">(Best Selling)</span></li>
 						<li><a href="#">Apparel</a></li>
@@ -325,6 +334,9 @@
 					</a>
 				</div>
 			</div>
+		</div>
+		<div class="uk-text-center uk-margin-top">
+			<button type="button" class="uk-button uk-button-large">View more</button>
 		</div>
 	</section>
 	<!-- end of Hot product (best selling) -->
