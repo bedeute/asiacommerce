@@ -1,103 +1,50 @@
 @import (reference) "../main.less";
 
+.ac-product-head-wrap {
+	&:extend(.uk-clearfix);
+	
+	@media screen and (max-width: @breakpoint-small-max) {
+		border-bottom: 1px solid #e9e9e9;
+
+		> .uk-container {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
 // Product image
 // ---------------------------------------------------
 .ac-product-image-wrap {
-	&:extend(.uk-clearfix);
-}
-
-.ac-product-image-carousel {
-	width: 60px;
+	width: 100%;
 	float: left;
-	margin-right: 10px;
+
+	.sp-full-screen-button {
+		top: 7px;
+		right: 14px;
+	}
+
+	@media (min-width: @breakpoint-small) {
+		width: 400px;
+	}
 }
 
-.ac-product-image-container {
-	width: ~"calc(100% - 70px)";
+.ac-product-info-wrap {
 	float: left;
-}
 
-.cycle-slideshow {
-	margin: auto;
-	padding: 0;
-
-	& * {
-		box-sizing: border-box;
-	}
-
-	> a {
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		display: block;
-		width: 100%;
-		border: 1px solid #aaa;
-
-		> img {
-			width: 100%;
-			position: static;
-			display: block;
-		}
-
-		> div {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			padding: 0;
-		}
+	@media (min-width: @breakpoint-small) {
+		width: 444px;
 	}
 }
 
-.cycle-slide {
-	
+// Purchase box
+// ---------------------------------------------------
+.ac-purchase-opt-box {
+	width: 100%;
 
-	> img {
-		opacity: .6;
-
-		margin: 8px auto;
-
-		.thumbnail-active& {
-			opacity: 1;
-		}
-	}
-}
-
-.cycle-control {
-	font-size: 16px;
-	display: block;
-	text-align: center;
-	padding: 6px 0;
-}
-
-.composite-example {
-
-	> div	{
-		background-color: #fff;
-
-		> img {
-			display: block;
-		}
-
-		.cycle-overlay {
-			color: white;
-			background: black;
-			opacity: .6; filter:alpha(opacity=60);
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			padding: 15px;
-		}
-	}
-}
-
-// zooming restyle
-// -----------------------------------------------
-
-.easyzoom-flyout {
-	> img {
-		max-width: none;
+	@media (min-width: @breakpoint-medium) {
+		width: 280px;
+		float: right;
 	}
 }
 
@@ -113,6 +60,17 @@
 	border-bottom: 1px solidd #d9d9d9;
 	padding-bottom: 10px;
 
+	@media screen and (max-width: @breakpoint-small-max) {
+		padding-left: 20px;
+		padding-right: 20px;
+
+		.ac-product-name {
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+
 	.ac-product-name {
 		vertical-align: middle;
 	}	
@@ -122,6 +80,19 @@
 
 	em {
 		color: #999;
+	}
+}
+
+.ac-product-info-mobile {
+
+
+	&-price {
+		vertical-align: middle;
+
+		> strong {
+			font-size: 22px;
+			color: @main-color;
+		}
 	}
 }
 
@@ -249,4 +220,34 @@
 .ac-product-remark {
 	font-size: .8rem !important;
 	font-size: .8rem !important;
+}
+
+// Floated action button
+// ------------------------------------
+
+.ac-fab {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+
+	&-add-to-cart {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		width: 46px;
+		height: 46px;
+		background-color: @main-color;
+		display: inline-block;
+		color: #fff;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+		line-height: 46px;
+		text-align: center;
+		border-radius: 46px;
+
+		&:hover,
+		&:focus {
+			background-color: darken(spin(@main-color, 10), 10%);
+			color: #fff;
+		}
+	}
 }

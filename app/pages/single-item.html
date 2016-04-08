@@ -2,7 +2,7 @@
 
 {% block css %}
 	<!-- build:css styles/single-item.css -->
-	<link rel="stylesheet" href="bower_components/easyzoom/css/easyzoom.css">
+	<link rel="stylesheet" href="bower_components/slider-pro/dist/css/slider-pro.css">
 	<link rel="stylesheet" href="styles/ac-single-item.css">
 	<!-- endbuild -->
 {% endblock %}
@@ -12,7 +12,7 @@
 	{% include "../components/header.html" %}
 	{% include "../components/header-nav.html" %}
 
-	<section class="ac-breadcrumb-wrap">
+	<section class="ac-breadcrumb-wrap uk-visible-large">
 		<div class="uk-container uk-container-center">
 			<ul class="uk-breadcrumb">
 			    <li><a href=""><i class="uk-icon-home"></i></a></li>
@@ -24,186 +24,209 @@
 
 	<section class="ac-product-head-wrap">
 		<div class="uk-container uk-container-center">
-			<div class="uk-grid uk-grid-small">
-				<div class="uk-width-4-10">
-					<div class="ac-product-image-wrap">
-						<div class="ac-product-image-carousel">
-							<a href=# class="cycle-control cycle-prev"><i class="uk-icon-chevron-up"></i></a>
-							<div
-								class="ac-product-image-thumbnails cycle-slideshow vertical"
-								data-cycle-fx=carousel
-								data-cycle-timeout=0
-								data-cycle-next=".cycle-next"
-								data-cycle-prev=".cycle-prev"
-								data-cycle-carousel-visible=3
-								data-cycle-carousel-vertical=true
-								data-cycle-slides="> a"
-								>
-								<a href="images/product-image/product-pic-large.jpg" data-standard="images/product-image/product-pic-std.jpg">
-									<img src="images/product-image/product-pic-small.jpg" alt="" />
-								</a>
-								<a href="images/product-image/product-pic-large-2.jpg" data-standard="images/product-image/product-pic-std-2.jpg">
-									<img src="images/product-image/product-pic-small-2.jpg" alt="" />
-								</a>
-								<a href="images/product-image/product-pic-large-3.jpg" data-standard="images/product-image/product-pic-std-3.jpg">
-									<img src="images/product-image/product-pic-small-3.jpg" alt="" />
-								</a>
-								<a href="images/product-image/product-pic-large-4.jpg" data-standard="images/product-image/product-pic-std-4.jpg">
-									<img src="images/product-image/product-pic-small-4.jpg" alt="" />
-								</a>
-								<a href="images/product-image/product-pic-large-5.jpg" data-standard="images/product-image/product-pic-std-5.jpg">
-									<img src="images/product-image/product-pic-small-5.jpg" alt="" />
-								</a>
-							</div>
-							<a href=# class="cycle-control cycle-next"><i class="uk-icon-chevron-down"></i></a>
-						</div>
-						<div class="ac-product-image-container">
-							<div class="easyzoom easyzoom--adjacent easyzoom--with-thumbnails">
-								<a href="images/product-image/product-pic-large.jpg">
-									<img src="images/product-image/product-pic-std.jpg" alt="" />
-								</a>
-							</div>
-						</div>
-					</div>
+			<div class="ac-product-image-wrap">
+				<div class="slider-pro" id="ac-product-image-slider">
+			    <div class="sp-slides">
+		        <!-- Slide 1 -->
+		        <div class="sp-slide">
+	            <img class="sp-image" src="images/loader.gif" 
+	            	data-src="images/product-image/product-pic-std.jpg"
+	            	data-small="images/product-image/product-pic-small.jpg"
+	            	data-large="images/product-image/product-pic-large.jpg"/>
+		        </div>
 
+		        <!-- Slide 2 -->
+		        <div class="sp-slide">
+	            <img class="sp-image" src="images/loader.gif" 
+	            	data-src="images/product-image/product-pic-std-2.jpg"
+	            	data-small="images/product-image/product-pic-small-2.jpg"
+	            	data-large="images/product-image/product-pic-large-2.jpg"/>
+		        </div>
+
+		        <!-- Slide 3 -->
+		        <div class="sp-slide">
+	            <img class="sp-image" src="images/loader.gif" 
+	            	data-src="images/product-image/product-pic-std-3.jpg"
+	            	data-small="images/product-image/product-pic-small-3.jpg"
+	            	data-large="images/product-image/product-pic-large-3.jpg"/>
+		        </div>
+		        <div class="sp-slide">
+	            <img class="sp-image" src="images/loader.gif" 
+	            	data-src="images/product-image/product-pic-std-4.jpg"
+	            	data-small="images/product-image/product-pic-small-4.jpg"
+	            	data-large="images/product-image/product-pic-large-4.jpg"/>
+		        </div>
+		        <div class="sp-slide">
+	            <img class="sp-image" src="images/loader.gif" 
+	            	data-src="images/product-image/product-pic-std-5.jpg"
+	            	data-small="images/product-image/product-pic-small-5.jpg"
+	            	data-large="images/product-image/product-pic-large-5.jpg"/>
+		        </div>
+			    </div>
+					<div class="sp-thumbnails uk-hidden-small">
+						<img class="sp-thumbnail" src="images/product-image/product-pic-small.jpg"/>
+						<img class="sp-thumbnail" src="images/product-image/product-pic-small-2.jpg"/>
+						<img class="sp-thumbnail" src="images/product-image/product-pic-small-3.jpg"/>
+						<img class="sp-thumbnail" src="images/product-image/product-pic-small-4.jpg"/>
+						<img class="sp-thumbnail" src="images/product-image/product-pic-small-5.jpg"/>
+					</div>
 				</div>
-				<div class="uk-width-4-10">
-					<div class="ac-product-name-wrap">
-						<h3 class="ac-product-name uk-display-inline-block">
-							Sale Liebo 2016 spring new solid color embroidered lace shirt sleeve shirt female A-51141249
-							<a href="#" class="uk-button uk-button-small uk-display-inline-block"><i class="uk-icon-external-link"></i>&nbsp;View original url</a>
-						</h3>
+			</div>
+			<div class="ac-product-info-wrap">		
+				<div class="ac-product-name-wrap">
+					<h3 class="ac-product-name uk-display-inline-block">
+						Sale Liebo 2016 spring new solid color embroidered lace shirt sleeve shirt female A-51141249
+						<a href="#" class="uk-button uk-button-small uk-display-inline-block"><i class="uk-icon-external-link"></i>&nbsp;View original url</a>
+					</h3>
+					<div class="ac-product-info-mobile uk-visible-small">
+						<div class="ac-product-info-mobile-price">
+							<strong>$123.32</strong>&nbsp;<span class="uk-display-inline-block ac-price-convert uk-text-muted">(<em>Approx</em> S$39.96)</span>
+						</div>
 					</div>
-					<div class="ac-product-info-price">
-						<dl class="uk-description-list-horizontal">
-							<dt class="">
-								Price:
-							</dt>
-							<dd>
-								<strong class="uk-display-inline-block ac-price-ori">￥179.80</strong>
-								<span class="uk-display-inline-block ac-price-convert uk-text-muted">(<em>Approx</em> S$39.96)</span>
-							</dd>
-						</dl>
-						<dl class="uk-description-list-horizontal">
-							<dt class="">
-								Domestic Shipping:
-							</dt>
-							<dd>
-								<strong class="uk-display-inline-block">￥0</strong>
-								<span class="uk-display-inline-block ac-price-convert uk-text-muted">(<em>Approx</em> S$0)</span>
-							</dd>
-						</dl>
-						<dl class="uk-description-list-horizontal">
-							<dt class="">
-								Shipping Cost:
-							</dt>
-							<dd>
-								<strong class="uk-display-inline-block">￥0</strong>
-								<span class="uk-display-inline-block ac-price-convert uk-text-muted">(<em>Approx</em> S$0)</span>
-							</dd>
-						</dl>
-					</div>
-					<div class="ac-product-info-color">
-						<dl class="uk-description-list-horizontal">
-							<dt class="">
-								Color:
-							</dt>
-							<dd>
-								<ul class="uk-list ac-list-inline uk-margin-remove ac-product-option">
-									<li class="ac-opt-selected">
-										<a class="" title="White" href="#"><img class="color" height="26" width="26" src="images/product-image/product-image-color.jpg" title="White"></a>
-									</li>
-									<li>
-										<a class="" title="Red" href="#"><img class="color" height="26" width="26" src="images/product-image/product-image-color-red.jpg" title="Red"></a>
-									</li>
-									<li>
-										<a class="" title="Blue" href="#"><img class="color" height="26" width="26" src="images/product-image/product-image-color-blue.jpg" title="Blue"></a>
-									</li>
-								</ul>
-								<div class="ac-product-info-error-msg">
-									Please select a Color
-									<a href="#" class="uk-close"></a>
-								</div>
-							</dd>
-						</dl>
-					</div>
-					<div class="ac-product-info-size">
-						<dl class="uk-description-list-horizontal">
-							<dt class="">
-								Size:
-							</dt>
-							<dd>
-								<ul class="uk-list ac-list-inline uk-margin-remove">
-									<li>
-										<a class="uk-button uk-button-small" title="Extra Small" href="#">XS</a>
-									</li>
-									<li>
-										<a class="uk-button uk-button-small" title="Small" href="#">S</a>
-									</li>
-									<li class="ac-opt-selected">
-										<a class="uk-button uk-button-small" title="Medium" href="#">M</a>
-									</li>
-									<li>
-										<a class="uk-button uk-button-small" title="Large" href="#">L</a>
-									</li>
-									<li>
-										<a class="uk-button uk-button-small" title="Extra Large" href="#">XL</a>
-									</li>
-									<li>
-										<a class="uk-button uk-button-small" title="Double Extra Large" href="#">XXL</a>
-									</li>
-								</ul>
-								<div class="msg-error sku-msg-error" style="display:none;">
+				</div>
+				<div class="ac-product-info-price uk-hidden-small">
+					<dl class="uk-description-list-horizontal">
+						<dt class="">
+							Price:
+						</dt>
+						<dd>
+							<strong class="uk-display-inline-block ac-price-ori">￥179.80</strong>
+							<span class="uk-display-inline-block ac-price-convert uk-text-muted">(<em>Approx</em> S$39.96)</span>
+						</dd>
+					</dl>
+					<dl class="uk-description-list-horizontal">
+						<dt class="">
+							Domestic Shipping:
+						</dt>
+						<dd>
+							<strong class="uk-display-inline-block">￥0</strong>
+							<span class="uk-display-inline-block ac-price-convert uk-text-muted">(<em>Approx</em> S$0)</span>
+						</dd>
+					</dl>
+				</div>
+				<div class="ac-product-info-color uk-hidden-small">
+					<dl class="uk-description-list-horizontal">
+						<dt class="">
+							Color:
+						</dt>
+						<dd>
+							<ul class="uk-list ac-list-inline uk-margin-remove ac-product-option">
+								<li class="ac-opt-selected">
+									<a class="" title="White" href="#"><img class="color" height="26" width="26" src="images/product-image/product-image-color.jpg" title="White"></a>
+								</li>
+								<li>
+									<a class="" title="Red" href="#"><img class="color" height="26" width="26" src="images/product-image/product-image-color-red.jpg" title="Red"></a>
+								</li>
+								<li>
+									<a class="" title="Blue" href="#"><img class="color" height="26" width="26" src="images/product-image/product-image-color-blue.jpg" title="Blue"></a>
+								</li>
+							</ul>
+							<div class="ac-product-info-error-msg">
 								Please select a Color
-								</div>
-							</dd>
-						</dl>
-					</div>
+								<a href="#" class="uk-close"></a>
+							</div>
+						</dd>
+					</dl>
 				</div>
-				<div class="uk-width-2-10">
-					<div class="ac-card">
-						<div class="ac-card-body uk-text-center">
-							<span class="">Total Price</span>
-							<h2 class="ac-card-title uk-margin-remove"><strong>￥179.80</strong></h2>
-							<span style="font-size: .9rem;">via <a href="#" class="uk-display-inline-block">Kantor Pos Indonesia <i class="uk-icon-angle-down"></i></a></span>
-						</div>
-						<div class="ac-card-body">
-							<div class="ac-product-qty-wrap uk-margin-small">
-								<label>Qty:</label>
-								<div class="uk-form">
-									<input id="qty1" type="text" value="1" name="qty" class="uk-form-width-mini">
-									<ul class="uk-list">
-										<li>
-											<a href="javascript:plusOne('qty1');" ><i class="uk-icon-angle-up"></i></a>
-										</li>
-										<li>
-											<a href="javascript:minOne('qty1');" ><i class="uk-icon-angle-down"></i></a>
-										</li>
-									</ul>
-								</div>
-								<div class="ac-product-item-remain">
-									<span class="uk-text-small"><strong>25</strong><br>pcs left</span>
-								</div>
+				<div class="ac-product-info-size uk-hidden-small">
+					<dl class="uk-description-list-horizontal">
+						<dt class="">
+							Size:
+						</dt>
+						<dd>
+							<ul class="uk-list ac-list-inline uk-margin-remove">
+								<li>
+									<a class="uk-button uk-button-small" title="Extra Small" href="#">XS</a>
+								</li>
+								<li>
+									<a class="uk-button uk-button-small" title="Small" href="#">S</a>
+								</li>
+								<li class="ac-opt-selected">
+									<a class="uk-button uk-button-small" title="Medium" href="#">M</a>
+								</li>
+								<li>
+									<a class="uk-button uk-button-small" title="Large" href="#">L</a>
+								</li>
+								<li>
+									<a class="uk-button uk-button-small" title="Extra Large" href="#">XL</a>
+								</li>
+								<li>
+									<a class="uk-button uk-button-small" title="Double Extra Large" href="#">XXL</a>
+								</li>
+							</ul>
+							<div class="msg-error sku-msg-error" style="display:none;">
+							Please select a Color
 							</div>
-						</div>
-						<div class="ac-card-body">
+						</dd>
+					</dl>
+				</div>
+				<div class="ac-product-qty-wrap uk-margin-small uk-hidden-small">
+					<dl class="uk-description-list-horizontal">
+						<dt>Quantity:</dt>
+						<dd>
 							<div class="uk-form">
-								<label><strong>Remarks</strong></label>
-								<textarea class="ac-product-remark uk-width-1-1" rows="3" placeholder="Item remarks : Our staff will purchse the items with your requirement (optional)"></textarea>
+								<input id="qty1" type="text" value="1" name="qty" class="uk-form-width-mini">
+								<ul class="uk-list">
+									<li>
+										<a href="javascript:plusOne('qty1');" ><i class="uk-icon-angle-up"></i></a>
+									</li>
+									<li>
+										<a href="javascript:minOne('qty1');" ><i class="uk-icon-angle-down"></i></a>
+									</li>
+								</ul>
 							</div>
+							<div class="ac-product-item-remain">
+								<span class="uk-text-small"><strong>25</strong><br>pcs left</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<dl class="uk-description-list-horizontal uk-hidden-small">
+					<dt>
+						Remarks
+					</dt>
+					<dd>
+						<div class="uk-form">
+							<textarea class="ac-product-remark uk-width-1-1" rows="3" placeholder="Item remarks : Our staff will purchse the items with your requirement (optional)"></textarea>
 						</div>
-						<div class="ac-card-footer">
-							<button type="button" class="uk-button uk-button-large uk-button-primary uk-margin-small uk-width-1-1" ><i class="uk-icon-check-square"></i>&nbsp;Buy Now</button>
-							<button type="button" class="uk-button uk-width-1-1 "><i calss="uk-icon-plus-square"></i>&nbsp;Add to wishlist</button>
+					</dd>
+				</dl>
+				<dl class="uk-description-list-horizontal uk-hidden-small">
+					<dt>
+						Shipping method
+					</dt>
+					<dd data-uk-margin>
+						<a href="#" class="uk-button uk-button-small">Air Shipping</a>
+						<a href="#" class="uk-button uk-button-small">Sea Shipping</a>
+						<a href="#" class="uk-button uk-button-small">Land Shipping</a>
+					</dd>
+				</dl>
+				<dl class="uk-description-list-horizontal uk-hidden-small">
+					<dd>
+						<button type="button" class="uk-button uk-button-large uk-button-primary" ><i class="uk-icon-check-square"></i>&nbsp;Buy Now</button>
+						<button type="button" class="uk-button uk-button-large"><i calss="uk-icon-plus"></i>&nbsp;Add to wishlist</button>
+					</dd>
+				</dl>
 
-						</div>
+			</div>
+			<div class="ac-purchase-offcanvas">
+				<div class="ac-purchase-offcanvas-label">
+					Puchase Option
+					<a href="#" class="ac-purchase-offcanvas-close"><i class="uk-icon-close"></i></a>
+				</div>
+				<div class="ac-purchase-offcanvas-head">
+					<div class="ac-purchase-offcanvas-head-img">
+						<img src="images/product-image/product-pic-small.jpg">
+					</div>
+					<div class="ac-purchase-offcanvas-head-text">
+						$99.03
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="ac-section" style="margin: 30px auto;">
+	<section class="ac-section uk-visible-large" style="margin: 30px auto;">
 		<div class="uk-container uk-container-center">
 			<div class="ac-card">
 				<div class="ac-card-body">
@@ -243,7 +266,7 @@
 	</section>
 
 
-	<section class="ac-product-detail-wrap">
+	<section class="ac-product-detail-wrap" style="display: none;">
 		<div class="uk-container uk-container-center">
       <ul class="uk-tab" data-uk-tab="{connect:'#tab-content'}">
         <li class="uk-active" ><a href="#">Product Detail</a></li>
@@ -394,35 +417,39 @@
       </ul>
 	</section>
 
+	<a href="#" class="ac-fab ac-fab-add-to-cart ac-purchase-button-toggle"><i class="uk-icon-cart-plus"></i></a>
+
 </div>
 {% endblock %}
 
 {% block scripts %}
 	<!-- build:js scripts/singleItemScripts.js -->
-	<script src="bower_components/easyzoom/dist/easyzoom.js"></script>
-	<script src="bower_components/jquery-cycle2/build/jquery.cycle2.min.js"></script>
-	<script src="bower_components/jquery-cycle2/build/plugin/jquery.cycle2.carousel.min.js"></script>
+	<script src="bower_components/slider-pro/dist/js/jquery.sliderPro.js"></script>
 	<script src="bower_components/jquery_lazyload/jquery.lazyload.js"></script>
 
 	<script>
 
 	$(function() {
 
-	  // Instantiate EasyZoom instances
-		var $easyzoom = $('.easyzoom').easyZoom();
-
-		// Setup thumbnails example
-		var api1 = $easyzoom.filter('.easyzoom--with-thumbnails').data('easyZoom');
-
-		$('.ac-product-image-thumbnails').on('click', 'a', function(e) {
-			var $this = $(this);
-
-			e.preventDefault();
-			$(this).addClass('thumbnail-active').siblings().removeClass('thumbnail-active');
-
-			// Use EasyZoom's `swap` method
-			api1.swap($this.data('standard'), $this.attr('href'));
-		});
+	  // Instantiate slider
+		$( document ).ready(function( $ ) {
+				$( '#ac-product-image-slider' ).sliderPro({
+					width: 400,
+					height: 500,
+					autoHeight: true,
+					fade: true,
+					arrows: true,
+					imageScaleMode: 'contain',
+					buttons: false,
+					fullScreen: true,
+					shuffle: true,
+					smallSize: 300,
+					mediumSize: 500,
+					largeSize: 800,
+					thumbnailArrows: true,
+					autoplay: false
+				});
+			});
 	})
 
 
@@ -440,6 +467,28 @@
 	   }
 	 }
 	}
+
+	// purchase option offcanvas 
+	$(function() {
+		var $purchaseOpt = $('.ac-purchase-offcanvas')
+		$('.ac-purchase-button-toggle').click(function(e) {
+			e.preventDefault();
+			// e.stopPropagation();
+			if ($purchaseOpt.hasClass('reveal')) {
+				$purchaseOpt.removeClass('reveal');
+				$('body').removeClass('ac-purchase-offcanvas-bg')
+			} else {
+				$purchaseOpt.addClass('reveal')
+				$('body').addClass('ac-purchase-offcanvas-bg')
+			}
+		});
+
+		$('.ac-purchase-offcanvas-close').click(function(e){
+			e.preventDefault();
+			$purchaseOpt.removeClass('reveal');
+			$('body').removeClass('ac-purchase-offcanvas-bg')
+		})
+	})
 
 	</script>
 	<!-- endbuild -->
