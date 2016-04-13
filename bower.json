@@ -2,7 +2,7 @@
   "name": "asiacommerce",
   "private": true,
   "dependencies": {
-    "uikit": "~2.19.0",
+    "uikit": "^2.19.0",
     "modernizr": "~2.8.1",
     "fluidable": "^1.2.5",
     "glidejs": "^2.0.7",

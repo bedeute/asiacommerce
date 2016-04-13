@@ -4,10 +4,13 @@
 @import "bower_components/uikit/less/core/article.less";
 @import "bower_components/uikit/less/core/badge.less";
 @import "bower_components/uikit/less/core/base.less";
+@import "bower_components/uikit/less/core/block.less";
 @import "bower_components/uikit/less/core/breadcrumb.less";
 @import "bower_components/uikit/less/core/button.less";
 @import "bower_components/uikit/less/core/close.less";
+@import "bower_components/uikit/less/core/column.less";
 @import "bower_components/uikit/less/core/comment.less";
+@import "bower_components/uikit/less/core/contrast.less";
 @import "bower_components/uikit/less/core/cover.less";
 @import "bower_components/uikit/less/core/description-list.less";
 @import "bower_components/uikit/less/core/dropdown.less";
@@ -48,6 +51,10 @@ body {
   background: #fff;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #555;
+
+  @media screen and (max-width: @breakpoint-small-max) {
+    background-color: #f7f7f7;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -139,22 +146,26 @@ h1, h2, h3, h4, h5, h6 {
 // -----------------------------------
 
 .ac-purchase-offcanvas {
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin-left: 100%;
-  bottom: 0;
-  transition: margin-left 0.2s ease-in-out 0.1s;
-  z-index: 100;
-  overflow-x: auto;
 
-  &.reveal {
-    margin-left: 0;
+  @media screen and (max-width: @breakpoint-small-max) {
 
-    .ac-purchase-offcanvas-close {
-      opacity: 1;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: 100%;
+    bottom: 0;
+    transition: margin-left 0.2s ease-in-out 0.1s;
+    z-index: 100;
+    overflow-x: auto;
+
+    &.reveal {
+      margin-left: 0;
+
+      .ac-purchase-offcanvas-close {
+        opacity: 1;
+      }
     }
   }
 

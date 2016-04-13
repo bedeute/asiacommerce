@@ -12,7 +12,7 @@
 	{% include "../components/header.html" %}
 	{% include "../components/header-nav.html" %}
 
-	<section class="ac-breadcrumb-wrap uk-visible-large">
+	<section class="ac-breadcrumb-wrap uk-hidden-small">
 		<div class="uk-container uk-container-center">
 			<ul class="uk-breadcrumb">
 			    <li><a href=""><i class="uk-icon-home"></i></a></li>
@@ -72,21 +72,24 @@
 					</div>
 				</div>
 			</div>
-			<div class="ac-product-info-wrap">		
-				<div class="ac-product-name-wrap">
-					<h3 class="ac-product-name uk-display-inline-block">
+			<div class="uk-clearfix uk-visible-small"></div>
+			<div class="ac-product-info-wrap ac-purchase-offcanvas">
+				<div class="ac-purchase-offcanvas-label uk-visible-small">
+					Puchase Option
+					<a href="#" class="ac-purchase-offcanvas-close"><i class="uk-icon-close"></i></a>
+				</div>
+				<div class="ac-product-name-wrap uk-clearfix uk-hidden-small">
+					<h2 class="ac-product-name uk-display-inline-block">
 						Sale Liebo 2016 spring new solid color embroidered lace shirt sleeve shirt female A-51141249
 						<a href="#" class="uk-button uk-button-small uk-display-inline-block"><i class="uk-icon-external-link"></i>&nbsp;View original url</a>
-					</h3>
-					<div class="ac-product-info-mobile uk-visible-small">
-						<div class="ac-product-info-mobile-price">
-							<strong>$123.32</strong>&nbsp;<span class="uk-display-inline-block ac-price-convert uk-text-muted">(<em>Approx</em> S$39.96)</span>
-						</div>
-					</div>
+					</h2>
 				</div>
-				<div class="ac-product-info-price uk-hidden-small">
+				<div class="uk-visible-small ac-product-image-mobile-wrap uk-float-left">
+					<img src="images/product-image/product-pic-small.jpg" class="uk-visible-small">
+				</div>
+				<div class="ac-product-info-price">
 					<dl class="uk-description-list-horizontal">
-						<dt class="">
+						<dt class="uk-visible-large">
 							Price:
 						</dt>
 						<dd>
@@ -94,17 +97,9 @@
 							<span class="uk-display-inline-block ac-price-convert uk-text-muted">(<em>Approx</em> S$39.96)</span>
 						</dd>
 					</dl>
-					<dl class="uk-description-list-horizontal">
-						<dt class="">
-							Domestic Shipping:
-						</dt>
-						<dd>
-							<strong class="uk-display-inline-block">￥0</strong>
-							<span class="uk-display-inline-block ac-price-convert uk-text-muted">(<em>Approx</em> S$0)</span>
-						</dd>
-					</dl>
 				</div>
-				<div class="ac-product-info-color uk-hidden-small">
+				<div class="uk-clearfix"></div>
+				<div class="ac-product-info-color">
 					<dl class="uk-description-list-horizontal">
 						<dt class="">
 							Color:
@@ -128,7 +123,7 @@
 						</dd>
 					</dl>
 				</div>
-				<div class="ac-product-info-size uk-hidden-small">
+				<div class="ac-product-info-size">
 					<dl class="uk-description-list-horizontal">
 						<dt class="">
 							Size:
@@ -160,28 +155,22 @@
 						</dd>
 					</dl>
 				</div>
-				<div class="ac-product-qty-wrap uk-margin-small uk-hidden-small">
+				<div class="ac-product-qty-wrap uk-margin-small">
 					<dl class="uk-description-list-horizontal">
 						<dt>Quantity:</dt>
 						<dd>
 							<div class="uk-form">
+								<a href="javascript:minOne('qty1');" ><i class="uk-icon-angle-down"></i></a>
 								<input id="qty1" type="text" value="1" name="qty" class="uk-form-width-mini">
-								<ul class="uk-list">
-									<li>
-										<a href="javascript:plusOne('qty1');" ><i class="uk-icon-angle-up"></i></a>
-									</li>
-									<li>
-										<a href="javascript:minOne('qty1');" ><i class="uk-icon-angle-down"></i></a>
-									</li>
-								</ul>
+								<a href="javascript:plusOne('qty1');" ><i class="uk-icon-angle-up"></i></a>
 							</div>
 							<div class="ac-product-item-remain">
-								<span class="uk-text-small"><strong>25</strong><br>pcs left</span>
+								<span class="uk-text-muted"><strong>25</strong>&nbsp;pcs left</span>
 							</div>
 						</dd>
 					</dl>
 				</div>
-				<dl class="uk-description-list-horizontal uk-hidden-small">
+				<dl class="uk-description-list-horizontal">
 					<dt>
 						Remarks
 					</dt>
@@ -207,21 +196,6 @@
 						<button type="button" class="uk-button uk-button-large"><i calss="uk-icon-plus"></i>&nbsp;Add to wishlist</button>
 					</dd>
 				</dl>
-
-			</div>
-			<div class="ac-purchase-offcanvas">
-				<div class="ac-purchase-offcanvas-label">
-					Puchase Option
-					<a href="#" class="ac-purchase-offcanvas-close"><i class="uk-icon-close"></i></a>
-				</div>
-				<div class="ac-purchase-offcanvas-head">
-					<div class="ac-purchase-offcanvas-head-img">
-						<img src="images/product-image/product-pic-small.jpg">
-					</div>
-					<div class="ac-purchase-offcanvas-head-text">
-						$99.03
-					</div>
-				</div>
 			</div>
 		</div>
 	</section>
@@ -266,158 +240,118 @@
 	</section>
 
 
-	<section class="ac-product-detail-wrap" style="display: none;">
+	<section class="ac-product-detail-wrap">
 		<div class="uk-container uk-container-center">
-      <ul class="uk-tab" data-uk-tab="{connect:'#tab-content'}">
-        <li class="uk-active" ><a href="#">Product Detail</a></li>
-        <li class=""><a href="#">Shipping Method</a></li>
-  		</ul>
-
-      <ul id="tab-content" class="uk-switcher uk-margin">
-        <li class="uk-active">
-					<div class="uk-grid">
-						<div class="uk-width-1-1">
-            	<div class="uk-margin-large">
-              	<strong class="uk-text-muted " style="padding-left: 10px;">Product Parameter</strong>
-              	<table class="uk-table">
-              		<tbody>
-              			<tr>
-              				<td class="trans">Material: viscose fibers (viscose rayon) 86% Linen 14% </td>
-              				<td class="trans">Sales channels Type: pure electricity supplier (only online sales) </td>
-              				<td class="trans">Item No: 71141249 </td>
-              				<td class="trans">Clothing version type: straight </td>
-            				</tr>
-            				<tr>
-              				<td class="trans">Style: wild </td>
-              				<td class="trans">Length: conventional models </td>
-              				<td class="trans">Sleeve: Sleeve </td>
-              				<td class="trans">Sleeve type: General </td></tr><tr>
-              				<td class="trans">Collar: Collar </td>
-              				<td class="trans">Clothing placket: Single-row multi-buckle </td>
-              				<td class="trans">Pattern: </td><td class="trans">Clothing style details: embroidered </td>
-            				</tr>
-            				<tr>
-            					<td class="trans">Brand: Rip </td>
-            					<td class="trans">Component content: 81% (inclusive) -90% (inclusive) </td>
-            					<td class="trans">Texture: Sticky </td>
-            					<td class="trans">Age: 25-29 years of age </td>
-          					</tr>
-          					<tr>
-            					<td class="trans">Year season: Spring 2016 </td>
-            					<td class="trans">Color Classification: Army Green </td>
-            					<td class="trans">Color classification: Sky blue </td>
-            					<td class="trans">Color Classification: Chocolate Color </td>
-          					</tr>
-          					<tr>
-            					<td class="trans">Color: orange </td>
-            					<td class="trans">Colors: White </td>
-            					<td class="trans">Size: S </td>
-            					<td class="trans">Size: M </td>
-          					</tr>
-          					<tr>
-            					<td class="trans">Size: L </td>
-            					<td class="trans">Size: XL </td>
-            					<td class="trans">Size: XXL</td>
-          					</tr>
-        					</tbody>
-      					</table>
-            	</div>
-							<div class="uk-grid">
-								<div class="uk-width-4-5">
-		    					<span>
-								    <p>
-								    	<a href="//ripfs.tmall.com/p/rd768246.htm?spm=a312a.7700718.w5003-12790709778.1.hiXm6k&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.1">
-								    		<img src="//gdp.alicdn.com/imgextra/i1/228784630/TB2wwDzlVXXXXbrXpXXXXXXXXXX_!!228784630.png" height="" border="0" class="img-ks-lazyload">
-								    	</a>
-							    	</p>
-								    <table width="791" height="190" border="0" cellpadding="0" cellspacing="0">
-								    	<tbody>
-								    		<tr>
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i1/228784630/TB22iEGkpXXXXbsXXXXXXXXXXXX_!!228784630.jpg" width="165" height="56" alt="" class="img-ks-lazyload"> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/TB2pT.kkpXXXXbtXpXXXXXXXXXX_!!228784630.jpg" width="137" height="56" alt="" class="img-ks-lazyload"> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/TB2DoomkpXXXXa.XpXXXXXXXXXX_!!228784630.jpg" width="122" height="56" alt="" class="img-ks-lazyload"> </td> 
-							    				<td colspan="2"> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/TB2kc3vkpXXXXXJXpXXXXXXXXXX_!!228784630.jpg" width="105" height="56" alt="" class="img-ks-lazyload"> </td> 
-							    				<td colspan="2"> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i1/228784630/TB2HR3SkpXXXXXJXXXXXXXXXXXX_!!228784630.jpg" width="132" height="56" alt="" class="img-ks-lazyload"> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i1/228784630/TB29m7MkpXXXXasXXXXXXXXXXXX_!!228784630.jpg" width="129" height="56" alt="" class="img-ks-lazyload"> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="1" height="56" alt="" class="img-ks-lazyload"> </td> </tr> <tr> 
-							    				<td> <a href="//ripfs.tmall.com/category-1202186602.htm?spm=a312a.7700718.w5003-12790709778.2.hiXm6k&amp;tsearch=y&amp;scene=taobao_shop#TmshopSrchNav" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.2"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i1/228784630/TB2CknJlVXXXXaFXpXXXXXXXXXX_!!228784630.jpg" width="165" height="21" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <a href="//ripfs.tmall.com/search.htm?spm=a312a.7700718.w5003-12790709778.3.hiXm6k&amp;orderType=defaultSort&amp;viewType=grid&amp;keyword=%B6%CC%D0%E4T%D0%F4&amp;lowPrice=&amp;highPrice=&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.3"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i1/228784630/TB21RZMkpXXXXaLXXXXXXXXXXXX_!!228784630.jpg" width="137" height="21" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <a href="//ripfs.tmall.com/category-632972185.htm?spm=a312a.7700718.w5003-12790709778.4.hiXm6k&amp;search=y&amp;scene=taobao_shop#TmshopSrchNav" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.4"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/TB2NDoDkpXXXXccXXXXXXXXXXXX_!!228784630.jpg" width="122" height="21" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <a href="//ripfs.tmall.com/search.htm?spm=a312a.7700718.w5003-12790709778.5.hiXm6k&amp;orderType=defaultSort&amp;viewType=grid&amp;keyword=牛仔裤&amp;lowPrice=&amp;highPrice=&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.5"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i3/228784630/TB2WV7HkpXXXXbJXXXXXXXXXXXX_!!228784630.jpg" width="104" height="21" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td colspan="2"> <a href="//ripfs.tmall.com/?spm=a312a.7700718.w5003-12790709778.6.hiXm6k&amp;q=%B6%CC%CD%E2%CC%D7&amp;type=p&amp;search=y&amp;newHeader_b=s_from&amp;searcy_type=item&amp;from=.shop.pc_2_searchbutton&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.6"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i3/228784630/TB2oxkkkpXXXXbuXpXXXXXXXXXX_!!228784630.jpg" width="132" height="21" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td colspan="2"> <a href="//ripfs.tmall.com/category-1040620894-974359227.htm?spm=a312a.7700718.w5003-12790709778.7.hiXm6k&amp;search=y&amp;catName=%A1%BE%B8%DF%B6%CB%C1%AB%B2%D3%A1%BF&amp;scene=taobao_shop#bd" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.7"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i4/228784630/TB2pH.tkpXXXXX9XpXXXXXXXXXX_!!228784630.jpg" width="130" height="21" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="1" height="21" alt="" class="img-ks-lazyload"> </td> </tr> <tr> 
-							    				<td> <a href="//ripfs.tmall.com/category-1197724355.htm?spm=a312a.7700718.w5003-12790709778.8.hiXm6k&amp;tsearch=y&amp;scene=taobao_shop#TmshopSrchNav" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.8"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/TB2A8r.lVXXXXa_XXXXXXXXXXXX_!!228784630.jpg" width="165" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <a href="//ripfs.tmall.com/search.htm?spm=a312a.7700718.w5003-12790709778.9.hiXm6k&amp;orderType=defaultSort&amp;viewType=grid&amp;keyword=%B4%CC%D0%E5T%D0%F4&amp;lowPrice=&amp;highPrice=&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.9"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i1/228784630/TB2ygkSkpXXXXXwXXXXXXXXXXXX_!!228784630.jpg" width="137" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <a href="//ripfs.tmall.com/search.htm?spm=a312a.7700718.w5003-12790709778.10.hiXm6k&amp;orderType=defaultSort&amp;viewType=grid&amp;keyword=连衣裙&amp;lowPrice=&amp;highPrice=&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.10"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i3/228784630/TB29GEzkpXXXXXlXpXXXXXXXXXX_!!228784630.jpg" width="122" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <a href="//ripfs.tmall.com/category-1068990882.htm?spm=a312a.7700718.w5003-12790709778.11.hiXm6k&amp;search=y&amp;scene=taobao_shop#TmshopSrchNav" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.11"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/TB28OZOkpXXXXXBXXXXXXXXXXXX_!!228784630.jpg" width="104" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td colspan="2"> <a href="//ripfs.tmall.com/search.htm?spm=a312a.7700718.w5003-12790709778.12.hiXm6k&amp;orderType=defaultSort&amp;viewType=grid&amp;keyword=%CC%D7%CD%B7%CE%C0%D2%C2&amp;lowPrice=&amp;highPrice=&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.12"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i3/228784630/TB2KNMhkpXXXXbGXpXXXXXXXXXX_!!228784630.jpg" width="132" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td colspan="2"> <a href="//ripfs.tmall.com/category-1068991014-974359227.htm?spm=a312a.7700718.w5003-12790709778.13.hiXm6k&amp;search=y&amp;parentCatId=815960974&amp;parentCatName=%A1%BE%B7%E7%B8%F1%CF%B5%C1%D0%A1%BF&amp;parentCatPageId=974359227&amp;catName=%BB%F9%B4%A1%B0%D9%B4%EE%CF%B5%C1%D0&amp;scene=taobao_shop#bd" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.13"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i4/228784630/TB2hXcFkpXXXXbZXXXXXXXXXXXX_!!228784630.jpg" width="130" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="1" height="17" alt="" class="img-ks-lazyload"> </td> </tr> <tr> 
-							    				<td> <a href="//ripfs.tmall.com/category-1193957720.htm?spm=a312a.7700718.w5003-12790709778.14.hiXm6k&amp;tsearch=y&amp;scene=taobao_shop#TmshopSrchNav" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.14"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i4/228784630/TB2xjzAlVXXXXbCXpXXXXXXXXXX_!!228784630.jpg" width="165" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <a href="//ripfs.tmall.com/search.htm?spm=a312a.7700718.w5003-12790709778.15.hiXm6k&amp;orderType=defaultSort&amp;viewType=grid&amp;keyword=连衣裙&amp;lowPrice=&amp;highPrice=&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.15"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/TB2eb3IkpXXXXbBXXXXXXXXXXXX_!!228784630.jpg" width="137" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <a href="//ripfs.tmall.com/search.htm?spm=a312a.7700718.w5003-12790709778.16.hiXm6k&amp;orderType=defaultSort&amp;viewType=grid&amp;keyword=衬衫&amp;lowPrice=&amp;highPrice=&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.16"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i3/228784630/TB2rI3QkpXXXXaeXXXXXXXXXXXX_!!228784630.jpg" width="122" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <a href="//ripfs.tmall.com/category-1068990887-974359227.htm?spm=a312a.7700718.w5003-12790709778.17.hiXm6k&amp;search=y&amp;tsearch=y&amp;scene=taobao_shop#TmshopSrchNav" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.17"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i3/228784630/TB2EzoTkpXXXXXzXXXXXXXXXXXX_!!228784630.jpg" width="104" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td colspan="2"> <a href="//ripfs.tmall.com/?spm=a312a.7700718.w5003-12790709778.18.hiXm6k&amp;q=%B7%E7%D2%C2&amp;type=p&amp;search=y&amp;newHeader_b=s_from&amp;searcy_type=item&amp;from=.shop.pc_2_searchbutton&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.18"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i3/228784630/TB270oNkpXXXXaCXXXXXXXXXXXX_!!228784630.jpg" width="132" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td colspan="2"> <a href="//ripfs.tmall.com/category-863588979-974359227.htm?spm=a312a.7700718.w5003-12790709778.19.hiXm6k&amp;search=y&amp;parentCatId=815960974&amp;parentCatName=%A1%BE%B7%E7%B8%F1%CF%B5%C1%D0%A1%BF&amp;parentCatPageId=974359227&amp;catName=%D6%D0%B9%FA%C3%F1%D7%E5%CF%B5%C1%D0&amp;scene=taobao_shop#bd" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.19"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i3/228784630/TB23q7kkpXXXXbrXpXXXXXXXXXX_!!228784630.jpg" width="130" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="1" height="17" alt="" class="img-ks-lazyload"> </td> </tr> <tr> 
-							    				<td> <a href="//ripfs.tmall.com/category-1187604273.htm?spm=a312a.7700718.w5003-12790709778.20.hiXm6k&amp;tsearch=y&amp;scene=taobao_shop#TmshopSrchNav" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.20"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i4/228784630/TB2emDSlVXXXXXsXpXXXXXXXXXX_!!228784630.jpg" width="165" height="18" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <a href="//ripfs.tmall.com/search.htm?spm=a312a.7700718.w5003-12790709778.21.hiXm6k&amp;orderType=defaultSort&amp;viewType=grid&amp;keyword=衬衫&amp;lowPrice=&amp;highPrice=&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.21"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i4/228784630/TB2u9IskpXXXXanXpXXXXXXXXXX_!!228784630.jpg" width="137" height="18" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <a href="//ripfs.tmall.com/category-1069035477.htm?spm=a312a.7700718.w5003-12790709778.22.hiXm6k&amp;search=y&amp;scene=taobao_shop#TmshopSrchNav" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.22"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i3/228784630/TB2SmkykpXXXXcPXXXXXXXXXXXX_!!228784630.jpg" width="122" height="18" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <a href="//ripfs.tmall.com/category-632978274.htm?spm=a312a.7700718.w5003-12790709778.23.hiXm6k&amp;search=y&amp;scene=taobao_shop#TmshopSrchNav" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.23"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i3/228784630/TB2GE.SkpXXXXXtXXXXXXXXXXXX_!!228784630.jpg" width="104" height="18" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td colspan="2"> <a href="//ripfs.tmall.com/search.htm?spm=a312a.7700718.w5003-12790709778.24.hiXm6k&amp;orderType=defaultSort&amp;viewType=grid&amp;keyword=%CE%F7%D7%B0&amp;lowPrice=&amp;highPrice=&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.24"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i1/228784630/TB24CZSkpXXXXXdXXXXXXXXXXXX_!!228784630.jpg" width="132" height="18" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td colspan="2"> <a href="//ripfs.tmall.com/category-949962407.htm?spm=a312a.7700718.w5003-12790709778.25.hiXm6k&amp;tsearch=y&amp;scene=taobao_shop#TmshopSrchNav" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.25"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i3/228784630/TB2knkvkpXXXXXGXpXXXXXXXXXX_!!228784630.jpg" width="130" height="18" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="1" height="18" alt="" class="img-ks-lazyload"> </td> </tr> <tr> 
-							    				<td rowspan="4"> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i3/228784630/TB2EPcAkpXXXXc3XXXXXXXXXXXX_!!228784630.jpg" width="165" height="60" alt="" class="img-ks-lazyload"> </td> 
-							    				<td> <a href="//ripfs.tmall.com/search.htm?spm=a312a.7700718.w5003-12790709778.26.hiXm6k&amp;orderType=defaultSort&amp;viewType=grid&amp;keyword=牛仔裤&amp;lowPrice=&amp;highPrice=&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.26"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i1/228784630/TB2L3kOkpXXXXakXXXXXXXXXXXX_!!228784630.jpg" width="137" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td rowspan="2"> <a href="//ripfs.tmall.com/search.htm?spm=a312a.7700718.w5003-12790709778.27.hiXm6k&amp;orderType=defaultSort&amp;viewType=grid&amp;keyword=%B3%A4%D0%E4T%D0%F4&amp;lowPrice=&amp;highPrice=&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.27"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i4/228784630/TB2rc3SkpXXXXXSXXXXXXXXXXXX_!!228784630.jpg" width="122" height="18" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <a href="//ripfs.tmall.com/?spm=a312a.7700718.w5003-12790709778.28.hiXm6k&amp;q=%B3%A4%C8%B9&amp;type=p&amp;search=y&amp;newHeader_b=s_from&amp;searcy_type=item&amp;from=.shop.pc_2_searchbutton&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.28"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i1/228784630/TB2Q2cxkpXXXXXaXpXXXXXXXXXX_!!228784630.jpg" width="104" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td colspan="3"> <a href="//ripfs.tmall.com/?spm=a312a.7700718.w5003-12790709778.29.hiXm6k&amp;q=%C2%ED%BC%D7&amp;type=p&amp;search=y&amp;newHeader_b=s_from&amp;searcy_type=item&amp;from=.shop.pc_2_searchbutton&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.29"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/TB2icEMkpXXXXakXXXXXXXXXXXX_!!228784630.jpg" width="133" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <a href="//ripfs.tmall.com/category-1040967110-974359227.htm?spm=a312a.7700718.w5003-12790709778.30.hiXm6k&amp;search=y&amp;tsearch=y&amp;scene=taobao_shop#TmshopSrchNav" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.30"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i1/228784630/TB2GhMUkpXXXXXvXXXXXXXXXXXX_!!228784630.jpg" width="129" height="17" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="1" height="17" alt="" class="img-ks-lazyload"> </td> </tr> <tr> 
-							    				<td rowspan="2"> <a href="//ripfs.tmall.com/search.htm?spm=a312a.7700718.w5003-12790709778.31.hiXm6k&amp;orderType=defaultSort&amp;viewType=grid&amp;keyword=%C5%A3%D7%D0%BF%E3&amp;lowPrice=&amp;highPrice=&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.31"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i4/228784630/TB2LrwAkpXXXXcJXXXXXXXXXXXX_!!228784630.jpg" width="137" height="16" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td colspan="2" rowspan="2"> <a href="//ripfs.tmall.com/?spm=a312a.7700718.w5003-12790709778.32.hiXm6k&amp;q=%D6%B1%CD%B2%BF%E3&amp;type=p&amp;search=y&amp;newHeader_b=s_from&amp;searcy_type=item&amp;from=.shop.pc_2_searchbutton&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12790709778" data-spm-anchor-id="a312a.7700718.w5003-12790709778.32"><img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/TB2meUUkpXXXXXsXXXXXXXXXXXX_!!228784630.jpg" width="105" height="16" alt="" class="img-ks-lazyload"></a> </td> 
-							    				<td colspan="2" rowspan="3"> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/TB2OH.TkpXXXXXvXXXXXXXXXXXX_!!228784630.jpg" width="132" height="43" alt="" class="img-ks-lazyload"> </td> 
-							    				<td rowspan="3"> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i4/228784630/TB2RQcKkpXXXXa9XXXXXXXXXXXX_!!228784630.jpg" width="129" height="43" alt="" class="img-ks-lazyload"> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="1" height="1" alt="" class="img-ks-lazyload"> </td> </tr> <tr> 
-							    				<td rowspan="2"> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/TB2sf.AkpXXXXcUXXXXXXXXXXXX_!!228784630.jpg" width="122" height="42" alt="" class="img-ks-lazyload"> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="1" height="15" alt="" class="img-ks-lazyload"> </td> </tr> <tr> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i1/228784630/TB2Wh7nkpXXXXa8XpXXXXXXXXXX_!!228784630.jpg" width="137" height="27" alt="" class="img-ks-lazyload"> </td> 
-							    				<td colspan="2"> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i3/228784630/TB2SU3EkpXXXXb0XXXXXXXXXXXX_!!228784630.jpg" width="105" height="27" alt="" class="img-ks-lazyload"> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="1" height="27" alt="" class="img-ks-lazyload"> </td> </tr> <tr> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="165" height="1" alt="" class="img-ks-lazyload"> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="137" height="1" alt="" class="img-ks-lazyload"> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="122" height="1" alt="" class="img-ks-lazyload"> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="104" height="1" alt="" class="img-ks-lazyload"> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="1" height="1" alt="" class="img-ks-lazyload"> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="131" height="1" alt="" class="img-ks-lazyload"> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="1" height="1" alt="" class="img-ks-lazyload"> </td> 
-							    				<td> <img style="display:block;" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" width="129" height="1" alt="" class="img-ks-lazyload"> </td> 
-							    				<td>&nbsp;</td> </tr> </tbody> </table>
-									</span>
-									<span>
-								    <table width="790" border="0" cellpadding="2" cellspacing="2">
-								    	<tbody> <tr> <td> <div class="lb_relative"> <a href="//detail.tmall.com/item.htm?spm=a312a.7700718.w5003-12408027146.1.hiXm6k&amp;id=525235882298&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12408027146" data-spm-anchor-id="a312a.7700718.w5003-12408027146.1"><img src="//gdp.alicdn.com/imgextra/i3/228784630/TB23jl_lVXXXXcwXXXXXXXXXXXX_!!228784630.png" border="0" class="img-ks-lazyload"></a> <div class="lb_absolute" style="left:0;bottom:-3px;"> <img src="//gdp.alicdn.com/imgextra/i1/228784630/TB2u2sNiFXXXXacXpXXXXXXXXXX_!!228784630.png" alt="" class="img-ks-lazyload"> </div> <div class="lb_absolute" style="left:325px;bottom:2px;font-family:arial;font-size:26px;color:#FFFFFF;font-weight:600;letter-spacing:-1px;"><font><font><font><font>179 </font></font></font></font><span style="color:rgb(255,255,255);font-family:arial;font-size:26px;font-weight:600;letter-spacing:-1px;line-height:39px;"><font><font><font><font>.8</font></font></font></font></span> </div> </div> </td> <td> <img alt="" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" height="288" width="10" class="img-ks-lazyload"> </td> <td> <div class="lb_relative"> <a href="//detail.tmall.com/item.htm?spm=a312a.7700718.w5003-12408027146.2.hiXm6k&amp;id=525719949991&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12408027146" data-spm-anchor-id="a312a.7700718.w5003-12408027146.2"><img src="//gdp.alicdn.com/imgextra/i1/228784630/TB2gfdOkpXXXXbCXXXXXXXXXXXX_!!228784630.jpg" alt="" border="0" class="img-ks-lazyload"></a><a href="//detail.tmall.com/item.htm?spm=a312a.7700718.w5003-12408027146.3.hiXm6k&amp;id=525135858756&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12408027146" data-spm-anchor-id="a312a.7700718.w5003-12408027146.3"></a> <div class="lb_absolute" style="left:0;bottom:-3px;"> <img src="//gdp.alicdn.com/imgextra/i1/228784630/TB2u2sNiFXXXXacXpXXXXXXXXXX_!!228784630.png" alt="" class="img-ks-lazyload"> </div> <div class="lb_absolute" style="left:325px;bottom:2px;font-family:arial;font-size:26px;color:#FFFFFF;font-weight:600;letter-spacing:-1px;"><font><font> 179.8 </font></font></div> </div> </td> </tr> </tbody> </table> <table width="790" border="0" cellpadding="2" cellspacing="2"> <tbody> <tr> <td> <div class="lb_relative"> <a href="//detail.tmall.com/item.htm?spm=a312a.7700718.w5003-12408027146.4.hiXm6k&amp;id=525238321565&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12408027146" data-spm-anchor-id="a312a.7700718.w5003-12408027146.4"><img src="//gdp.alicdn.com/imgextra/i1/228784630/TB2Q0nfjFXXXXXxXXXXXXXXXXXX_!!228784630.jpg" width="190" border="0" class="img-ks-lazyload"></a> <div class="lb_absolute" style="left:0;bottom:-10px;"> <img src="//gdp.alicdn.com/imgextra/i3/228784630/TB2_9cYiFXXXXa1XXXXXXXXXXXX_!!228784630.png" alt="" class="img-ks-lazyload"> </div> <div class="lb_absolute" style="left:127px;bottom:-5px;font-family:arial;font-size:26px;color:#FFFFFF;font-weight:600;letter-spacing:-1px;"><font><font><font><font>169 </font></font></font></font><span style="color:rgb(255,255,255);font-family:arial;font-size:26px;font-weight:600;letter-spacing:-1px;line-height:39px;"><font><font><font><font>.8</font></font></font></font></span> </div> </div> </td> <td> <img alt="" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" height="288" width="10" class="img-ks-lazyload"> </td> <td> <div class="lb_relative"> <a href="//detail.tmall.com/item.htm?spm=a312a.7700718.w5003-12408027146.5.hiXm6k&amp;id=525970006591&amp;rn=3a83cd534203676eb12e4f8523feff1d&amp;abbucket=14&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12408027146" data-spm-anchor-id="a312a.7700718.w5003-12408027146.5"><img src="//gdp.alicdn.com/imgextra/i4/228784630/TB2OwaFjFXXXXcdXpXXXXXXXXXX_!!228784630.jpg" alt="" width="190" border="0" class="img-ks-lazyload"></a> <div class="lb_absolute" style="left:0;bottom:-10px;"> <img src="//gdp.alicdn.com/imgextra/i3/228784630/TB2_9cYiFXXXXa1XXXXXXXXXXXX_!!228784630.png" alt="" class="img-ks-lazyload"> </div> <div class="lb_absolute" style="left:127px;bottom:-5px;font-family:arial;font-size:26px;color:#FFFFFF;font-weight:600;letter-spacing:-1px;"><font><font> 179.8 </font></font></div> </div> </td> <td> <img alt="" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" height="288" width="10" class="img-ks-lazyload"> </td> <td> <div class="lb_relative"> <a href="//detail.tmall.com/item.htm?spm=a312a.7700718.w5003-12408027146.6.hiXm6k&amp;id=525295337564&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12408027146" data-spm-anchor-id="a312a.7700718.w5003-12408027146.6"><img src="//gdp.alicdn.com/imgextra/i1/228784630/TB2ubrKjVXXXXXqXpXXXXXXXXXX_!!228784630.jpg" alt="" width="190" border="0" class="img-ks-lazyload"></a> <div class="lb_absolute" style="left:0;bottom:-10px;"> <img src="//gdp.alicdn.com/imgextra/i3/228784630/TB2_9cYiFXXXXa1XXXXXXXXXXXX_!!228784630.png" alt="" class="img-ks-lazyload"> </div> <div class="lb_absolute" style="left:127px;bottom:-5px;font-family:arial;font-size:26px;color:#FFFFFF;font-weight:600;letter-spacing:-1px;"><font><font> 179.8 </font></font></div> </div> </td> <td> <img alt="" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" height="288" width="10" class="img-ks-lazyload"> </td> <td> <div class="lb_relative"> <a href="//detail.tmall.com/item.htm?spm=a312a.7700718.w5003-12408027146.7.hiXm6k&amp;id=525266785412&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12408027146" data-spm-anchor-id="a312a.7700718.w5003-12408027146.7"><img src="//gdp.alicdn.com/imgextra/i4/228784630/TB2Zkv_kXXXXXccXXXXXXXXXXXX_!!228784630.jpg" width="190" border="0" class="img-ks-lazyload"></a> <div class="lb_absolute" style="left:0;bottom:-10px;"> <img src="//gdp.alicdn.com/imgextra/i3/228784630/TB2_9cYiFXXXXa1XXXXXXXXXXXX_!!228784630.png" alt="" class="img-ks-lazyload"> </div> <div class="lb_absolute" style="left:128px;bottom:-5px;font-family:arial;font-size:26px;color:#FFFFFF;font-weight:600;letter-spacing:-1px;"><font><font> 199.8 </font></font></div> </div> </td> </tr> </tbody> </table> <table width="790" border="0" cellpadding="2" cellspacing="2"> <tbody> <tr> <td> <div class="lb_relative"> <a href="//detail.tmall.com/item.htm?spm=a312a.7700718.w5003-12408027146.8.hiXm6k&amp;id=526930047410&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12408027146" data-spm-anchor-id="a312a.7700718.w5003-12408027146.8"><img src="//gdp.alicdn.com/imgextra/i2/228784630/TB2wi1skVXXXXXCXpXXXXXXXXXX_!!228784630.jpg" width="190" border="0" class="img-ks-lazyload"></a> <div class="lb_absolute" style="left:0;bottom:-10px;"> <img src="//gdp.alicdn.com/imgextra/i3/228784630/TB2_9cYiFXXXXa1XXXXXXXXXXXX_!!228784630.png" alt="" class="img-ks-lazyload"> </div> <div class="lb_absolute" style="left:127px;bottom:-5px;font-family:arial;font-size:26px;color:#FFFFFF;font-weight:600;letter-spacing:-1px;"><font><font> 179.8 </font></font></div> </div> </td> <td> <img alt="" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" height="288" width="10" class="img-ks-lazyload"> </td> <td> <div class="lb_relative"> <a href="//detail.tmall.com/item.htm?spm=a312a.7700718.w5003-12408027146.9.hiXm6k&amp;id=523738054570&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12408027146" data-spm-anchor-id="a312a.7700718.w5003-12408027146.9"><img src="//gdp.alicdn.com/imgextra/i4/228784630/TB2aApUepXXXXbiXpXXXXXXXXXX_!!228784630.jpg" width="190" border="0" class="img-ks-lazyload"></a> <div class="lb_absolute" style="left:0;bottom:-10px;"> <img src="//gdp.alicdn.com/imgextra/i3/228784630/TB2_9cYiFXXXXa1XXXXXXXXXXXX_!!228784630.png" alt="" class="img-ks-lazyload"> </div> <div class="lb_absolute" style="left:127px;bottom:-5px;font-family:arial;font-size:26px;color:#FFFFFF;font-weight:600;letter-spacing:-1px;"><font><font> 119.8 </font></font></div> </div> </td> <td> <img alt="" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" height="288" width="10" class="img-ks-lazyload"> </td> <td> <div class="lb_relative"> <a href="//detail.tmall.com/item.htm?spm=a312a.7700718.w5003-12408027146.10.hiXm6k&amp;id=525337209490&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12408027146" data-spm-anchor-id="a312a.7700718.w5003-12408027146.10"><img src="//gdp.alicdn.com/imgextra/i4/228784630/TB25_GOlVXXXXbvXpXXXXXXXXXX_!!228784630.jpg" width="190" border="0" class="img-ks-lazyload"></a> <div class="lb_absolute" style="left:0;bottom:-10px;"> <img src="//gdp.alicdn.com/imgextra/i3/228784630/TB2_9cYiFXXXXa1XXXXXXXXXXXX_!!228784630.png" alt="" class="img-ks-lazyload"> </div> <div class="lb_absolute" style="left:127px;bottom:-5px;font-family:arial;font-size:26px;color:#FFFFFF;font-weight:600;letter-spacing:-1px;"><font><font> 209.8 </font></font></div> </div> </td> <td> <img alt="" src="//gdp.alicdn.com/imgextra/i2/228784630/T2OF1kXw0aXXXXXXXX-228784630.gif" height="288" width="10" class="img-ks-lazyload"> </td> <td> <div class="lb_relative"> <a href="//detail.tmall.com/item.htm?spm=a312a.7700718.w5003-12408027146.11.hiXm6k&amp;id=43944064207&amp;scene=taobao_shop" target="_blank" data-spm-wangpu-module-id="5003-12408027146" data-spm-anchor-id="a312a.7700718.w5003-12408027146.11"><img src="//gdp.alicdn.com/imgextra/i2/228784630/TB2auQAbVXXXXbrXpXXXXXXXXXX_!!228784630.jpg" alt="" width="190" border="0" class="img-ks-beforeload"></a> <div class="lb_absolute" style="left:0;bottom:-10px;"> <img src="//gdp.alicdn.com/imgextra/i3/228784630/TB2_9cYiFXXXXa1XXXXXXXXXXXX_!!228784630.png" alt="" class="img-ks-lazyload"> </div> <div class="lb_absolute" style="left:127px;bottom:-5px;font-family:arial;font-size:26px;color:#FFFFFF;font-weight:600;letter-spacing:-1px;"><font><font><font><font>179 </font></font></font></font><span style="color:rgb(255,255,255);font-family:arial;font-size:26px;font-weight:600;letter-spacing:-1px;line-height:39px;"><font><font><font><font>.8</font></font></font></font></span> </div> </div> </td> </tr> </tbody> </table>
-									</span>
-									<div id="description" class="J_DetailSection tshop-psm tshop-psm-bdetaildes tm-curTab">
-										<h4 class="hd"><font><font><font><font>product details</font></font></font></font></h4>
-										<div class="content ke-post" style="height: auto;"><img class="desc_anchor img-ks-lazyload" id="desc-module-1" src="https://assets.alicdn.com/kissy/1.0.0/build/imglazyload/spaceball.gif"><div style="width: 99.8%;display: inline-block;"> &nbsp; </div> <p><img align="absmiddle" src="https://img.alicdn.com/imgextra/i3/228784630/TB2tbdecVXXXXXhXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2aLVpcVXXXXbeXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2_vBocVXXXXbpXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i3/228784630/TB2vhFqcVXXXXbiXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i4/228784630/TB2ZT0ecVXXXXbpXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i4/228784630/TB2I0U5cFXXXXbkXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i3/228784630/TB2s82DcVXXXXa_XpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i3/228784630/TB2C_tacVXXXXaXXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2bf..cFXXXXalXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></p><img class="desc_anchor img-ks-lazyload" id="desc-module-2" src="https://assets.alicdn.com/kissy/1.0.0/build/imglazyload/spaceball.gif"><p><img align="absmiddle" src="https://img.alicdn.com/imgextra/i4/228784630/TB2nSPBbFXXXXb7XXXXXXXXXXXX-228784630.jpg" style="font-family: 微软雅黑   黑体;font-size: 12.0px;line-height: 1.5em;" class="img-ks-lazyload"></p><table border="0" cellpadding="0" cellspacing="0" style="line-height: 18.0px;font-family: 微软雅黑;font-size: 13.0px;" width="750"><tbody><tr><td><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2dNj0bVXXXXaUXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></td><td align="right" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="330"><tbody><tr><td height="28" width="70"><font><font>Style No.:</font></font></td><td><p align="left"><span style="font-family: 微软雅黑   黑体;font-size: 12.0px;"><font><font>51141249</font></font></span></p></td></tr><tr><td height="28"><font><font>Product color:</font></font></td><td><p align="left"><span style="font-family: 微软雅黑   黑体;font-size: 12.0px;"><font><font>White Weight 0.16kg</font></font></span></p></td></tr><tr><td height="28"><font><font>Product ingredients:</font></font></td><td><p><font><font>White Fabric: 86% Viscose 14% Linen</font></font></p><p><font><font>Ingredients: 100% nylon base fabric 100% cotton embroidery thread</font></font></p><p>&nbsp;</p><p><font><font>White 2.0 Fabric: 89% Viscose 11% Linen</font></font></p><p></p><p><font><font>Ingredients: 52% polyester base fabric 48% nylon 100% cotton embroidery thread</font></font></p><p></p></td></tr><tr><td height="28"><font><font>Fabric products:</font></font></td><td><p align="left"><span style="font-family: 微软雅黑   黑体;font-size: 12.0px;"><font><font><font><font>Flax Nien</font></font></font></font></span></p></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" style="margin-top: 10.0px;" width="330"><tbody><tr><td height="38"><font><font>Soft index:</font></font></td><td align="middle" width="34"><font><font>soft</font></font></td><td align="middle"><img src="https://img.alicdn.com/imgextra/i4/1124754276/T23PKaXLVXXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td><td align="middle" width="34"><font><font>hard</font></font></td></tr><tr><td height="38"><font><font>Thickness index:</font></font></td><td align="middle"><font><font>thick</font></font></td><td align="middle"><img src="https://img.alicdn.com/imgextra/i1/1124754276/T29lJ.XGXaXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td><td align="middle"><font><font>thin</font></font></td></tr><tr><td height="38"><font><font>Elastic index:</font></font></td><td align="middle"><font><font>bomb</font></font></td><td align="middle"><img src="https://img.alicdn.com/imgextra/i1/1124754276/T29lJ.XGXaXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td><td align="middle"><font><font>no</font></font></td></tr><tr><td height="38"><font><font>Version Index:</font></font></td><td align="middle"><font><font>tight</font></font></td><td align="middle"><img src="https://img.alicdn.com/imgextra/i2/1124754276/T2NlyaXLJXXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td><td align="middle"><font><font>loose</font></font></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" width="330"><tbody><tr><td align="middle" height="50" width="50"><img src="https://img.alicdn.com/imgextra/i3/1124754276/T2y988XMxaXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td><td><span style="font-stretch: normal;color: #404040;"><font><font>Wash with warm clothes, not machine washable. </font></font></span><br style="font-stretch: normal;color: #404040;"><span style="font-stretch: normal;color: #404040;"><font><font>Avoid direct sunlight, shade hang to dry. </font></font></span><br style="font-stretch: normal;color: #404040;"><span style="font-stretch: normal;color: #404040;"><font><font>Classification washing, to avoid staining clothes.</font></font></span></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" width="330"><tbody><tr><td><p>&nbsp;</p></td></tr></tbody></table></td></tr></tbody></table><div style="line-height: 1.5em;margin: 0.0px auto;width: 790.0px;font-family: 微软雅黑   黑体;font-size: 12.0px;"><div style="margin: 15.0px 0.0px 9.0px 33.0px;overflow: hidden;"><div style="padding-right: 25.0px;float: left;"><img src="https://img.alicdn.com/imgextra/i4/1124754276/T2I5cgXaRaXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload">&nbsp; &nbsp; &nbsp;&nbsp;</div><div><table border="0" cellpadding="0" cellspacing="0" style="font-family: 微软雅黑   黑体;font-size: 12.0px;line-height: 18.0px;" width="460"><tbody><tr align="middle"><td height="27" style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><b><font><font><font><font>size</font></font></font></font></b></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><b><font><font>Swing around</font></font></b></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><b><font><font>Shoulder</font></font></b></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><b><font><font>Neck</font></font></b></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><b><font><font>Long before clothing</font></font></b></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><b><font><font>bust</font></font></b></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><b><font><font>Sleeve Length</font></font></b></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><b><font><font>Sleeve fertilizer</font></font></b></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><b><font><font>cuff</font></font></b></td></tr><tr align="middle"><td height="27" style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font><font><font>S</font></font></font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>134.0</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>36.5</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>41.0</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>66.0</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>88.0</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>39.2</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>31.8</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>22.9</font></font></td></tr><tr align="middle"><td height="27" style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font><font><font>M</font></font></font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>138</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>37.5</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>42</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>68</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>92</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>40</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>33</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>twenty four</font></font></td></tr><tr align="middle"><td height="27" style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font><font><font>L</font></font></font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>142.0</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>38.5</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>43.0</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>70.0</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>96.0</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>40.8</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>34.2</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>25.1</font></font></td></tr><tr align="middle"><td height="27" style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font><font><font>XL</font></font></font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>146.0</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>39.5</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>44.0</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>72.0</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>100.0</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>41.6</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>35.4</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>26.2</font></font></td></tr><tr align="middle"><td height="27" style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font><font><font>XXL</font></font></font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>150.0</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>40.5</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>45.0</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>72</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>104.0</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>42</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>36.6</font></font></td><td style="border-bottom-color: #c8c5c4;border-bottom-style: solid;"><font><font>27.3</font></font></td></tr></tbody></table></div><div style="float: left;"><div style="line-height: 15.0px;width: 460.0px;word-wrap: break-word;font-size: 12.0px;word-break: break-all;padding-top: 10.0px;">&nbsp;</div><div style="line-height: 15.0px;width: 460.0px;word-wrap: break-word;font-size: 12.0px;word-break: break-all;padding-top: 10.0px;"><font><font>Because size is pure manual measurement so inevitably there are 1CM-3CM, please elves understanding.</font></font></div></div><div style="height: 0.0px;clear: both;">&nbsp;</div></div></div><p></p><p style="font-family: 微软雅黑;font-size: 13.0px;line-height: 18.0px;"><span style="color: #ff00ff;"><span style="font-size: 14.0px;"><strong><span style="font-family: 微软雅黑   黑体;"><font><font>Tips:</font></font></span></strong></span></span></p><p style="font-family: 微软雅黑;font-size: 13.0px;line-height: 18.0px;"><span style="color: #ff00ff;"><span style="font-size: 14.0px;"><strong><span style="font-family: 微软雅黑   黑体;"><font><font>1. This chest pattern details please prevail oh ~</font></font></span></strong></span></span></p><p style="font-family: 微软雅黑;font-size: 13.0px;line-height: 18.0px;">&nbsp;</p><p style="font-family: 微软雅黑;font-size: 13.0px;line-height: 18.0px;"><span style="color: #ff00ff;"><strong><font><font>2. The use sticky linen shirt containing flax, da so easily wrinkled after washing, the elves do not worry Oh, just a little ironing, air-dry naturally drape, pleat will disappear without a trace friends ~ ~ ~~</font></font></strong></span></p><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2eUp9dXXXXXawXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><p></p><img class="desc_anchor img-ks-lazyload" id="desc-module-3" src="https://assets.alicdn.com/kissy/1.0.0/build/imglazyload/spaceball.gif"><p><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2DO4icVXXXXcXXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i4/228784630/TB2YcXqcVXXXXboXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2OmhbcVXXXXXxXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><a href="http://detail.tmall.com/item.htm?spm=a220o.1000855.0.0.BCAkrA&amp;id=43808653040" target="_blank"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i3/228784630/TB2FRhmcVXXXXbDXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></a></p><div style="height: 1.0px;overflow: hidden;line-height: 20.0px;"><font><font>A minimum of five characters</font></font></div><img class="desc_anchor img-ks-lazyload" id="desc-module-4" src="https://assets.alicdn.com/kissy/1.0.0/build/imglazyload/spaceball.gif"><p><img align="absmiddle" src="https://img.alicdn.com/imgextra/i4/228784630/TB28MJdcVXXXXXvXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><a href="http://detail.tmall.com/item.htm?spm=a220o.1000855.0.0.BCAkrA&amp;id=43808653040" target="_blank"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB20qXacVXXXXarXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></a><a href="http://detail.tmall.com/item.htm?spm=0.0.0.0.5fvb9G&amp;id=45086299790" target="_blank"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2MlBicVXXXXb2XXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></a></p><div style="height: 1.0px;overflow: hidden;line-height: 20.0px;"><font><font><font><font>A minimum of five characters</font></font></font></font></div><img class="desc_anchor img-ks-lazyload" id="desc-module-5" src="https://assets.alicdn.com/kissy/1.0.0/build/imglazyload/spaceball.gif"><div style="font-family: 微软雅黑   黑体;font-size: 12.0px;line-height: 18.0px;"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2MK2tbFXXXXbbXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></div><table border="0" cellpadding="0" cellspacing="0" style="font-family: 微软雅黑   黑体;font-size: 12.0px;line-height: 18.0px;" width="790"><tbody><tr><td colspan="2"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2ntSWcpXXXXXzXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></td></tr><tr><td align="right" width="150"><img src="https://img.alicdn.com/imgextra/i3/1124754276/T2OGuaXQhXXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td><td width="640"><font><font>TIPS: From the standpoint of aesthetics and comfort, Liebo special section of the part of the bids received and wash the garment side Marks are moved, the elves no longer have to worry about neck and neck tie marked out Alice Oh ~</font></font></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" style="font-family: 微软雅黑   黑体;font-size: 12.0px;line-height: 18.0px;" width="790"><tbody><tr><td colspan="2"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2NJSTcpXXXXbfXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></td></tr><tr><td align="right" height="50" width="70"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2VCA5cFXXXXbeXXXXXXXXXXXX_!!228784630.jpg" class="img-ks-lazyload"></td><td width="720"><span style="padding: 0.0px 5.0px;font-size: 17.0px;"><font><font>Art small collar</font></font></span><font><font> valiant little stand-up collar design, highlighting the deep literary temperament, neat playful.</font></font></td></tr><tr><td colspan="2"><img src="https://img.alicdn.com/imgextra/i1/1124754276/T2EjqaXKVXXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" style="font-family: 微软雅黑   黑体;font-size: 12.0px;line-height: 18.0px;" width="790"><tbody><tr><td colspan="2"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2GT9KcpXXXXa9XpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></td></tr><tr><td align="right" width="720"><p><span style="padding: 0.0px 5.0px;font-size: 17.0px;"><span style="font-size: 12.0px;"><font><font>Exclusive custom buttons, durable. &nbsp;</font></font></span><span style="line-height: 1.5em;"><font><font>Single-breasted</font></font></span></span></p></td><td height="50" width="70"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2VCA5cFXXXXbeXXXXXXXXXXXX_!!228784630.jpg" class="img-ks-lazyload"></td></tr><tr><td colspan="2"><img src="https://img.alicdn.com/imgextra/i1/1124754276/T2EjqaXKVXXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"><br><img align="absmiddle" src="https://img.alicdn.com/imgextra/i3/228784630/TB2MaqMcpXXXXaXXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" style="font-family: 微软雅黑   黑体;font-size: 12.0px;line-height: 18.0px;" width="790"><tbody><tr><td colspan="2">&nbsp;</td></tr><tr><td align="right" height="50" width="70"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i4/228784630/TB2PAdfcVXXXXavXXXXXXXXXXXX_!!228784630.jpg" class="img-ks-lazyload"></td><td width="720"><span style="font-size: 17.0px;"><font><font>Sleeve</font></font></span><font><font> &nbsp;simple sleeve, with the sleeve loop design, can be turned into short sleeves, a multi-wear clothes.</font></font></td></tr><tr><td colspan="2"><img src="https://img.alicdn.com/imgextra/i1/1124754276/T2EjqaXKVXXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"><br><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2q.yUcpXXXXavXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" style="font-family: 微软雅黑   黑体;font-size: 12.0px;line-height: 18.0px;" width="790"><tbody><tr><td colspan="2">&nbsp;</td></tr><tr><td align="right" width="720"><span style="padding: 0.0px 5.0px;font-size: 17.0px;"><span style="font-size: 12.0px;"><font><font>Front panel stitching solid color embroidered cloth, simple atmosphere, temperament refined.&nbsp;</font></font></span></span><span style="font-size: 17.0px;"><font><font>Embroidered cloth stitching</font></font></span></td><td height="50" width="70"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2syFicVXXXXXZXXXXXXXXXXXX_!!228784630.jpg" class="img-ks-lazyload"></td></tr><tr><td colspan="2"><img src="https://img.alicdn.com/imgextra/i1/1124754276/T2EjqaXKVXXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td></tr></tbody></table><img class="desc_anchor img-ks-lazyload" id="desc-module-6" src="https://assets.alicdn.com/kissy/1.0.0/build/imglazyload/spaceball.gif"><p style="margin: 0;padding: 0;width: 0;height: 0;overflow: hidden;"><img src="https://img.alicdn.com/imgextra/i2/774068109/TB22EsPgpXXXXaLXXXXXXXXXXXX-774068109.png?p=maijsoft_s1_101116_end" style="line-height: 1.5;" class="img-ks-lazyload"></p><div style="height: 1.0px;overflow: hidden;line-height: 20.0px;"><font><font><font><font>A minimum of five characters</font></font></font></font></div></div>
-									</div>
-								</div>
-								<div class="uk-width-1-5">
-									hola
-								</div>
+			<div class="uk-grid">
+				<div class="uk-width-large-3-10 uk-width-medium-3-10 uk-push-7-10">
+					<div data-uk-sticky="{
+						media: 768,
+						top: 100,
+						getWidthFrom: 'uk-width-medium-3-10',
+						boundary: '.ac-footer'
+					}">
+						<div class="ac-product-info-partial">
+							<h3 class="ac-product-name-mobile">
+								Sale Liebo 2016 spring new solid color embroidered lace shirt sleeve shirt female A-51141249
+							</h3>
+							<h1 class="ac-product-price-mobile">￥179.80</h1>
+							<span class="uk-text-muted">Approx S$39.96</span>
+						</div>
+						<div class="ac-product-info-seller">
+							<label class="uk-display-block" style="padding: 6px 20px">Seller info:</label>
+							<div class="uk-nbfc">
+								<span class="uk-nbfc-alt uk-text-truncate"><i class="uk-icon-user"></i> 裂帛玉茗专卖店</span>
+								<span class="uk-text uk-nbfc-alt uk-text-truncate"><i class="uk-icon-map-marker"></i> Beijing</span>
 							</div>
 						</div>
+						<div class="ac-product-info-box-mobile with-arrow uk-visible-small uk-clearfix ac-product-order-summary-mobile">
+							<div><span>Color: <strong>Red</strong></span><span>&nbsp;-&nbsp;</span><span>Size: <strong>M</strong></span></div>
+							<span>Shipping price: <strong>￥2.80</strong></span>
+							<br>
+							<strong>Via: Air shipping method</strong>
+							<div class="uk-float-right ac-product-info-box-arrow">
+								<a href="#" class="ac-purchase-button-toggle"><i class="uk-icon-angle-right uk-icon-medium"></i></a>
+							</div>
+						</div>
+						
+					</div>
+
+					<div class="ac-product-detail-list" data-uk-sticky="{
+						top:-100,
+						animation: 'uk-animation-fade'
+					}" >
+			      <ul class="" data-uk-switcher="{
+			      	connect:'#tab-content',
+			      	swiping: false,
+			      	active: 1
+			    	}">
+			        <li class="uk-active" ><a href="">Product Detail</a></li>
+			        <li class=""><a href="">Product Parameter</a></li>
+			  		</ul>
 					</div>
 				</div>
-        </li>
-        <li class="">Hello again!</li>
-        <li class="">Bazinga!</li>
-      </ul>
+
+				<div class="uk-width-large-7-10 uk-width-medium-7-10 uk-pull-3-10">
+					<ul id="tab-content" class="uk-switcher uk-margin">
+						<li>
+	  					<div class="ac-product-detail-visual">
+  							<p><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2zh7pcVXXXXaVXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i3/228784630/TB2H17LcVXXXXanXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2P4.wcVXXXXXgXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2OGIGcVXXXXboXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i3/228784630/TB22mIycVXXXXcVXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2XAUtcVXXXXXMXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2Hg.wcVXXXXXXXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2l5ZBcVXXXXbxXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2NgUrcVXXXXauXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2MtAtcVXXXXXJXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2BAcMcVXXXXX3XXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></p><div style="height: 1.0px;overflow: hidden;line-height: 20.0px;">最少5个字符</div><p><img src="https://assets.alicdn.com/kissy/1.0.0/build/imglazyload/spaceball.gif" class="img-ks-lazyload"></p><div style="line-height: 1.5em;margin: 0.0px auto;width: 790.0px;font-size: 12.0px;"><div><img align="absmiddle" src="https://img.alicdn.com/imgextra/i4/228784630/TB2nSPBbFXXXXb7XXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></div><div style="margin: 0.0px auto;width: 750.0px;"><table style="font-family: 微软雅黑;font-size: 13.0px;" border="0" cellpadding="0" cellspacing="0" width="750"><tbody><tr><td><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB28MwnbFXXXXa7XXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></td><td align="right" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="330"><tbody><tr><td height="28" width="70">产品款号：</td><td><p align="left"><span style="font-size: 12.0px;">51141014</span></p></td></tr><tr><td height="28">产品颜色：</td><td><p align="left"><span style="font-size: 12.0px;">黑色 蓝色 橘红 &nbsp; &nbsp; 克重：0.19kg</span></p></td></tr><tr><td height="28">产品成分：</td><td><p>面料:95%棉5%氨纶</p><p>里料:94%聚酯纤维6%氨纶</p><p>绣花:100%聚酯纤维</p></td></tr><tr><td height="28">产品面料：</td><td><p align="left"><span style="font-size: 12.0px;">棉氨针织布</span></p></td></tr></tbody></table><table style="margin-top: 10.0px;" border="0" cellpadding="0" cellspacing="0" width="330"><tbody><tr><td height="38">柔软指数:</td><td align="center" width="34">软</td><td align="center"><img src="https://img.alicdn.com/imgextra/i4/1124754276/T23PKaXLVXXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td><td align="center" width="34">硬</td></tr><tr><td height="38">厚度指数:</td><td align="center">厚</td><td align="center"><img style="font-family: 微软雅黑;font-size: 13.0px;line-height: 18.0px;" src="https://img.alicdn.com/imgextra/i1/1124754276/T2EoR8XL0aXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td><td align="center">薄</td></tr><tr><td height="38">弹性指数:</td><td align="center">弹</td><td align="center"><img src="https://img.alicdn.com/imgextra/i1/1124754276/T2EoR8XL0aXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td><td align="center">无</td></tr><tr><td height="38">版型指数:</td><td align="center">紧</td><td align="center"><img style="font-family: 微软雅黑;font-size: 13.0px;line-height: 18.0px;" src="https://img.alicdn.com/imgextra/i1/1124754276/T2EoR8XL0aXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td><td align="center">松</td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" width="330"><tbody><tr><td align="center" height="50" width="50"><img src="https://img.alicdn.com/imgextra/i3/1124754276/T2y988XMxaXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td><td><span style="text-align: left;text-transform: none;background-color: #ffffff;text-indent: 0.0px;display: inline;font: 13.0px 18.0px 微软雅黑;white-space: normal;float: none;letter-spacing: normal;color: #404040;word-spacing: 0.0px;">用温水清洗衣服，不宜机洗。</span><br style="text-align: left;text-transform: none;background-color: #ffffff;text-indent: 0.0px;font: 13.0px 18.0px 微软雅黑;white-space: normal;letter-spacing: normal;color: #404040;word-spacing: 0.0px;"><span style="text-align: left;text-transform: none;background-color: #ffffff;text-indent: 0.0px;display: inline;font: 13.0px 18.0px 微软雅黑;white-space: normal;float: none;letter-spacing: normal;color: #404040;word-spacing: 0.0px;">避免阳光直晒，悬挂阴凉处晾晒。</span><br style="text-align: left;text-transform: none;background-color: #ffffff;text-indent: 0.0px;font: 13.0px 18.0px 微软雅黑;white-space: normal;letter-spacing: normal;color: #404040;word-spacing: 0.0px;"><span style="text-align: left;text-transform: none;background-color: #ffffff;text-indent: 0.0px;display: inline;font: 13.0px 18.0px 微软雅黑;white-space: normal;float: none;letter-spacing: normal;color: #404040;word-spacing: 0.0px;">分类洗涤，避免衣服染色。</span></td></tr></tbody></table></td></tr></tbody></table></div><div style="margin: 15.0px 0.0px 9.0px 33.0px;overflow: hidden;"><div style="padding-right: 25.0px;float: left;"><img src="https://img.alicdn.com/imgextra/i4/1124754276/T2I5cgXaRaXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></div><div style="float: left;"><table style="font-size: 12.0px;" border="0" cellpadding="0" cellspacing="0" width="460"><tbody><tr align="center"><td style="border-bottom: #c8c5c4 1.0px solid;" height="27"><b>尺码</b></td><td style="border-bottom: #c8c5c4 1.0px solid;"><b>摆围</b></td><td style="border-bottom: #c8c5c4 1.0px solid;"><b>肩宽</b></td><td style="border-bottom: #c8c5c4 1.0px solid;"><b>前衣长</b></td><td style="border-bottom: #c8c5c4 1.0px solid;"><b>胸围</b></td><td style="border-bottom: #c8c5c4 1.0px solid;"><b>袖长</b></td><td style="border-bottom: #c8c5c4 1.0px solid;"><b>袖肥</b></td><td style="border-bottom: #c8c5c4 1.0px solid;"><b>袖口</b></td></tr><tr align="center"><td style="border-bottom: #c8c5c4 1.0px solid;" height="27">S</td><td style="border-bottom: #c8c5c4 1.0px solid;">98</td><td style="border-bottom: #c8c5c4 1.0px solid;">39</td><td style="border-bottom: #c8c5c4 1.0px solid;">53</td><td style="border-bottom: #c8c5c4 1.0px solid;">98</td><td style="border-bottom: #c8c5c4 1.0px solid;">57</td><td style="border-bottom: #c8c5c4 1.0px solid;">32</td><td style="border-bottom: #c8c5c4 1.0px solid;">18</td></tr><tr align="center"><td style="border-bottom: #c8c5c4 1.0px solid;" height="27">M</td><td style="border-bottom: #c8c5c4 1.0px solid;">102.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">40.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">54.5</td><td style="border-bottom: #c8c5c4 1.0px solid;">102.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">58.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">33.2</td><td style="border-bottom: #c8c5c4 1.0px solid;">19.0</td></tr><tr align="center"><td style="border-bottom: #c8c5c4 1.0px solid;" height="27">L</td><td style="border-bottom: #c8c5c4 1.0px solid;">106.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">41.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">56.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">106.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">59.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">34.4</td><td style="border-bottom: #c8c5c4 1.0px solid;">20.0</td></tr><tr align="center"><td style="border-bottom: #c8c5c4 1.0px solid;" height="27">XL</td><td style="border-bottom: #c8c5c4 1.0px solid;">110.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">42.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">57.5</td><td style="border-bottom: #c8c5c4 1.0px solid;">110.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">60.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">35.6</td><td style="border-bottom: #c8c5c4 1.0px solid;">21.0</td></tr><tr align="center"><td style="border-bottom: #c8c5c4 1.0px solid;" height="27">XXL</td><td style="border-bottom: #c8c5c4 1.0px solid;">114.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">43.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">57.5</td><td style="border-bottom: #c8c5c4 1.0px solid;">114.0</td><td style="border-bottom: #c8c5c4 1.0px solid;">60</td><td style="border-bottom: #c8c5c4 1.0px solid;">36.8</td><td style="border-bottom: #c8c5c4 1.0px solid;">22.0</td></tr></tbody></table><div style="line-height: 15.0px;width: 460.0px;word-wrap: break-word;font-size: 12.0px;word-break: break-all;padding-top: 10.0px;">由于尺码是纯手工测量所以难免存在1CM-3CM，请精灵们谅解。</div></div><div style="height: 0.0px;clear: both;">&nbsp;</div></div><div><div><div><div><p><strong><span style="color: #ff00ff;"><span style="font-size: 18.0px;">温馨提示：此款衣衣实物绣花图案偏小，不影响美观度哦，请精灵们知悉。</span></span></strong></p></div></div></div></div></div><p><img align="absmiddle" src="https://img.alicdn.com/imgextra/i3/228784630/TB2lxYodpXXXXXdXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></p><p><img src="https://assets.alicdn.com/kissy/1.0.0/build/imglazyload/spaceball.gif" class="img-ks-lazyload"></p><p><img align="absmiddle" src="https://img.alicdn.com/imgextra/i3/228784630/TB2edQMcVXXXXXQXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2ZWQLcVXXXXatXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2s9UxcVXXXXbNXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><a target="_blank"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2_6ZNcVXXXXXuXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></a><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2kXcLcVXXXXatXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i3/228784630/TB2..QrcVXXXXawXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2IrZCcVXXXXb8XXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i4/228784630/TB291MvcVXXXXb_XXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i3/228784630/TB2CYZucVXXXXXTXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i3/228784630/TB2qcwGcVXXXXaEXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></p><div style="height: 1.0px;overflow: hidden;line-height: 20.0px;">最少5个字符</div><p><img src="https://assets.alicdn.com/kissy/1.0.0/build/imglazyload/spaceball.gif" class="img-ks-lazyload"></p><p><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB227wxcVXXXXc5XXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"><a target="_blank"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i4/228784630/TB21UwycVXXXXcQXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></a><a target="_blank"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2gy3NcVXXXXXPXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></a></p><p><a target="_blank"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i4/228784630/TB2KKhYdXXXXXXbXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></a></p><div style="height: 1.0px;overflow: hidden;line-height: 20.0px;">最少5个字符</div><p><img src="https://assets.alicdn.com/kissy/1.0.0/build/imglazyload/spaceball.gif" class="img-ks-lazyload"></p><div style="font-size: 12.0px;line-height: 18.0px;"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i2/228784630/TB2MK2tbFXXXXbbXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></div><table style="font-size: 12.0px;line-height: 18.0px;" border="0" cellpadding="0" cellspacing="0" width="790"><tbody><tr><td colspan="2"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2HlMnbFXXXXabXXXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></td></tr><tr><td align="right" width="150"><img src="https://img.alicdn.com/imgextra/i3/1124754276/T2OGuaXQhXXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td><td width="640">TIPS:从美观和舒适角度考虑，裂帛特别把部分款的领标和洗唛都移到了衣侧，精灵们再也不用担心领标扎脖子和翘出来了哦~</td></tr></tbody></table><table style="font-size: 12.0px;line-height: 18.0px;" border="0" cellpadding="0" cellspacing="0" width="790"><tbody><tr><td colspan="2"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2CXghbFXXXXaUXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></td></tr><tr><td align="right" height="50" width="70"><img src="https://img.alicdn.com/imgextra/i4/1124754276/T2Nod8XKhaXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td><td width="720"><span style="padding: 0.0px 5.0px;font-size: 17.0px;">气质圆领</span>领口包边线条，衬托出巴掌小脸轮廓。</td></tr><tr><td colspan="2"><img src="https://img.alicdn.com/imgextra/i1/1124754276/T2EjqaXKVXXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td></tr></tbody></table><table style="font-size: 12.0px;line-height: 18.0px;" border="0" cellpadding="0" cellspacing="0" width="790"><tbody><tr><td colspan="2"><img align="absmiddle" src="https://img.alicdn.com/imgextra/i3/228784630/TB2VgcobFXXXXbgXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></td></tr><tr><td align="right" width="720"><p><span style="padding: 0.0px 5.0px;font-size: 17.0px;"><span style="font-size: 12.0px;">无论内搭单穿都时尚有型。 &nbsp;</span><span style="line-height: 1.5em;">百搭长袖</span></span></p></td><td height="50" width="70"><img src="https://img.alicdn.com/imgextra/i4/1124754276/T29EyXXSlXXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td></tr><tr><td colspan="2"><img src="https://img.alicdn.com/imgextra/i1/1124754276/T2EjqaXKVXXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"><br><img align="absmiddle" src="https://img.alicdn.com/imgextra/i3/228784630/TB2tMUjbFXXXXajXpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></td></tr></tbody></table><table style="font-size: 12.0px;line-height: 18.0px;" border="0" cellpadding="0" cellspacing="0" width="790"><tbody><tr><td colspan="2">&nbsp;</td></tr><tr><td align="right" height="50" width="70"><img src="https://img.alicdn.com/imgextra/i3/1124754276/T2HtCXXU4XXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"></td><td width="720"><span style="font-size: 17.0px;">绣花图案&nbsp;</span>&nbsp;重工刺绣，色调素雅大气，装饰感强，不落俗套。</td></tr><tr><td colspan="2"><img src="https://img.alicdn.com/imgextra/i1/1124754276/T2EjqaXKVXXXXXXXXX_!!1124754276.jpg" class="img-ks-lazyload"><br><img align="absmiddle" src="https://img.alicdn.com/imgextra/i1/228784630/TB2ng7hbFXXXXa6XpXXXXXXXXXX-228784630.jpg" class="img-ks-lazyload"></td></tr></tbody></table>
+							</div>
+						</li>
+						<li>
+			      	<div class="uk-margin-large">
+			        	<strong class="uk-text-muted " style="padding-left: 10px;">Product Parameter</strong>
+			        	<table class="uk-table">
+			        		<tbody>
+			        			<tr>
+			        				<td class="trans">Material: viscose fibers (viscose rayon) 86% Linen 14% </td>
+			        				<td class="trans">Sales channels Type: pure electricity supplier (only online sales) </td>
+			        				<td class="trans">Item No: 71141249 </td>
+			        				<td class="trans">Clothing version type: straight </td>
+			      				</tr>
+			      				<tr>
+			        				<td class="trans">Style: wild </td>
+			        				<td class="trans">Length: conventional models </td>
+			        				<td class="trans">Sleeve: Sleeve </td>
+			        				<td class="trans">Sleeve type: General </td></tr><tr>
+			        				<td class="trans">Collar: Collar </td>
+			        				<td class="trans">Clothing placket: Single-row multi-buckle </td>
+			        				<td class="trans">Pattern: </td><td class="trans">Clothing style details: embroidered </td>
+			      				</tr>
+			      				<tr>
+			      					<td class="trans">Brand: Rip </td>
+			      					<td class="trans">Component content: 81% (inclusive) -90% (inclusive) </td>
+			      					<td class="trans">Texture: Sticky </td>
+			      					<td class="trans">Age: 25-29 years of age </td>
+			    					</tr>
+			    					<tr>
+			      					<td class="trans">Year season: Spring 2016 </td>
+			      					<td class="trans">Color Classification: Army Green </td>
+			      					<td class="trans">Color classification: Sky blue </td>
+			      					<td class="trans">Color Classification: Chocolate Color </td>
+			    					</tr>
+			    					<tr>
+			      					<td class="trans">Color: orange </td>
+			      					<td class="trans">Colors: White </td>
+			      					<td class="trans">Size: S </td>
+			      					<td class="trans">Size: M </td>
+			    					</tr>
+			    					<tr>
+			      					<td class="trans">Size: L </td>
+			      					<td class="trans">Size: XL </td>
+			      					<td class="trans">Size: XXL</td>
+			    					</tr>
+			  					</tbody>
+								</table>
+			      	</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</section>
 
-	<a href="#" class="ac-fab ac-fab-add-to-cart ac-purchase-button-toggle"><i class="uk-icon-cart-plus"></i></a>
+	<a href="#" class="ac-fab ac-fab-add-to-cart ac-purchase-button-toggle uk-visible-small"><i class="uk-icon-cart-plus"></i></a>
 
 </div>
 {% endblock %}
@@ -426,7 +360,7 @@
 	<!-- build:js scripts/singleItemScripts.js -->
 	<script src="bower_components/slider-pro/dist/js/jquery.sliderPro.js"></script>
 	<script src="bower_components/jquery_lazyload/jquery.lazyload.js"></script>
-
+	<!-- endbuild -->
 	<script>
 
 	$(function() {
@@ -437,6 +371,14 @@
 					width: 400,
 					height: 500,
 					autoHeight: true,
+					breakpoints: {
+						768: {
+							height: 320,
+							width: '100%',
+							autoHeight: false
+						},
+
+					},
 					fade: true,
 					arrows: true,
 					imageScaleMode: 'contain',
@@ -488,8 +430,11 @@
 			$purchaseOpt.removeClass('reveal');
 			$('body').removeClass('ac-purchase-offcanvas-bg')
 		})
+
+
+		$('.ac-product-detail-wrap table').wrap('<div class="uk-overflow-container"></div>');
 	})
 
 	</script>
-	<!-- endbuild -->
+	
 {% endblock %}
