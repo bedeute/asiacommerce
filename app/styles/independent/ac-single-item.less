@@ -155,7 +155,7 @@
 	.ac-product-info-mobile-mixins;
 
 	ul {
-
+		margin-left: 0;
 		> li {
 			padding: 0;
 
@@ -287,6 +287,20 @@
 
 	> li {
 
+		@media screen and (max-width: @breakpoint-small-max) {
+
+			> a {
+				
+				> img {
+					width: 40px;
+				}
+
+				> span {
+					padding: 10px 14px;
+				}
+			}
+		}
+
 		&.ac-opt-selected {
 
 			> a {
@@ -307,6 +321,14 @@
 		> a {
 			display: block;
 			position: relative;
+			border: 1px solid #ccc;
+
+			> span {
+				padding: 3px 14px;
+				display: inline-block;
+				color: #555;
+				vertical-align: middle;
+			}
 		}
 	}
 }
@@ -316,6 +338,38 @@
 	width: 100%;
 	display: table;
 	box-sizing: border-box;
+
+	@media screen and (max-width: @breakpoint-small-max) {
+		dl {
+
+			> dt {
+				display: inline-block;
+				margin-right: 10px;
+				vertical-align: middle;
+				margin-bottom: 0 !important;
+			}
+
+			> dd {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+		.uk-form {
+
+			> a {
+				padding: 0 12px;
+			}
+
+			> input {
+				height: 36px;
+			}
+		}
+
+		.ac-product-item-remain {
+			margin-top: 9px;
+		}
+	}
 
 	> label {
 		display: table-cell;
@@ -358,20 +412,37 @@
 	font-size: .8rem !important;
 }
 
+.ac-product-info-shipping-method {
+	.ac-product-info-mobile-mixins;
+}
 
 // Product detail section
 // ------------------------------------
 
 .ac-product-detail-list {
 
-	@media screen and (max-width: @breakpoint-medium-max) {
+	@media screen and (max-width: @breakpoint-small-max) {
 		background-color: #fff;
 		width: 100% !important;	
 		border-bottom: 1px solid #eee;
+		margin-top: 14px;
 
 		&.uk-active {
 			padding: 0 25px;
+			margin-top: 0;
 			left: 0;
+
+			> ul {
+
+				> li {
+
+					> a {
+						border-bottom-color: transparent;
+						background-color: #fff;
+
+					}
+				}
+			}
 		}
 
 		> ul {
@@ -390,12 +461,12 @@
 				}
 
 				> a {
-					border-color: transparent;
+					border-color: transparent transparent #ddd transparent;
 					padding-top: 7px;
 					padding-bottom: 7px;
 					color: #777;
 					border-width: 2px;
-					background-color: #fff;
+					background-color: #f7f7f7;
 				}
 			}
 		}

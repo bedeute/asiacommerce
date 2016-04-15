@@ -162,9 +162,14 @@ h1, h2, h3, h4, h5, h6 {
 
     &.reveal {
       margin-left: 0;
+      padding-bottom: 70px;
 
       .ac-purchase-offcanvas-close {
         opacity: 1;
+      }
+
+      .ac-purchase-offcanvas-submit {
+        transform: translateX(0);
       }
     }
   }
@@ -220,6 +225,18 @@ h1, h2, h3, h4, h5, h6 {
   display: table-cell;
   padding-left: 10px;
   vertical-align: middle;
+}
+
+.ac-purchase-offcanvas-submit {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(100%);
+  background-color: #f3f3f3;
+  border-top: 1px solid #ccc;
+  padding: 10px 20px;
+  transition: all 0.2s ease 0.1s;
 }
 
 

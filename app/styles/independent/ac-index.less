@@ -17,6 +17,43 @@
 	display: inline-block;
 }
 
+.ac-how-mobile {
+	width: 100%;
+	padding-left: 0;
+
+	&-wrap {
+		padding-left: 25px;
+		margin-left: -30px;
+	}
+
+	&-icon {
+		width: auto;
+		position: relative;
+		z-index: 3;
+
+		> img {
+			max-width: 60px;
+		}
+	}
+
+	&-text {
+		position: relative;
+		z-index: 2;
+		> span {
+			background-color: @main-color;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: -30px;
+			right: -30px;
+			color: #fff;
+			padding: 4px 35px;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 14px;
+		}
+	}
+}
 
 // Showcases
 // ---------------------------------------------------

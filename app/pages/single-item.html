@@ -105,7 +105,7 @@
 							Color:
 						</dt>
 						<dd>
-							<ul class="uk-list ac-list-inline uk-margin-remove ac-product-option">
+							<ul class="uk-list ac-list-inline ac-product-option" data-uk-margin>
 								<li class="ac-opt-selected">
 									<a class="" title="White" href="#"><img class="color" height="26" width="26" src="images/product-image/product-image-color.jpg" title="White"></a>
 								</li>
@@ -114,6 +114,11 @@
 								</li>
 								<li>
 									<a class="" title="Blue" href="#"><img class="color" height="26" width="26" src="images/product-image/product-image-color-blue.jpg" title="Blue"></a>
+								</li>
+								<li>
+									<a class="" title="Blue" href="#">
+										<span>Purple</span>
+									</a>
 								</li>
 							</ul>
 							<div class="ac-product-info-error-msg">
@@ -129,7 +134,7 @@
 							Size:
 						</dt>
 						<dd>
-							<ul class="uk-list ac-list-inline uk-margin-remove">
+							<ul class="uk-list ac-list-inline" data-uk-margin>
 								<li>
 									<a class="uk-button uk-button-small" title="Extra Small" href="#">XS</a>
 								</li>
@@ -170,32 +175,39 @@
 						</dd>
 					</dl>
 				</div>
-				<dl class="uk-description-list-horizontal">
-					<dt>
-						Remarks
-					</dt>
-					<dd>
-						<div class="uk-form">
-							<textarea class="ac-product-remark uk-width-1-1" rows="3" placeholder="Item remarks : Our staff will purchse the items with your requirement (optional)"></textarea>
-						</div>
-					</dd>
-				</dl>
-				<dl class="uk-description-list-horizontal uk-hidden-small">
-					<dt>
-						Shipping method
-					</dt>
-					<dd data-uk-margin>
-						<a href="#" class="uk-button uk-button-small">Air Shipping</a>
-						<a href="#" class="uk-button uk-button-small">Sea Shipping</a>
-						<a href="#" class="uk-button uk-button-small">Land Shipping</a>
-					</dd>
-				</dl>
+				<div class="ac-product-info-mobile-mixins">
+					<dl class="uk-description-list-horizontal">
+						<dt>
+							Remarks
+						</dt>
+						<dd>
+							<div class="uk-form">
+								<textarea class="ac-product-remark uk-width-1-1" rows="3" placeholder="Item remarks : Our staff will purchse the items with your requirement (optional)"></textarea>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="ac-product-info-shipping-method">
+					<dl class="uk-description-list-horizontal">
+						<dt>
+							Shipping method
+						</dt>
+						<dd data-uk-margin>
+							<a href="#" class="uk-button uk-button-small">Air Shipping</a>
+							<a href="#" class="uk-button uk-button-small">Sea Shipping</a>
+							<a href="#" class="uk-button uk-button-small">Land Shipping</a>
+						</dd>
+					</dl>
+				</div>
 				<dl class="uk-description-list-horizontal uk-hidden-small">
 					<dd>
 						<button type="button" class="uk-button uk-button-large uk-button-primary" ><i class="uk-icon-check-square"></i>&nbsp;Buy Now</button>
 						<button type="button" class="uk-button uk-button-large"><i calss="uk-icon-plus"></i>&nbsp;Add to wishlist</button>
 					</dd>
 				</dl>
+				<div class="uk-visible-small ac-purchase-offcanvas-submit">
+					<button class="uk-button uk-button-large uk-button-primary uk-width-1-1">Buy Now</button>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -249,7 +261,7 @@
 						top: 100,
 						getWidthFrom: 'uk-width-medium-3-10',
 						boundary: '.ac-footer'
-					}">
+					}" style="z-index: 1;">
 						<div class="ac-product-info-partial">
 							<h3 class="ac-product-name-mobile">
 								Sale Liebo 2016 spring new solid color embroidered lace shirt sleeve shirt female A-51141249
@@ -273,12 +285,21 @@
 								<a href="#" class="ac-purchase-button-toggle"><i class="uk-icon-angle-right uk-icon-medium"></i></a>
 							</div>
 						</div>
+						<div class="uk-grid uk-grid-collapse uk-hidden-small" style="margin-top: 8px;">
+							<div class="uk-width-1-2">
+								<button class="uk-button uk-button-large uk-width-1-1">+ Wishtlist</button>
+							</div>
+							<div class="uk-width-1-2">
+								<button class="uk-button uk-button-large uk-width-1-1 uk-button-primary">Buy now</button>
+							</div>
+						</div>
 						
 					</div>
 
 					<div class="ac-product-detail-list" data-uk-sticky="{
 						top:-100,
-						animation: 'uk-animation-fade'
+						animation: 'uk-animation-fade',
+						boundary: '.ac-footer'
 					}" >
 			      <ul class="" data-uk-switcher="{
 			      	connect:'#tab-content',
@@ -434,6 +455,30 @@
 
 		$('.ac-product-detail-wrap table').wrap('<div class="uk-overflow-container"></div>');
 	})
+
+	// responsive thing 
+	$(document).ready(function() {
+    // Optimalisation: Store the references outside the event handler:
+    var $window = $(window);
+
+    function checkWidth() {
+      var windowsize = $window.width();
+    	var $purcaseSizeOpt = $('.ac-product-info-size .uk-button, .ac-product-info-shipping-method .uk-button')
+      if (windowsize > 768) {
+      	var $purchaseOffcanvas = $('.ac-purchase-offcanvas');
+				if ($purchaseOffcanvas.hasClass('reveal')) {
+					$purchaseOffcanvas.removeClass('reveal')
+					$('body').removeClass('ac-purchase-offcanvas-bg')
+				}
+      } else {
+      	$purcaseSizeOpt.removeClass('uk-button-small')
+      }
+    }
+    // Execute on load
+    checkWidth();
+    // Bind event listener
+    $(window).resize(checkWidth);
+	});
 
 	</script>
 	

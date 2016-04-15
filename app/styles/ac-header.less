@@ -199,6 +199,45 @@
 	@media screen and (max-width: @breakpoint-mini-max) {
 		display: none;
 	}
+
+  @media screen and (max-width: @breakpoint-small-max) {
+
+    .uk-button {
+      border-color: #fff;
+      color: #fff;
+
+      &:hover,
+      &:focus {
+        background-color: @main-color-accent;
+        border-color: @main-color-accent;
+      }
+    }
+
+    .ac-button-cart {
+      color: #fff;
+      background-color: @main-color;
+
+      &:hover,
+      &:focus {
+
+        > span {
+          background-color: @main-color;
+
+          &:before {
+            border-right-color: @main-color;
+          }
+        }
+      }
+
+      > span {
+        background-color: @main-color-accent;
+
+        &:before {
+          border-right-color: @main-color-accent;
+        }
+      }
+    }
+  }
 }
 
 .ac-button-cart {
