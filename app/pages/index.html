@@ -14,7 +14,7 @@
 {% block main %}
 <div id="ac-index">
 	{% include "../components/header.html" %}
-	{% include "../components/header-nav-index.html" %}
+	<!-- {% include "../components/header-nav-index.html" %} -->
 	<header class="ac-header-wrap">
 		<div class="uk-container uk-container-center">
 			<div class="ac-header-slider-wrap">
@@ -47,7 +47,7 @@
 				    <div class="swiper-button-next"></div>
 				</div>
 			</div>
-			<div class="ac-header-box-wrap uk-visible-large">
+			<div class="ac-header-box-wrap">
 				<div class="ac-header-box">
 					<a href="#" class="uk-display-block">
 						<img src="images/banner-1.jpg" alt="banner-1" title="banner 1">
@@ -366,6 +366,7 @@
 {% block scripts %}
 	<!-- build:js scripts/indexScripts.js -->
 	<script src="bower_components/Swiper/dist/js/swiper.jquery.min.js"></script>
+	<!-- endbuild -->
 
 	<script>
 	  $(document).ready(function () {
@@ -385,5 +386,4 @@
 	  $(document).ready(function() {
 	  })
 	</script>
-	<!-- endbuild -->
 {% endblock %}

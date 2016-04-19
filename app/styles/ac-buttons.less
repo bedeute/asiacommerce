@@ -3,12 +3,23 @@
 @button-main-dark-color: @main-color-dark;
 @button-main-dark-border: @main-color-dark;
 
+@button-main-background: transparent;
+@button-main-color: @main-color;
+@button-main-border: @main-color;
+
 .uk-button {
 
 }
 
 .uk-button-rounded {
 	border-radius: 2px;
+}
+
+.uk-button-main {
+	background-color: @button-main-background;
+	color: @button-main-color;
+	.hook-button-main;
+	border: 1px solid @button-main-border;
 }
 
 .uk-button-main-dark {
@@ -20,3 +31,21 @@
 
 // Hooks
 .hook-button-main-dark(){};
+.hook-button-main(){};
+
+@fb-bg-color: #4C67A1;
+.ac-button-fb-ish {
+	background-color: @fb-bg-color;
+	color: #fff;
+
+	&:hover,
+	&:active {
+		background-color: lighten(spin(@fb-bg-color, 3), 4%);
+		color: #fff;
+	}
+
+	&:focus {
+		background-color: darken(spin(@fb-bg-color, -2), 3%);
+		color: #fff;
+	}
+}

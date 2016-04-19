@@ -9,8 +9,7 @@
 
 {% block main %}
 <div id="ac-single-item">
-	{% include "../components/header.html" %}
-	{% include "../components/header-nav.html" %}
+	{% include "../components/header-single-item.html" %}
 
 	<section class="ac-breadcrumb-wrap uk-hidden-small">
 		<div class="uk-container uk-container-center">
@@ -285,7 +284,7 @@
 								<a href="#" class="ac-purchase-button-toggle"><i class="uk-icon-angle-right uk-icon-medium"></i></a>
 							</div>
 						</div>
-						<div class="uk-grid uk-grid-collapse uk-hidden-small" style="margin-top: 8px;">
+						<div class="uk-grid uk-grid-collapse uk-hidden-small ac-product-submit-floated" style="margin-top: 8px;">
 							<div class="uk-width-1-2">
 								<button class="uk-button uk-button-large uk-width-1-1">+ Wishtlist</button>
 							</div>
@@ -297,8 +296,6 @@
 					</div>
 
 					<div class="ac-product-detail-list" data-uk-sticky="{
-						top:-100,
-						animation: 'uk-animation-fade',
 						boundary: '.ac-footer'
 					}" >
 			      <ul class="" data-uk-switcher="{

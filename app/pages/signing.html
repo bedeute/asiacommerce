@@ -1,0 +1,151 @@
+{% extends "../layouts/default.html" %}
+
+{% block css %}
+	<!-- build:css styles/ac-signing.css -->
+	<link rel="stylesheet" href="styles/ac-signing.css">
+	<!-- endbuild -->
+{% endblock %}
+
+{% block main %}
+<div id="ac-signing-section">
+
+
+	<div class="uk-container uk-container-center">
+		<div class="uk-grid uk-grid-collapse">
+			<div class="uk-width-medium-8-10  uk-container-center">
+				<div class="uk-grid">
+					<div class="uk-width-large-1-2 uk-width-medium-4-10 uk-position-relative">
+						<div class="ac-signing-text uk-text-center">
+							<img src="images/keyhole-icon.png" width="120" class="uk-hidden-small">
+							<br class="uk-hidden-small">
+							<img src="images/AsiaCommerce-Logo-Color-350x72.png" class="uk-width-7-10 uk-container-center">
+							<p class="">
+								Join with us, now. Then we'll deliver your goods.
+							</p>
+						</div>
+					</div>
+					<div class="uk-width-large-1-2 uk-width-medium-6-10">
+						<div class="ac-signing">
+							<div class="ac-signing-switcher">
+								<ul data-uk-switcher="{connect:'#ac-signing-content'}" class="uk-clearfix">
+								    <li class="ac-signing-list-sign-in"><a href="">Sign in</a></li>
+								    <li><a href="">Register</a></li>
+								</ul>
+							</div>
+							<div class="uk-panel uk-panel-box uk-clearfix">
+								<ul id="ac-signing-content" class="uk-switcher">
+							    <li>
+				    	    	<form class="uk-form uk-form-horizontal" data-uk-margin="{cls:'uk-margin-top'}">
+				    	    		<div class="uk-form-row uk-text-center" style="margin-top: 8px;">
+				    	    			<button type="button" class="uk-button uk-button-large uk-width-medium-9-10 uk-width-small-1-1 ac-button-fb-ish"><span><i class="uk-icon-facebook-square"></i></span>&nbsp;Sign in with facebook</button>
+				    	    		</div>
+				    					<div class="uk-grid" data-uk-margin="{cls:'uk-margin-top'}">
+				    						<div class="uk-width-large-1-2 uk-width-small-1-1">
+				    							<div class="uk-form-row">
+				    								<label class="uk-form-label" for="ac-form-email">Email</label>
+				    								<input type="email" class="uk-form-control uk-form-large uk-width-1-1" id="ac-form-email" placeholder="email"></input>
+				    							</div>
+				    						</div>
+				    						<div class="uk-width-large-1-2 uk-width-small-1-1">
+				    							<div class="uk-form-row">
+				    								<label class="uk-form-label" for="ac-form-password">Password</label>
+				    								<input type="password" class="uk-form-control uk-form-large uk-width-1-1" id="ac-form-password" placeholder="password"></input>
+				    							</div>
+				    						</div>
+				    					</div>
+				    					<div class="ac-signing-footer">
+				    						<div class="uk-grid uk-grid-small">
+				    							<div class="uk-width-medium-2-3">
+				    								<a href="#" class="uk-display-inline-block" style="margin-top: 10px;">Forget Password?</a>
+				    							</div>
+				    							<div class="uk-width-medium-1-3 uk-text-right">
+				    								<button class="uk-button uk-button-large uk-button-primary uk-width-1-1" type="submit">Sign in</button>
+				    							</div>
+				    						</div>
+				    					</div>
+				    	    	</form>
+							    </li>
+							    <li>
+							    	<form class="uk-form uk-form-horizontal" data-uk-margin="{cls:'uk-margin-top'}">
+							    		<div class="uk-form-row uk-text-center" style="margin-top: 8px;">
+							    			<button type="button" class="uk-button uk-button-large uk-width-medium-9-10 uk-width-small-1-1 ac-button-fb-ish"><span><i class="uk-icon-facebook-square"></i></span>&nbsp;Connect with facebook</button>
+							    		</div>
+											<div class="uk-form-row">
+												<label class="uk-form-label" for="ac-form-Fullname">Fullname</label>
+												<input type="email" class="uk-form-control uk-form-large uk-width-1-1" id="ac-form-Fullname" placeholder="Fullname"></input>
+											</div>
+											<div class="uk-grid" data-uk-margin="{cls:'uk-margin-top'}">
+												<div class="uk-width-large-1-2 uk-width-small-1-2">
+													<div class="uk-form-row">
+														<label class="uk-form-label" for="ac-form-username">Username</label>
+														<input type="email" class="uk-form-control uk-form-large uk-width-1-1" id="ac-form-username" placeholder="Username"></input>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-small-1-2">
+													<div class="uk-form-row">
+														<label class="uk-form-label" for="ac-form-email">Email</label>
+														<input type="email" class="uk-form-control uk-form-large uk-width-1-1" id="ac-form-email" placeholder="email"></input>
+													</div>
+												</div>
+											</div>
+											<div class="uk-grid" data-uk-margin="{cls: 'uk-margin-top'}">
+												<div class="uk-width-large-1-2 uk-width-small-1-2">
+													<div class="uk-form-row">
+														<label class="uk-form-label" for="ac-form-password">Password</label>
+														<input type="password" class="uk-form-control uk-form-large uk-width-1-1" id="ac-form-password" placeholder="password"></input>
+													</div>
+												</div>
+												<div class="uk-width-large-1-2 uk-width-small-1-2">
+													<div class="uk-form-row">
+														<label class="uk-form-label" for="ac-form-re-password">Confirm Password</label>
+														<input type="password" class="uk-form-control uk-form-large uk-width-1-1" id="ac-form-re-password" placeholder="Confirm password"></input>
+													</div>
+												</div>
+											</div>
+											<div class="ac-signing-footer">
+												<div class="uk-grid uk-grid-small">
+													<div class="uk-width-1-2">
+														<button class="uk-button uk-button-large uk-width-1-1" type="button">Reset</button>
+													</div>
+													<div class="uk-width-1-2">
+														<button class="uk-button uk-button-large uk-width-1-1 uk-button-primary" type="submit">Submit</button>
+													</div>
+												</div>
+												<p class="uk-text-center uk-margin-bottom-remove">By creating an account, I accept <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+											</div>
+							    	</form>
+						    	</li>
+								</ul>
+							</div>
+							
+						</div>
+				</div>
+			</div>
+
+				
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+	<footer class="uk-text-center ac-footer-plain">
+		<span class="ac-footer-copy">Copyright © 2016 <strong>asia</strong>commerce alpha dev team. All Rights Reserved</span>
+		</div>
+	</footer>
+{% endblock %}
+
+{% block scripts %}
+	<!-- build:js scripts/signingScripts.js -->
+	
+	<!-- endbuild -->
+	<script>
+	$(function() {
+		if ($('#ac-signing-section').length) {
+			$('html').addClass('ac-signing-body')
+		}
+	})
+	</script>
+	
+{% endblock %}

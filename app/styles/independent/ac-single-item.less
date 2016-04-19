@@ -1,5 +1,14 @@
 @import (reference) "../main.less";
 
+#ac-single-item {
+
+	@media screen and (max-width: @breakpoint-small-max) {
+		.ac-nav-brand-wrap {
+			width: auto;
+		}
+	}
+}
+
 .ac-product-head-wrap {
 	&:extend(.uk-clearfix);
 	
@@ -262,6 +271,13 @@
 	}
 }
 
+.ac-product-submit-floated {
+
+	@media (min-width: @breakpoint-large) {
+		margin-left: 0;
+	}
+}
+
 .ac-product-order-summary-mobile {
 	// margin-bottom: 20px;
 }
@@ -421,6 +437,24 @@
 
 .ac-product-detail-list {
 
+	@media screen and (max-width: @breakpoint-mini-max) {
+
+		&.uk-active {
+			padding: 0;
+			> ul {
+
+				> li {
+					width: 50%;
+
+					> a {
+						padding: 10px 0;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
 	@media screen and (max-width: @breakpoint-small-max) {
 		background-color: #fff;
 		width: 100% !important;	
@@ -439,6 +473,7 @@
 					> a {
 						border-bottom-color: transparent;
 						background-color: #fff;
+						padding: 10px 16px;
 
 					}
 				}

@@ -11,7 +11,8 @@
     "drift": "^0.1.7",
     "jquery-cycle2": "^2.1.6",
     "jquery_lazyload": "jquery.lazyload#^1.9.7",
-    "slider-pro": "^1.2.2"
+    "slider-pro": "^1.2.2",
+    "ScrollToFixed": "^1.0.6"
   },
   "overrides": {
     "uikit": {

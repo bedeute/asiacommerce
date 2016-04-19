@@ -3,6 +3,7 @@
 
 .ac-top-section {
   background-color: #fff;
+  border-bottom: 1px solid #ddd;
 
   @media screen and (max-width: @breakpoint-small-max) {
 	  background-color: @main-color;
@@ -106,6 +107,22 @@
 
 }
 
+.ac-nav-back {
+  color: #fff;
+  padding: 8px;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    opacity: .8;
+    color: #fff;
+  }
+
+  > i {
+    font-size: 28px;
+  }
+}
+
 .ac-top-content-right {
   float: left;
   width: ~"calc(100% - 105px)";
@@ -188,6 +205,16 @@
 	  	border-color: @main-color;
 	    height: 36px;
     }
+  }
+}
+
+.ac-top-logo-mobile {
+  width: ~'calc(100% - 220px)';
+  float: left;
+
+  @media screen and (max-width: @breakpoint-mini-max) {
+    width: 100%;
+    text-align: center;
   }
 }
 
