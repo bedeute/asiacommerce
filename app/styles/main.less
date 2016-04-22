@@ -52,9 +52,14 @@ body {
   background: #fff;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #555;
+  margin-bottom: 330px;
 
   @media screen and (max-width: @breakpoint-small-max) {
     background-color: #f7f7f7;
+  }
+
+  @media (min-width: @breakpoint-small) {
+    margin-bottom: 440px;
   }
 }
 
@@ -257,6 +262,30 @@ h1, h2, h3, h4, h5, h6 {
 // -----------------------------------
 
 .ac-breadcrumb-wrap {
-  padding-top: 10px;
+  padding-top: 14px;
 }
 
+
+// Increase & decrease input style
+// -----------------------------------
+
+.ac-dynamic-num-form {
+  display: table;
+  vertical-align: middle;
+  width: 100px;
+  margin-right: 10px;
+  
+  a {
+    display: table-cell;
+    border: 1px solid #ddd;
+    width: 1%;
+    padding: 0 10px;
+    text-align: center;
+    line-height: 1rem;
+
+    &:hover,
+    &:focus {
+      background-color: #eee;
+    }
+  }
+}

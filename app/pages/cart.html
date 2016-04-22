@@ -2,7 +2,7 @@
 
 {% block css %}
 	<!-- build:css styles/cart.css -->
-	<link rel="stylesheet" href="styles/ac-best-selling.css">
+	<link rel="stylesheet" href="styles/ac-cart.css">
 	<!-- endbuild -->
 {% endblock %}
 
@@ -10,5 +10,220 @@
 <div id="ac-cart">
 	{% include "../components/header.html" %}
 
+	<!-- Breadcrumb -->
+	<section class="ac-breadcrumb-wrap">
+		<div class="uk-container uk-container-center">
+			<ul class="uk-breadcrumb">
+			    <li><a href=""><i class="uk-icon-home"></i></a></li>
+			    <li><span>My cart</span></li>
+			</ul>
+		</div>
+	</section>
+	<!-- end of Breadcrumb -->
+
+	<section class="ac-cart-table">
+		<div class="uk-container uk-container-center">
+			<div class="ac-cart-header uk-clearfix uk-hidden-small">
+				<div class="ac-cart-header-item ac-cart-check">
+					<label>
+						<input type="checkbox">&nbsp;Select All
+					</label>
+				</div>
+				<div class="ac-cart-header-item ac-cart-desc">
+					Description
+				</div>
+				<div class="ac-cart-header-item ac-cart-qty">
+					Qty
+				</div>
+				<div class="ac-cart-header-item ac-cart-subtotal">
+					Subtotal
+				</div>
+				<div class="ac-cart-header-item ac-cart-act uk-text-right uk-hidden-medium">
+					Action
+				</div>
+			</div>
+			<div class="ac-cart-body">
+
+				<div class="ac-cart-item-group">
+					<div class="ac-cart-item-seller">
+						<div class="ac-cart-body-item ac-cart-check">
+							<label>
+								<input type="checkbox">
+							</label>
+						</div>
+						<div class="uk-display-inline-block uk-margin-right uk-text-muted">
+							 Seller: <span class="uk-text-muted">Seller name</span>
+						</div>
+						<div class="uk-display-inline-block uk-text-muted">
+							Domestic shippping fee: <strong class="uk-text-warning">$0.2</strong>
+						</div>
+					</div>
+					<div class="ac-cart-item">
+						<div class="ac-cart-body-item ac-cart-check">
+							<input type="checkbox"></input>
+						</div>
+						<div class="ac-cart-body-item ac-cart-desc">
+							<div class="ac-cart-item-pic uk-float-left">
+								<img src="images/product-image/product-pic-small.jpg">
+							</div>
+							<div class="ac-cart-item-desc uk-float-left">
+								<span class="uk-display-block">Girls woolen coat long section of the Spring and Autumn 2016 new Korean version of slim thin woolen coat jacket thin women</span>
+								<div class="ac-cart-item-desc-opt">
+									<span class="uk-display-block uk-margin-small-top"><strong>￥179.80</strong>&nbsp;| Color Classificaion: Red;&nbsp;&nbsp;Size: M</span>
+								</div>
+							</div>
+						</div>
+						<div class="ac-cart-body-item ac-cart-qty uk-text-center">
+							<div class="uk-form ac-dynamic-num-form">
+								<a href="javascript:minOne('qty1');" ><i class="uk-icon-angle-down"></i></a>
+								<input id="qty1" type="text" value="1" name="qty" class="uk-form-width-mini">
+								<a href="javascript:plusOne('qty1');" ><i class="uk-icon-angle-up"></i></a>
+							</div>
+						</div>
+						<div class="ac-cart-body-item ac-cart-subtotal">
+							<strong class="uk-text-warning">$361.22</strong>
+						</div>
+						<div class="ac-cart-body-item ac-cart-act uk-text-right">
+							<ul class="ac-list-inline uk-margin-remove">
+								<li class="uk-padding-remove"><a href="#" class="uk-button uk-button-small"><i class="uk-icon-pencil uk-hidden-small"></i><span class="uk-visible-small">Edit</span></a></li>
+								<li class="uk-padding-remove"><a href="#" class="uk-button uk-button-small"><i class="uk-icon-trash uk-hidden-small"></i><span class="uk-visible-small">Remove</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="ac-cart-item">
+						<div class="ac-cart-body-item ac-cart-check">
+							<input type="checkbox"></input>
+						</div>
+						<div class="ac-cart-body-item ac-cart-desc">
+							<div class="ac-cart-item-pic uk-float-left">
+								<img src="images/product-image/product-pic-small-2.jpg">
+							</div>
+							<div class="ac-cart-item-desc uk-float-left">
+								<span class="uk-display-block">Girls woolen coat long section of the Spring and Autumn 2016 new Korean version of slim thin woolen coat jacket thin women</span>
+								<div class="ac-cart-item-desc-opt">
+									<span class="uk-display-block uk-margin-small-top"><strong>￥179.80</strong>&nbsp;| Color Classificaion: Red;&nbsp;&nbsp;Size: M</span>
+								</div>
+							</div>
+						</div>
+						<div class="ac-cart-body-item ac-cart-qty uk-text-center">
+							<div class="uk-form ac-dynamic-num-form">
+								<a href="javascript:minOne('qty1');" ><i class="uk-icon-angle-down"></i></a>
+								<input id="qty1" type="text" value="1" name="qty" class="uk-form-width-mini">
+								<a href="javascript:plusOne('qty1');" ><i class="uk-icon-angle-up"></i></a>
+							</div>
+						</div>
+						<div class="ac-cart-body-item ac-cart-subtotal">
+							<strong class="uk-text-warning">$361.22</strong>
+						</div>
+						<div class="ac-cart-body-item ac-cart-act uk-text-right">
+							<ul class="ac-list-inline uk-margin-remove">
+								<li class="uk-padding-remove"><a href="#" class="uk-button uk-button-small"><i class="uk-icon-pencil uk-hidden-small"></i><span class="uk-visible-small">Edit</span></a></li>
+								<li class="uk-padding-remove"><a href="#" class="uk-button uk-button-small"><i class="uk-icon-trash uk-hidden-small"></i><span class="uk-visible-small">Remove</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="ac-cart-item-group">
+					<div class="ac-cart-item-seller">
+						<div class="ac-cart-body-item ac-cart-check">
+							<label>
+								<input type="checkbox">
+							</label>
+						</div>
+						<div class="uk-display-inline-block uk-margin-right uk-text-muted">
+							 Seller: <span class="uk-text-muted">Seller name</span>
+						</div>
+						<div class="uk-display-inline-block uk-text-muted">
+							Domestic shippping fee: <strong class="uk-text-warning">$0.2</strong>
+						</div>
+					</div>
+					<div class="ac-cart-item">
+						<div class="ac-cart-body-item ac-cart-check">
+							<input type="checkbox"></input>
+						</div>
+						<div class="ac-cart-body-item ac-cart-desc">
+							<div class="ac-cart-item-pic uk-float-left">
+								<img src="images/product-image/product-pic-small.jpg">
+							</div>
+							<div class="ac-cart-item-desc uk-float-left">
+								<span class="uk-display-block">Girls woolen coat long section of the Spring and Autumn 2016 new Korean version of slim thin woolen coat jacket thin women</span>
+								<div class="ac-cart-item-desc-opt">
+									<span class="uk-display-block uk-margin-small-top"><strong>￥179.80</strong>&nbsp;| Color Classificaion: Red;&nbsp;&nbsp;Size: M</span>
+								</div>
+							</div>
+						</div>
+						<div class="ac-cart-body-item ac-cart-qty uk-text-center">
+							<div class="uk-form ac-dynamic-num-form">
+								<a href="javascript:minOne('qty1');" ><i class="uk-icon-angle-down"></i></a>
+								<input id="qty1" type="text" value="1" name="qty" class="uk-form-width-mini">
+								<a href="javascript:plusOne('qty1');" ><i class="uk-icon-angle-up"></i></a>
+							</div>
+						</div>
+						<div class="ac-cart-body-item ac-cart-subtotal">
+							<strong class="uk-text-warning">$361.22</strong>
+						</div>
+						<div class="ac-cart-body-item ac-cart-act uk-text-right">
+							<ul class="ac-list-inline uk-margin-remove">
+								<li class="uk-padding-remove"><a href="#" class="uk-button uk-button-small"><i class="uk-icon-pencil uk-hidden-small"></i><span class="uk-visible-small">Edit</span></a></li>
+								<li class="uk-padding-remove"><a href="#" class="uk-button uk-button-small"><i class="uk-icon-trash uk-hidden-small"></i><span class="uk-visible-small">Remove</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="ac-cart-belt">
+		<div class="uk-container uk-container-center uk-clearfix">
+			<div class="uk-float-left">
+				<div class="ac-cart-belt-item it-select-all uk-hidden-small">
+					<label>
+						<input type="checkbox">&nbsp;Select All
+					</label>
+				</div>
+				<div class="ac-cart-belt-item it-remove uk-hidden-small">
+					<a href="#" class="uk-button"><i class="uk-icon-trash uk-visible-small"></i><span class="uk-hidden-small">Remove</span></a>
+				</div>
+				<div class="ac-cart-belt-item it-selected uk-hidden-small uk-hidden-medium">
+					Selected <strong>0</strong>
+				</div>
+				<div class="ac-cart-belt-item it-total">
+					Total <strong>82 USD</strong>
+				</div>
+			</div>
+			<div class="uk-float-right">
+				<div class="ac-cart-belt-item it-checkout">
+					<a href="#" class="uk-button">Checkout</a>
+				</div>
+				<div class="ac-cart-belt-item it-quote">
+					<a href="#" class="uk-button">Quote item(s)</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
 </div>
+{% endblock %}
+
+{% block scripts %}
+	<!-- build:js scripts/cartScripts.js -->
+	<script src="bower_components/ScrollToFixed/jquery-scrolltofixed.js"></script>
+	<!-- endbuild -->
+	<script>
+
+	$(function() {
+		$('.ac-cart-belt').scrollToFixed( {
+        bottom: 0,
+        limit: $('.ac-cart-belt').offset().top
+    });
+	})
+
+
+	</script>
+	
 {% endblock %}

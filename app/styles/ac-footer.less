@@ -3,6 +3,7 @@
 
 html {
   min-height: 100%;
+  position: relative;
 }
 
 .ac-signing-body {
@@ -32,13 +33,22 @@ html {
 }
 
 .ac-footer {
+  height: 330px;
+  box-sizing: border-box;
   padding: 20px 0;
   background-color: #222;
   color: #999;
   font-size: .9rem;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
 
   @media (min-width: @breakpoint-small) {
-    padding: 40px 0;
+    padding: 30px 0;
+    height: 440px;
   }
 
   a {
@@ -54,7 +64,7 @@ html {
   hr {
     border-top-color: #1a1a1a;
     border-bottom: 1px solid #333;
-    margin-top: 22px;
+    margin-top: 20px;
     margin-bottom: 22px;
   }
 }
