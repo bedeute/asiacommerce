@@ -1,0 +1,105 @@
+{# Custom Configuration #}
+{% block config %}
+  {# Setup site's base URL to match the "baseUrl" key within `package.json` #}
+  {# Otherwise default to relative pathing #}
+  {% set baseUrl = config.baseUrl or './' %}
+{% endblock %}
+
+<!DOCTYPE html>
+
+<!--[if lt IE 9]>
+<html class="lt-ie9 no-js" lang="en">
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>asiacommerce (front end)</title>
+    <meta name="description" content="A new Yeogurt application"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="{{baseUrl}}styles/main.css"/>
+    {% block stylesheets %}{% endblock %}
+
+    {# {% block head-scripts %}{% endblock %} #}
+
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+    <p class="browsehappy">
+      You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+    </p>
+    <![endif]-->
+
+    {% block content %}{% endblock %}
+
+    <div id="ac-offcanvas-left" class="uk-offcanvas">
+      <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+          <li class="uk-nav-header">Categories</li>
+          <li><a href="#"class="ac-header-nav-category-item ac-header-nav-category-upper"><i class="uk-icon-steam"></i>&nbsp;All</a></li>
+          {# {% include "../components/category-menu.html" %} #}
+        </ul>
+      </div>
+    </div>
+
+    <div id="ac-offcanvas-right" class="uk-offcanvas">
+      <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+        <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+          <li class="uk-parent"><a href="#">Language</a>
+            <ul class="uk-nav-sub">
+              <li><a href="#">Indonesia</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </li>
+          <li class="uk-parent"><a href="#">Guidance</a>
+            <ul class="uk-nav-sub">
+              <li><a href="#">Shopping Guide</a></li>
+              <li><a href="#">Select Product</a></li>
+              <li><a href="#">Hot Item</a></li>
+            </ul>
+          </li>
+          <li class="uk-parent"><a href="#">Help</a>
+            <ul class="uk-nav-sub">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Help Center</a></li>
+            </ul>
+          </li>
+          <li><a href="#">My Whislist</a></li>
+          <li class="uk-active"><a href="#">Register</a></li>
+        </ul>
+      </div>
+    </div>
+
+    {% block footer %}
+      {# {% include "../components/footer.html" %} #}
+    {% endblock %}
+
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/uikit/js/core/core.js"></script>
+    <script src="../bower_components/uikit/js/core/touch.js"></script>
+    <script src="../bower_components/uikit/js/core/utility.js"></script>
+    <script src="../bower_components/uikit/js/core/smooth-scroll.js"></script>
+    <script src="../bower_components/uikit/js/core/scrollspy.js"></script>
+    <script src="../bower_components/uikit/js/core/toggle.js"></script>
+    <script src="../bower_components/uikit/js/core/alert.js"></script>
+    <script src="../bower_components/uikit/js/core/button.js"></script>
+    <script src="../bower_components/uikit/js/core/dropdown.js"></script>
+    <script src="../bower_components/uikit/js/core/grid.js"></script>
+    <script src="../bower_components/uikit/js/core/modal.js"></script>
+    <script src="../bower_components/uikit/js/core/nav.js"></script>
+    <script src="../bower_components/uikit/js/core/offcanvas.js"></script>
+    <script src="../bower_components/uikit/js/core/switcher.js"></script>
+    <script src="../bower_components/uikit/js/core/tab.js"></script>
+    <script src="../bower_components/uikit/js/core/cover.js"></script>
+    <script src="../bower_components/uikit/js/components/sticky.js"></script>
+
+    <script src="{{baseUrl}}scripts/main.js"></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>
