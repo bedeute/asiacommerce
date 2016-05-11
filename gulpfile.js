@@ -35,11 +35,18 @@ gulp.task('styles', function () {
     .pipe(reload({stream: true}));
 });
 
+var getJsonData = function(file) {
+  return require('app/data/main.json');
+};
+
 gulp.task('templates', function() {
   return gulp.src([
     'app/pages/**/*.html',
-    'app/components/**.*.html'
+    'app/components/**/*.html'
     ])
+    .pipe($.data(function(file) {
+      return require('./app/data/main.json');
+    }))
     .pipe($.plumber())
     .pipe($.swig({
       defaults: {
@@ -50,12 +57,24 @@ gulp.task('templates', function() {
     .pipe(reload({stream: true}));
 });
 
+gulp.task('check-scripts', function () {
+  return gulp.src([
+   'src/static/stuff/scripts/someImportantScript.js',
+   'src/static/stuff/scripts/controllers/*.js',
+   'src/static/stuff/scripts/services/*.js',
+   '...', ])
+  .pipe(jshint())
+  .pipe(jshint.reporter('default'))
+  .pipe(jshint.reporter('fail'));
+})
+
 function jshint(files) {
   return function () {
     return gulp.src(files)
       .pipe(reload({stream: true, once: true}))
       .pipe($.jshint())
-      .pipe($.jshint.reporter('jshint-stylish'))
+      // .pipe($.jshint.reporter('jshint-stylish'))
+      .pipe($.jshint.reporter('default'))
       .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
   };
 }
@@ -128,7 +147,7 @@ gulp.task('serve', ['templates', 'styles', 'fonts'], function () {
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/**/*.html', ['templates']);
+  gulp.watch(['app/**/*.html', 'app/data/**/*.json'], ['templates']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });

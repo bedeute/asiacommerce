@@ -12,28 +12,37 @@
 			<a href="#ac-offcanvas-right" class="uk-float-right uk-navbar-toggle uk-visible-small ac-rightbar-menu-offcanvas-toggle" data-uk-offcanvas=""></a>
 		</div>
 		<div class="ac-nav-brand-wrap">
-			<a href="#ac-offcanvas-left" data-uk-offcanvas class="ac-nav-brand uk-visible-small">
+			<a href="#ac-dashboard-sidebar-offcanvas" data-uk-offcanvas class="ac-nav-brand uk-visible-small">
 				<img src="images/asiacommerce-logo-white-w-hamburger.png">
 			</a>
 			<a href="./" class="ac-nav-brand uk-hidden-small">
 				<img src="images/AsiaCommerce-Logo-Color-350x72.png" class="uk-margin uk-margin-remove" title="Logo" alt="logo" height="49" width="250">
 			</a>
 		</div>
+
+		<!-- different goes here -->
 		<div class="ac-top-content-right">
 			<div class="ac-top-search-wrap">
 				<input type="text" placeholder="Fill keywords to search, or paste a goods link direct to buy" class="uk-margin-remove">
 				<button class=""><i class="uk-icon-search"></i></button>
 			</div>
 			<div class="ac-top-login-button-wrap">
-				<a href="signing.html" class="uk-button uk-button-main-dark uk-button-rounded ac-top-login-button-login"><i class="uk-icon-lock"></i>&nbsp;Login</a>
+				<div class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}">
+					<a href="" class="uk-button uk-button-main-dark uk-button-rounded uk-text-truncate ac-top-login-button-login">Username <i class="uk-icon-caret-down"></i></a>
+          <div class="uk-dropdown uk-dropdown-bottom">
+            <ul class="uk-nav uk-nav-dropdown">
+              <li><a href="">My Account</a></li>
+              <li><a href="">Dashboard</a></li>
+              <li><a href="">Sign out</a></li>
+            </ul>
+          </div>
+	      </div>
 				<a href="cart.html" class="uk-button uk-button-rounded ac-button-cart">
 					<i class="uk-icon-shopping-cart"></i>
-					<span>
-						My Cart
-					</span>
 					<span class="ac-button-cart-counter">0</span>
 				</a>
 			</div>
 		</div>
+		<!-- end of different goes here -->
 	</div>
 </section>

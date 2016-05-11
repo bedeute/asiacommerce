@@ -1,4 +1,4 @@
-<li class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}" aria-haspopup="true" aria-expanded="false">
+<!-- <li class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}" aria-haspopup="true" aria-expanded="false">
 	<a href="#" class="uk-button-link">Buy4me <i class="uk-icon-caret-down"></i></a>
 	<div class="uk-dropdown uk-dropdown-bottom">
 		<ul class="uk-nav uk-nav-dropdown">
@@ -17,10 +17,48 @@
 			<li><a href="#">Tracking</a></li>
 		</ul>
 	</div>
+</li> -->
+
+<li class="uk-visible-small">
+	<a href="#" class="uk-text-center">
+		{% include "login-user-sidebar-item.html" %}
+	</a>
 </li>
-<li class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}" aria-haspopup="true" aria-expanded="false">
+<li class="uk-nav-divider uk-visible-small"></li>
+<li class="uk-visible-small"><a href="#">My cart <span class="uk-text-danger">(2)</span></a></li>
+<li class="uk-nav-divider uk-visible-small"></li>
+<li class="uk-hidden-small">
+	Language:
+	<select>
+		<option>ID</option>
+		<option>EN</option>
+	</select>
+</li>
+<li class="uk-parent uk-visible-small">
+	<a href="#">Language</a>
+  <ul class="uk-nav-sub">
+    <li><a href="#">Indonesia</a></li>
+    <li><a href="#">English</a></li>
+  </ul>
+</li>
+<li class="uk-parent uk-visible-small">
+	<a href="#">Guidance</a>
+  <ul class="uk-nav-sub">
+    <li><a href="#">Shopping Guide</a></li>
+    <li><a href="#">Select Product</a></li>
+    <li><a href="#">Hot Item</a></li>
+  </ul>
+</li>
+<li class="uk-parent uk-visible-small">
+	<a href="#">Help</a>
+  <ul class="uk-nav-sub">
+    <li><a href="#">FAQ</a></li>
+    <li><a href="#">Help Center</a></li>
+  </ul>
+</li>
+<li class="uk-button-dropdown uk-hidden-small" data-uk-dropdown="{mode:'click'}" aria-haspopup="true" aria-expanded="false">
 	<a href="#" class="uk-button-link">Guidance <i class="uk-icon-caret-down"></i></a>
-	<div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
+	<div class="uk-dropdown uk-dropdown-bottom">
 		<ul class="uk-nav uk-nav-dropdown">
 			<li><a href="#">Shopping Guide</a></li>
 			<li><a href="#">Select Product</a></li>
@@ -28,9 +66,9 @@
 		</ul>
 	</div>
 </li>
-<li class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}" aria-haspopup="true" aria-expanded="false">
+<li class="uk-button-dropdown uk-hidden-small" data-uk-dropdown="{mode:'click'}" aria-haspopup="true" aria-expanded="false">
 	<a href="#" class="uk-button-link">Help <i class="uk-icon-caret-down"></i></a>
-	<div class="uk-dropdown uk-dropdown-bottom" style="top: 30px; left: 0px;">
+	<div class="uk-dropdown uk-dropdown-bottom">
 		<ul class="uk-nav uk-nav-dropdown">
 			<li><a href="#">FAQ</a></li>
 			<li><a href="#">Help Center</a></li>

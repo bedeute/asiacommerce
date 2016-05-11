@@ -1,0 +1,13 @@
+{% macro page(activeLinkBreadcrumb='dashboard') %}
+	<section class="ac-breadcrumb-wrap">
+	  <ul class="uk-breadcrumb">
+	    <li><a href="">Home</a></li>
+	    {% if activeLinkBreadcrumb == 'dashboard' %}
+	    	<li class="ac-now"><a href="javascript:void();">Dashboard</a></li>
+	    {% endif %}
+	    {% if activeLinkBreadcrumb == 'myWarehouse' %}
+	    	<li class="ac-now"><a href="javascript:void();">My Warehouse</a></li>
+	    {% endif %}
+	  </ul>
+	</section>
+{% endmacro %}

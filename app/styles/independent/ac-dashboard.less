@@ -1,0 +1,414 @@
+@import (reference) "../main.less";
+
+.ac-dashboard-wrap {
+	position: relative;
+
+	&:before {
+		content: '';
+		background-color: #e3e3e3;
+		height: 150px;
+		width: 100%;
+		position: absolute;
+		top: 0;
+	}
+
+	> .uk-container {
+		@media screen and (max-width: @breakpoint-small-max) {
+			padding-left: 8px;
+			padding-right: 8px;
+		}
+
+		@media (min-width: @breakpoint-large) {
+			max-width: 1234px;
+		}
+	}
+
+	.uk-table {
+		min-width: 333px;
+
+		td,th {
+			border-bottom: 1px solid #e5e5e5;
+		}
+
+		th {
+			border-bottom-width: 2px;
+		}
+	}
+}
+
+.ac-dashboard-sidebar {
+	box-sizing: border-box;
+	margin-right: 20px;
+	float: left;
+
+	@media screen and (max-width: @breakpoint-small-max) {
+		&.ac-card {
+			border: none;
+		}
+	}
+
+	@media (min-width: @breakpoint-medium) and (max-width: @breakpoint-large-max) {
+		width: 240px;
+	}
+
+	@media (min-width: @breakpoint-large) {
+		width: 260px;
+	}
+}
+
+.ac-dashboard-sidebar-list {
+
+	&.go-wide {
+		margin-top: 88px;
+		position: relative;
+		z-index: 11;
+
+		.ac-dashboard-sidebar-user-img {
+			position: absolute;
+	    text-align: center;
+	    top: -52px;
+		}
+
+
+		> .uk-nav {
+
+			> li {
+
+				> a {
+					color: #777;
+					padding-top: 8px;
+					padding-bottom: 8px;
+					background-color: #fff;
+					border-top: 1px solid #e1e1e1;
+					transition: all .18s ease-in-out;
+
+					> i {
+						color: #aaa;
+					}
+
+					&:hover,
+					&:focus {
+						background-color: #fafafa;
+						padding-left: 18px;
+						color: inherit;
+					}
+				}
+
+				&.active > a,
+				&.active > a:hover,
+				&.active > a:focus {
+					border-left: 3px solid @main-color;
+					padding-left: 18px;
+				}
+			}
+		}
+
+		&-header {
+
+			margin-top: 0;
+			border-top: 1px solid #e1e1e1;
+		}	
+	}
+}
+
+.ac-dashboard-sidebar-user-wrap {
+	background-color: #fff;
+	padding-bottom: 8px;
+}
+
+.ac-dashboard-sidebar-user-img {
+	width: 100%;
+
+	> img {
+		width: 86px;
+		padding: 2px;
+		background-color: #fff;
+		border: 1px solid #d5d5d5;
+		border-radius: 4px;
+	}
+}
+
+.ac-dashboard-sidebar-user-text {
+
+	> h3 {
+		margin: 16px auto 6px;
+		font-weight: bold;
+	}
+}
+
+.ac-dashboard-sidebar-user-email {
+	color: @main-color;
+}
+
+
+// dashboard main
+.ac-dashboard-main {
+	box-sizing: border-box;
+	float: left;
+	position: relative;
+	width: 100%;
+
+	@media (min-width: @breakpoint-medium) and (max-width: @breakpoint-large-max) {
+		width: ~'calc(100% - 260px)';
+		margin-top: 20px;
+	}
+
+	@media (min-width: @breakpoint-large) {
+		margin-top: 20px;
+		width: ~'calc(100% - 280px)';
+	}
+
+	.uk-breadcrumb {
+		margin-bottom: 10px;
+
+		li {
+
+			&.ac-now {
+
+				> a {
+					color: #555;
+					cursor: default;
+					font-weight: bold;
+
+					&:hover,
+					&:focus {
+						text-decoration: none;
+					}
+				}
+			}
+
+			@media (min-width: @breakpoint-medium) {
+
+				> a {
+					font-size: 0.9rem;
+				}
+
+				&.ac-now {
+					display: block;
+
+					> a {
+						font-size: 22px;
+						font-weight: normal;
+					}
+				}
+			}
+
+			&:last-child {
+
+				&:after {
+					display: none;
+				}
+			}
+
+			&:before {
+				display: none;
+			}
+
+
+			&:after {
+				content: '/';
+				padding: 0 6px;
+			}
+		}
+	}
+
+	.ac-breadcrumb-wrap {
+
+		@media screen and (max-width: @breakpoint-small-max) {
+			margin: 0 -8px 12px;
+			padding: 15px 25px;
+			background-color: #fff;
+
+			> .uk-breadcrumb {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.ac-cart-header {
+		margin-left: 0;
+		margin-right: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.ac-card-body {
+
+		> .ac-dashboard-main-heading:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+.ac-dashboard-main-heading {
+	margin: 24px auto;
+}
+
+.ac-dashboard-overal-stats {
+	margin-bottom: 0;
+
+	> li {
+		padding: 10px 0;
+		border-top: 1px solid #eee;
+
+		> span {
+			float: right;
+			padding-right: 10px;
+			font-weight: bold;
+		}
+	}
+}
+
+.ac-dashboard-unique-address {
+  padding: 12px 16px;
+  border: 1px solid #d3d3d3;
+  background: #f9f9f9;
+  color: #777;
+  font-weight: bold;
+  margin: 10px auto 5px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.14);
+  text-align: center;
+}
+
+
+
+.ac-dashboard-warehouse-item-table {
+
+	.ac-cart-item {
+		position: relative;
+	}
+
+}
+
+.ac-dashboard-warehouse-item {
+
+	.ac-dashboard-warehouse-item-table > .ac-cart-body & {
+
+		&-id {
+		}
+
+		&-pic {
+			padding-right: 10px;
+			width: 80px;
+
+		}
+
+		&-courier {
+			width: ~'calc(100% - 122px)';
+			.uk-text-truncate;
+
+			@media (min-width: @breakpoint-medium) {
+				width: ~'calc(100% - 125px)';
+			}
+		}
+
+		&-weight {
+			width: 77px;
+
+			@media (min-width: @breakpoint-medium) {
+				width: auto;
+			}
+		}
+
+		&-status {
+			position: absolute;
+	    right: -7px;
+	    background: #525252;
+	    font-size: 0.9rem;
+	    color: #9FFBCD;
+	    top: 6px;
+	    border: 1px solid #545454;
+	    padding: 1px 6px;
+
+	    &:before {
+	    	position: absolute;
+	    	border: 3px solid	transparent;
+	    	border-color: #777 transparent transparent #777;
+	    	bottom: -7px;
+	    	right: 0;
+	    }
+
+			@media (min-width: @breakpoint-medium) and (max-width: @breakpoint-medium-max) {
+				top: 40px;
+			}
+
+			@media (min-width: @breakpoint-large) {
+				top: 3px;
+			}
+		}
+
+		&-remarks {
+			width: ~'calc(100% - 122px)';
+
+			@media (min-width: @breakpoint-medium) {
+				width: ~'calc(100% - 140px)';
+			}
+		}
+
+		&-tracking {
+			width: 100%;
+	    padding: 12px 42px 12px 0;
+	    margin-top: 10px;
+	    border-top: 1px dashed #e7e7e7;
+	    box-sizing: border-box;
+
+	    @media (min-width:@breakpoint-large) {
+  	    position: absolute;
+  	    width: auto;
+  	    border: 1px dashed #aaa;
+  	    right: 0;
+  	    text-align: right;
+  	    padding: 4px 10px 4px 14px;
+  	    background: #fafafa;
+  	    top: 20px;
+  	    font-weight: bold;
+  	    color: #555;
+	    }
+		}
+
+		&-act {
+			position: absolute;
+	    bottom: 18px;
+	    right: 8px;
+
+	    @media (min-width: @breakpoint-large) {
+	    	bottom: auto;
+	    	top: 64px;
+	    }
+		}
+	}
+
+	.ac-dashboard-warehouse-item-table > .ac-cart-header & {
+
+		&-desc {
+			margin-left: 20px;
+		}
+
+		&-tracking {
+			float: right;
+		}
+	}
+}
+
+.ac-dashboard-warehouse-request {
+
+	&-text {
+		display: block;
+		margin-bottom: 10px;
+		text-align: center;
+		@media (min-width: @breakpoint-medium) {
+			display: inline-block;
+			margin-top: 5px;
+			margin-bottom: 0;
+		}
+	}
+
+	&-button {
+		width: 100%;
+
+		> .uk-button {
+			width: 100%;
+
+		}
+	}
+}

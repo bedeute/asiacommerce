@@ -1,0 +1,59 @@
+{% extends "../layouts/dashboard.html" %}
+
+
+{% block dashboard-main %}
+	{{ breadcrumb.page('dashboard') }}
+	<div class="ac-card ac-card-dashboard">
+		<div class="ac-card-body">
+			<h3 class="ac-dashboard-main-heading uk-margin-bottom"><i class="uk-icon-bar-chart"></i>&nbsp;Overal activity</h3>
+			<div class="uk-grid uk-grid-small" data-uk-grid-margin>
+				<div class="uk-width-medium-1-2">
+					<div class="ac-card">
+						<div class="ac-card-header">
+							<strong>My Items</strong>
+							<a href="#" class="uk-float-right">more</a>
+						</div>
+						<div class="ac-card-body">
+							<ul class="uk-list ac-dashboard-overal-stats">
+								<li>In Cart<span>1</span></li>
+								<li>Quoting in Process<span>0</span></li>
+								<li>Quote Confirmed<span>0</span></li>
+								<li>Re-Quoting<span>0</span></li>
+								<li>Rejected<span>0</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="uk-width-medium-1-2">
+					<div class="ac-card">
+						<div class="ac-card-header">
+							<strong>My Order</strong>
+							<a href="#" class="uk-float-right">more</a>
+						</div>
+						<div class="ac-card-body">
+							<ul class="uk-list ac-dashboard-overal-stats">
+								<li>Delivering to us<span>1</span></li>
+								<li>Awaiting 2nd Payment<span>0</span></li>
+								<li>Delivering to you<span>0</span></li>
+								<li>Completed<span>0</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ac-card-body">
+			<div class="ac-card">
+				<div class="ac-card-header">
+					<strong>My Warehouse</strong>
+					<a href="#" class="uk-float-right">more</a>
+				</div>
+				<div class="ac-card-body">
+					<ul class="uk-list ac-dashboard-overal-stats">
+						<li>Checked in<span>0</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -247,7 +247,7 @@
       &:hover,
       &:focus {
 
-        > span {
+        &-counter {
           background-color: @main-color;
 
           &:before {
@@ -256,7 +256,7 @@
         }
       }
 
-      > span {
+      &-counter {
         background-color: @main-color-accent;
 
         &:before {
@@ -264,7 +264,12 @@
         }
       }
     }
+
   }
+}
+
+.ac-top-login-button-login {
+  max-width: 140px;
 }
 
 .ac-button-cart {
@@ -273,7 +278,7 @@
   color: #fff;
   padding-right: 0;
 
-  > span {
+  &-counter {
     background-color: @main-color;
     display: inline-block;
     border-top-right-radius: 1px;

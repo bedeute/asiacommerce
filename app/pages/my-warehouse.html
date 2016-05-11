@@ -1,0 +1,203 @@
+{% extends "../layouts/dashboard.html" %}
+
+{% block css %}
+	<!-- build:css styles/cart.css -->
+	<link rel="stylesheet" href="styles/ac-cart.css">
+	<!-- endbuild -->
+{% endblock %}
+
+
+{% block sidebar %}
+  {{ sidebar.active('myWarehouse') }}
+{% endblock %}
+
+
+{% block dashboard-main %}
+	{{ breadcrumb.page('myWarehouse') }}
+	<div class="uk-alert uk-alert-large" data-uk-alert>
+	    <a href="" class="uk-alert-close uk-close"></a>
+	    <h2>What is My Warehouse?</h2>
+	    <p>
+	    	You can buy products yourself and send to your unique Asiacommerce address. When the product arrives, we will weigh and take snapshot of your parcel. You will receive a email notification. Then you can select the arrived product(s) and submit a shipping request.After you paid the shipping fee, We will pack it and ship it immediately. No service fees required.
+	    </p>
+	</div>
+	<div class="ac-card ac-card-dashboard">
+		<div class="ac-card-body">
+			<h3 class="ac-dashboard-main-heading uk-margin-bottom"><i class="uk-icon-info"></i>&nbsp;Necessary Information</h3>
+			<div class="ac-card">
+				<div class="ac-card-body">
+					<h4 class="uk-margin-small-bottom">My unique Asiacommerce address</h4>
+					<span class="uk-text-muted">Please copy & paste the following address for your online purchase</span>
+					<div class="ac-dashboard-unique-address">
+						深圳市 罗湖区 东门南路3005号 寸金大厦2301室转30820室 ，518002 [86-13798241448] 百乐收
+					</div>
+					<div class="uk-alert uk-alert-warning">
+						Address is uniqely generated, please DO NOT copy address from other tutorials, otherwise it may cause package lost and we are not responsible for lost caused by this reason.
+					</div>
+					<hr>
+					<h4 class="uk-margin-small">Details</h4>
+					<span class="uk-text-muted">Details you have to fill in the marketplace platform when they request a chinese address.</span>
+					<div class="uk-overflow-container uk-margin-small">
+						<table class="uk-table">
+							<tr>
+								<th>English</th>
+								<th>Chinese</th>
+								<th>What you should fill in</th>
+							</tr>
+							<tr>
+								<td>Recipient</td>
+								<td>收货人 / 姓名</td>
+								<td>百乐</td>
+							</tr>
+							<tr>
+								<td>Address</td>
+								<td>地址</td>
+								<td>东门南路3005号 寸金大厦2301室转30820室</td>
+							</tr>
+							<tr>
+								<td>State</td>
+								<td>省份</td>
+								<td>广东省</td>
+							</tr>
+							<tr>
+								<td>City</td>
+								<td>城市</td>
+								<td>深圳市 罗湖区</td>
+							</tr>
+							<tr>
+								<td>Street</td>
+								<td>街道</td>
+								<td>东门南路3005号</td>
+							</tr>
+							<tr>
+								<td>Phone</td>
+								<td>电话 / 手机</td>
+								<td>86-13798241448</td>
+							</tr>
+						</table>	
+					</div>
+				</div>
+			</div>
+			<div class="uk-margin">
+				<h3 class="ac-dashboard-main-heading uk-margin-small-bottom"><i class="uk-icon-archive"></i>&nbsp;Parcels arrived my warehouse</h3>
+				<span class="uk-text-muted">You do not have any items in our warehouse</span>
+			</div>
+			<hr>
+			<section class="ac-cart-table ac-dashboard-warehouse-item-table">
+				<div class="ac-cart-header uk-clearfix uk-visible-large">
+					<div class="ac-cart-header-item ac-cart-check">
+						<label>
+							<input type="checkbox">&nbsp;Select All
+						</label>
+					</div>
+					<div class="ac-cart-header-item ac-dashboard-warehouse-item-desc">
+						Parcel Description
+					</div>
+					<div class="ac-cart-header-item ac-dashboard-warehouse-item-tracking">
+						Status, Track no. & Action
+					</div>
+				</div>
+				<div class="ac-cart-body">
+
+					<div class="ac-cart-item-group">
+						<div class="ac-cart-item">
+							<div class="ac-cart-body-item ac-cart-check">
+								<input type="checkbox"></input>
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-pic">
+								<img src="images/product-image/product-pic-small.jpg">
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-desc">
+								
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-id">
+								<span class="uk-hidden-small">ID: </span><strong>#a1b2c3</strong>
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-courier">
+								<span class="uk-display-block"><span class="uk-hidden-small">From: </span>Courier Company (or whatever)</span>
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-weight">
+								<strong class="uk-display-block"><span class="uk-hidden-small">Weight: </span>200kg</strong>
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-remarks">
+								<div class="uk-button-dropdown" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
+	                <a class="">remarks <i class="uk-icon-angle-right"></i></a>
+	                <div class="uk-dropdown uk-dropdown-bottom">
+										This could be place for 'remarks' text
+	                </div>
+		            </div>
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-status">
+								<span class="uk-display-block">Recieved</span>
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-tracking">
+								<div class="ac-dashboard-warehouse-item-tracking-inner">
+									724CK1N6-NUM832-0F-7H3-173M
+								</div>
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-act uk-text-right">
+								<a href="#" class="uk-button uk-button-small"><i class="uk-icon-send uk-visible-small"></i><span class="uk-hidden-small">Req Shipment</span></a>
+							</div>
+						</div>
+						<div class="ac-cart-item">
+							<div class="ac-cart-body-item ac-cart-check">
+								<input type="checkbox"></input>
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-pic">
+								<img src="images/product-image/product-pic-small-2.jpg">
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-desc">
+								
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-id">
+								<span class="uk-hidden-small">ID: </span><strong>#a1b2c3</strong>
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-courier">
+								<span class="uk-display-block"><span class="uk-hidden-small">From: </span>Courier Company (or whatever)</span>
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-weight">
+								<strong class="uk-display-block"><span class="uk-hidden-small">Weight: </span>200kg</strong>
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-remarks">
+								<div class="uk-button-dropdown" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
+	                <a class="">remarks <i class="uk-icon-angle-right"></i></a>
+	                <div class="uk-dropdown uk-dropdown-bottom">
+										This could be place for 'remarks' text
+	                </div>
+		            </div>
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-status">
+								<span class="uk-display-block">Recieved</span>
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-tracking">
+								<div class="ac-dashboard-warehouse-item-tracking-inner">
+									724CK1N6-NUM832-0F-7H3-173M
+								</div>
+							</div>
+							<div class="ac-cart-body-item ac-dashboard-warehouse-item-act uk-text-right">
+								<a href="#" class="uk-button uk-button-small"><i class="uk-icon-send uk-visible-small"></i><span class="uk-hidden-small">Req Shipment</span></a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<div class="ac-card uk-margin ac-dashboard-warehouse-request-wrap">
+				<div class="ac-card-body uk-clearfix">
+					<label class="ac-dashboard-warehouse-request-text">
+						<input type="checkbox">&nbsp;Select all / Total Weight : 0 kg
+					</label>
+					<div class="uk-float-right ac-dashboard-warehouse-request-button">
+						<a href="#" class="uk-button uk-button-main">Request Shipment</a>
+					</div>
+				</div>
+			</div>		
+
+			<div class="uk-form uk-form-horizontal">
+				<label for="remarksTextarea" class="uk-form-label"><strong>Remarks to us</strong></label>
+				<textarea class="uk-width-1-1" id="remarksTextarea" rows="3" placeholder="You can leave remarks for us. (e.g Package request)"></textarea>
+			</div>
+		</div>
+	</div>
+{% endblock %}

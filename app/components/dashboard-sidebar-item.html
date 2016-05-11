@@ -1,0 +1,23 @@
+{% macro active(activePageDashboard='dashboard') %}
+<div class="ac-dashboard-sidebar-user-wrap uk-hidden-small">
+	<div class="uk-text-right uk-position-relative uk-position-z-index">
+		<a href="#" class="uk-button"><i class="uk-icon-cog"></i>&nbsp;Edit</a>
+	</div>
+	{% include "login-user-sidebar-item.html" %}
+</div>
+<ul class="uk-nav uk-nav-offcanvas" data-uk-nav >
+	<li class="{% if activePageDashboard == 'dashboard' %} active {% endif %}"><a href="./my-account.html" class=""><i class="uk-icon-dashboard"></i>&nbsp;&nbsp;Dashboard</a></li>
+	<li class="{% if activePageDashboard == 'myCart' %} active {% endif %}"><a href="#" class=""><i class="uk-icon-shopping-basket"></i>&nbsp;&nbsp;My Cart</a></li>
+	<li class="{% if activePageDashboard == 'myOrder' %} active {% endif %}"><a href="#" class=""><i class="uk-icon-list-ol"></i>&nbsp;&nbsp;My Order</a></li>
+	<li class="{% if activePageDashboard == 'myWarehouse' %} active {% endif %}"><a href="./my-warehouse.html" class=""><i class="uk-icon-building"></i>&nbsp;&nbsp;My Warehouse</a></li>
+	<li class="ac-dashboard-sidebar-list-header uk-nav-header">My Account</li>
+	<li class="{% if activePageDashboard == 'ascoWallet' %} active {% endif %}"><a href="#" class=""><i class="uk-icon-money"></i>&nbsp;&nbsp;AsCo Wallet</a></li>
+	<li class="{% if activePageDashboard == 'addressBook' %} active {% endif %}"><a href="#" class=""><i class="uk-icon-book"></i>&nbsp;&nbsp;Address Book</a></li>
+	<li class="{% if activePageDashboard == 'favouritesSeller' %} active {% endif %}"><a href="#" class=""><i class="uk-icon-heart"></i>&nbsp;&nbsp;Favourites Sellers</a></li>
+	<li class="{% if activePageDashboard == 'watchlist' %} active {% endif %}"><a href="#" class=""><i class="uk-icon-eye"></i>&nbsp;&nbsp;Watchlist</a></li>
+	<li class="{% if activePageDashboard == 'ascoCoinCoupon' %} active {% endif %}"><a href="#" class=""><i class="uk-icon-ticket"></i>&nbsp;&nbsp;AsCo Coin & Coupon</a></li>
+	<li class="{% if activePageDashboard == 'acconuntSettings' %} active {% endif %}"><a href="#" class=""><i class="uk-icon-cog"></i>&nbsp;&nbsp;Account Settings</a></li>
+	<li class="{% if activePageDashboard == 'customItems' %} active {% endif %}"><a href="#" class=""><i class="uk-icon-tint"></i>&nbsp;&nbsp;Custom Item</a></li>
+	<li class="{% if activePageDashboard == 'signOut' %} active {% endif %}"><a href="#" class=""><i class="uk-icon-sign-out"></i>&nbsp;&nbsp;Sign out</a></li>
+</ul>
+{% endmacro %}
