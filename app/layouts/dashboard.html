@@ -1,5 +1,7 @@
 {% import "../components/dashboard-sidebar-item.html" as sidebar %}
 {% import "../components/dashboard-breadcrumb-macro.html" as breadcrumb %}
+{% import "../components/offcanvas-left-macro.html" as offcanvasLeft %}
+
 <!doctype html>
 <html class="no-js" lang="">
 <head>
@@ -16,7 +18,7 @@
   <!-- endbower -->
   <!-- endbuild -->
 
-  <!-- build:css styles/main.css -->
+  <!-- build:css styles/dashboard.css -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/ac-dashboard.css">
 
@@ -55,43 +57,27 @@
     </div>
   </section>
 
-<div id="ac-offcanvas-right" class="uk-offcanvas">
-  <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
-    <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
-      
-      {% include "../components/top-menu-lite.html" %}
-<!-- 
-      <li class="uk-parent"><a href="#">Language</a>
-        <ul class="uk-nav-sub">
-          <li><a href="#">Indonesia</a></li>
-          <li><a href="#">English</a></li>
-        </ul>
-      </li>
-      <li class="uk-parent"><a href="#">Guidance</a>
-        <ul class="uk-nav-sub">
-          <li><a href="#">Shopping Guide</a></li>
-          <li><a href="#">Select Product</a></li>
-          <li><a href="#">Hot Item</a></li>
-        </ul>
-      </li>
-      <li class="uk-parent"><a href="#">Help</a>
-        <ul class="uk-nav-sub">
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Help Center</a></li>
-        </ul>
-      </li>
-      <li><a href="#">My Whislist</a></li>
-      <li class="uk-active"><a href="#">Register</a></li>
-
- -->
-    </ul>
-  </div>
-</div>
 
   {% block footer %}
     {% include "../components/footer.html" %}
   {% endblock %}
 
+  {% block offcanvas-left %}
+    {{ offcanvasLeft.sidebarLiLeft('dashboard', 'login') }}
+  {% endblock %}
+
+  <section class="ac-flayer" id="ac-flayer-dashboard-menu">
+    <div class="ac-flayer-header">
+      <label>Dashboard</label>
+      <a href="" class="ac-close"><i class="uk-icon-close"></i></a>
+    </div>
+    <div class="ac-flayer-body">
+      <ul class="">
+        {% include "../components/dashboard-sidebar-item.html" %}
+
+      </ul>
+    </div>
+  </section>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>

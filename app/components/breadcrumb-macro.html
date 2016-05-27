@@ -1,0 +1,19 @@
+{% macro page(activeLinkBreadcrumb='dashboard', visibility='hide') %}
+<section class="ac-breadcrumb-wrap {% if visibility == 'hide' %}uk-hidden-small{% endif %}">
+	<div class="uk-container uk-container-center">
+		<ul class="uk-breadcrumb">
+		    <li><a href="./index.html"><i class="uk-icon-home"></i></a></li>
+		    {% if activeLinkBreadcrumb == 'hotProduct' %}
+			    <li><span>Hot Product</span></li>
+		    {% endif %}
+		    {% if activeLinkBreadcrumb == 'productDetail' %}
+			    <li><a href="javascript:void();">Hot Product</a></li>
+			    <li><span>Nice item here</span></li>
+		    {% endif %}
+		    {% if activeLinkBreadcrumb == 'cart' %}
+			    <li><span>My cart</span></li>
+		    {% endif %}
+		</ul>
+	</div>
+</section>
+{% endmacro %}

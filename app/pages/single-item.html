@@ -9,17 +9,7 @@
 
 {% block main %}
 <div id="ac-single-item">
-	{% include "../components/header-single-item.html" %}
-
-	<section class="ac-breadcrumb-wrap uk-hidden-small">
-		<div class="uk-container uk-container-center">
-			<ul class="uk-breadcrumb">
-			    <li><a href=""><i class="uk-icon-home"></i></a></li>
-			    <li><a href="">Hot Product</a></li>
-			    <li><span>Nice item here</span></li>
-			</ul>
-		</div>
-	</section>
+	{{ breadcrumb.page('productDetail') }}
 
 	<section class="ac-product-head-wrap">
 		<div class="uk-container uk-container-center">

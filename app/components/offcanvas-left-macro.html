@@ -1,0 +1,28 @@
+
+{% macro sidebarLiLeft(where='general', status='public') %}  
+<div id="ac-offcanvas-left" class="uk-offcanvas">
+  <div class="uk-offcanvas-bar">
+    <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+      {% if status == 'public' %}
+      <li><a href="#" class="uk-button ac-offcanvas-login-button">Login</a></li>
+      {% endif %}
+      {% if status == 'login' %}
+      <li class="uk-visible-small">
+        <a href="#" class="uk-text-center">
+          {% include "../components/login-user-sidebar-item.html" %}
+        </a>
+      </li>
+      {% endif %}
+      <li class="uk-visible-small"><a href="#">My cart <span class="uk-text-danger">(2)</span></a></li>
+      <li class="uk-nav-divider uk-visible-small"></li>
+        {% if where == 'dashboard' %}
+          <li><a href="#" class="ac-flayer-trigger" data-flayer-target="#ac-flayer-dashboard-menu">Dashboard menu</a></li>
+        {% endif %}
+        {% if where == 'general' %}
+          <li><a href="#" class="ac-flayer-trigger" data-flayer-target="#ac-flayer-category-menu">Shop by category</a></li>
+        {% endif %}
+      {% include "../components/top-menu-lite.html" %}
+    </ul>
+  </div>
+</div>
+{% endmacro %}

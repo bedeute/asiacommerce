@@ -1,0 +1,98 @@
+@import (reference) "main.less";
+
+
+// floated layer style here
+
+.base-padding(@ver: 8px, @hor: 20px) {
+	padding: @ver @hor;
+}
+
+.ac-flayer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #444;
+  z-index: 111;
+  overflow-x: auto;
+  margin-right: 100%;
+  transition: margin-right 0.2s ease-in-out 0.1s;
+
+  &.reveal {
+    margin-right: 0;
+  }
+
+  a {
+  	color: #aaa;
+
+  	&:hover,
+  	&:active {
+  		color: @main-color;
+  		text-decoration: none;
+  	}
+  }
+}
+
+.ac-flayer-header {
+	.base-padding();
+	position: relative;
+	border-bottom: 1px solid #555;
+
+	> label {
+		display: block;
+		padding: 6px 0;
+		color: #ddd;
+		font-size: 1.2rem;
+		font-weight: bold;
+	}
+
+	> .ac-close {
+		position: absolute;
+		text-align: center;
+		top: 0;
+		right: 0;
+		width: 52px;
+		height: 48px;
+		display: inline-block;
+		line-height: 48px;
+		background-color: #555;
+		color: #CC3A3A;
+
+	}
+}
+
+.ac-flayer-body {
+	.base-padding();
+
+	ul {
+		margin: 0;
+    list-style: none;
+    padding: 0;
+
+    > .uk-parent {
+
+    	> a {
+    		display: block;
+    		padding: 10px 0 8px;
+    	}
+
+    	> .uk-nav-sub {
+    		margin-left: 22px;
+
+    		li {
+
+    			&.uk-nav-header {
+		    		color: #666;
+    				padding: 10px 0 6px;
+    			}
+    			> a {
+    				display: block;
+    				padding: 8px 0;
+    				color: #999;
+    			}
+    		}
+    	}
+    }
+	}
+}

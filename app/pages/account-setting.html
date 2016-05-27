@@ -1,8 +1,57 @@
 {% extends "../layouts/dashboard.html" %}
  
-
-
+ {% block sidebar %}
+   {{ sidebar.active('accountSettings') }}
+ {% endblock %}
 
 {% block dashboard-main %}
-	{{ macro.active('myCart') }}
+	{{ breadcrumb.page('accountSetting') }}
+	<div class="ac-card ac-card-dashboard">
+		<div class="ac-card-body">
+			<h3 class="ac-dashboard-main-heading uk-margin-bottom"><i class="uk-icon-info"></i>&nbsp;Account Information</h3>
+			<div class="uk-form uk-form-horizontal">
+				<div class="uk-form-row">
+					<label class="uk-form-label" for="ac-form-username">Username</label>
+					<div class="uk-form-controls">
+						<input type="text" class="uk-width-1-1" id="ac-form-username" value="username">
+					</div>
+				</div>
+				<div class="uk-form-row">
+					<label class="uk-form-label" for="ac-form-email">Email</label>
+					<div class="uk-form-controls">
+						<input type="email" class="uk-width-1-1" id="ac-form-email" value="email@email.com">
+					</div>
+				</div>
+				<div class="uk-form-row">
+					<label class="uk-form-label" for="ac-form-password">Password</label>
+					<div class="uk-form-controls">
+						<input type="password" class="uk-width-1-1" id="ac-form-password" value="password">
+					</div>
+				</div>
+				<div class="uk-form-row">
+					<label class="uk-form-label" for="ac-form-password">Avatar</label>
+					<div class="uk-form-controls">
+						<div class="uk-margin">
+							<img src="images/dashboard/avatar-dummy.jpg">
+						</div>
+						<input type="file">
+					</div>
+				</div>
+				<div class="uk-form-row">
+					<label class="uk-form-label">Facebook integration</label>
+					<div class="uk-form-controls">
+						<a href="#" class="uk-button"><i class="uk-icon-facebook"></i>&nbsp;Login</a>
+					</div>
+				</div>
+				<div class="uk-form-row">
+					<span class="uk-form-label" for="ac-form-notif">Email notification</span>
+					<div class="uk-form-controls">
+						<input type="checkbox" id="ac-form-notif">
+						<label for="ac-form-notif">Notify</label>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
 {% endblock %}

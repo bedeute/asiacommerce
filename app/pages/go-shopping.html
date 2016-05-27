@@ -48,10 +48,15 @@
 	</header>
 
 	<div class="ac-product-list-filter-wrap ac-card" data-uk-sticky="{top: 61}" style="z-index: 2;">
-		<div class="uk-container uk-container-center">
-			<div class="ac-card-body uk-form">
-				<label><strong>Filter:</strong></label>
-				<div class="uk-display-inline-block" style="margin-right: 20px;">
+		<div class="ac-card-body uk-form">
+			<div class="uk-container uk-container-center">
+				<label class="uk-visible-small"><strong>Filter:&nbsp;</strong></label>
+				<div class="uk-visible-small ac-filter-result">
+					<div class="uk-display-inline-block">
+						<span><i class=""></i></span>
+					</div>
+				</div>
+				<div class="uk-display-inline-block" style="margin-right: 28px;">
 					<label for="ac-filter-sort">Sort</label>
 					<select class="" id="ac-filter-sort">
 						<option>Price low to high</option>
@@ -64,10 +69,13 @@
 					<label>Price Range:</label>
 					<input type="text" placeholder="Start price">
 					<input type="text" placeholder="End price">
+					<a href="#" class="uk-button">Set</a>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	{{ breadcrumb.page('hotProduct') }}
 
 	<div class="ac-product-list-wrap" data-uk-grid>
 		<div class="uk-width-medium-1-3">
@@ -81,10 +89,6 @@
 </div>
 {% endblock %}
 
-
-{% block offcanvas-left %}
-  {{ offcanvasLeft.sidebarLiLeft('dashboard') }}
-{% endblock %}
 
 {% block scripts %}
 	<!-- build:js scripts/indexScripts.js -->

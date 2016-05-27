@@ -1,0 +1,65 @@
+@import (reference) "../main.less";
+
+.ac-best-selling-header {
+
+	> .uk-container {
+		@media screen and (max-width: @breakpoint-medium-max) {
+			padding: 0;
+		}
+	}
+}
+
+.ac-best-selling-header-slider {
+	border: 1px solid #d5d5d5;
+	display: inline-block;
+	max-width: 690px;
+	box-sizing: border-box;
+	width: 100%;
+	vertical-align: middle;
+
+	@media(min-width: @breakpoint-medium) {
+		width: ~'calc(100% - 240px)';
+	}
+}
+
+.ac-best-selling-header-push {
+	width: 235px;
+	display: inline-block;
+	height: 360px;
+	vertical-align: middle;
+	position: relative;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 200px;
+		height: 40px;
+		background-color: #ccc;
+		display: block;
+		left: 196px;
+		
+	}
+
+	&:before {
+		top: 64px;
+		transform: rotate(45deg);
+	}
+
+	&:after {
+		bottom: 64px;
+		transform: rotate(-45deg);
+	}
+}
+
+.ac-best-selling-header-banner {
+	width: 190px;
+	background: blue;
+	height: 360px;
+	display: none;
+	vertical-align: middle;
+
+	@media (min-width: @breakpoint-xlarge) {
+		display: inline-block;
+	}
+}

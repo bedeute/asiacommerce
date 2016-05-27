@@ -1,0 +1,18 @@
+
+{% macro sidebarli(where='general') %}  
+<div id="ac-category-menu" class="uk-offcanvas ">
+  <div class="uk-offcanvas-bar ac-category-menu-inner">
+    <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+      <li class="uk-nav-header">Shop by Category</li>
+        {% if where == 'dashboard' %}
+          <li><a href="#">dashboard</a></li>
+        {% endif %}
+        {% if where == 'general' %}
+          <li><a href="#">Shop by category 2</a></li>
+        {% endif %}
+      <li><a href="#"class="ac-header-nav-category-item ac-header-nav-category-upper"><i class="uk-icon-steam"></i>&nbsp;All</a></li>
+      {% include "../components/category-menu.html" %}
+    </ul>
+  </div>
+</div>
+{% endmacro %}

@@ -1,3 +1,7 @@
+{% import "../components/breadcrumb-macro.html" as breadcrumb %}
+{% import "../components/offcanvas-macro.html" as offcanvas %}
+{% import "../components/offcanvas-left-macro.html" as offcanvasLeft %}
+
 <!doctype html>
 <html class="no-js" lang="">
 <head>
@@ -32,51 +36,35 @@
 </head>
 <body>
 
-  {% block main %}
+  {% block header %}
+    {% include "../components/header.html" %}
   {% endblock %}
 
-<div id="ac-offcanvas-left" class="uk-offcanvas">
-  <div class="uk-offcanvas-bar">
-    <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
-      <li class="uk-nav-header">Categories</li>
-      <li><a href="#"class="ac-header-nav-category-item ac-header-nav-category-upper"><i class="uk-icon-steam"></i>&nbsp;All</a></li>
-      {% include "../components/category-menu.html" %}
-    </ul>
-  </div>
-</div>
-
-<div id="ac-offcanvas-right" class="uk-offcanvas">
-  <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
-    <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
-      <li class="uk-parent"><a href="#">Language</a>
-        <ul class="uk-nav-sub">
-          <li><a href="#">Indonesia</a></li>
-          <li><a href="#">English</a></li>
-        </ul>
-      </li>
-      <li class="uk-parent"><a href="#">Guidance</a>
-        <ul class="uk-nav-sub">
-          <li><a href="#">Shopping Guide</a></li>
-          <li><a href="#">Select Product</a></li>
-          <li><a href="#">Hot Item</a></li>
-        </ul>
-      </li>
-      <li class="uk-parent"><a href="#">Help</a>
-        <ul class="uk-nav-sub">
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Help Center</a></li>
-        </ul>
-      </li>
-      <li><a href="#">My Whislist</a></li>
-      <li class="uk-active"><a href="#">Register</a></li>
-    </ul>
-  </div>
-</div>
+  {% block main %}
+  {% endblock %}
 
   {% block footer %}
     {% include "../components/footer.html" %}
   {% endblock %}
 
+
+  {% block offcanvas-left %}
+    {{ offcanvasLeft.sidebarLiLeft('general', 'public') }}
+  {% endblock %}
+
+  <!-- need to erase -->
+  <section class="ac-flayer" id="ac-flayer-category-menu">
+    <div class="ac-flayer-header">
+      <label>Dashboard</label>
+      <a href="" class="ac-close"><i class="uk-icon-close"></i></a>
+    </div>
+    <div class="ac-flayer-body">
+      <ul class="">
+        {% include "../components/category-menu.html" %}
+
+      </ul>
+    </div>
+  </section>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>

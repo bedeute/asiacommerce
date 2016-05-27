@@ -1,5 +1,8 @@
 {% extends "../layouts/dashboard.html" %}
 
+{% block sidebar %}
+  {{ sidebar.active('accountSettings') }}
+{% endblock %}
 
 {% block dashboard-main %}
 	{{ breadcrumb.page('dashboard') }}

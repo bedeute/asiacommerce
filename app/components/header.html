@@ -1,4 +1,4 @@
-<section class=" ac-top-section">
+<section class=" ac-top-section" data-uk-sticky="{top:-440,animation: 'uk-animation-slide-top', clsinactive: 'uk-inactive'}">
 	<div class="uk-container uk-container-center">
 		<div class="ac-nav-top uk-clearfix">
 			<div class="ac-kurs uk-hidden-small">
@@ -9,8 +9,8 @@
 					{% include "top-menu-lite.html" %}
 				</ul>
 			</nav>
-			<a href="#ac-offcanvas-right" class="uk-float-right uk-navbar-toggle uk-visible-small ac-rightbar-menu-offcanvas-toggle" data-uk-offcanvas=""></a>
 		</div>
+		<a href="javascript:void(0);" id="ac-category-menu-button" class="uk-navbar-toggle uk-hidden-small"></a>
 		<div class="ac-nav-brand-wrap">
 			<a href="#ac-offcanvas-left" data-uk-offcanvas class="ac-nav-brand uk-visible-small">
 				<img src="images/asiacommerce-logo-white-w-hamburger.png">
@@ -37,3 +37,11 @@
 		</div>
 	</div>
 </section>
+
+<div class="uk-container uk-container-center uk-hidden-small">
+	<div class="ac-category-menu">
+		<ul>
+			{% include "../components/category-menu.html" %}
+		</ul>
+	</div>
+</div>

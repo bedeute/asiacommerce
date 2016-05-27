@@ -8,17 +8,8 @@
 
 {% block main %}
 <div id="ac-cart">
-	{% include "../components/header.html" %}
-
 	<!-- Breadcrumb -->
-	<section class="ac-breadcrumb-wrap">
-		<div class="uk-container uk-container-center">
-			<ul class="uk-breadcrumb">
-			    <li><a href=""><i class="uk-icon-home"></i></a></li>
-			    <li><span>My cart</span></li>
-			</ul>
-		</div>
-	</section>
+	{{ breadcrumb.page('cart') }}
 	<!-- end of Breadcrumb -->
 
 	<section class="ac-cart-table">
